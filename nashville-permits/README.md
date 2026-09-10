@@ -189,7 +189,7 @@ Common sub-trade codes: `CAPLMB` plumbing, `CAELEC` electrical, `CAHVAC` mechani
 }
 ```
 
-Groups by the licensed contractor when enrichment is on, otherwise by applicant. Owner-builders are excluded. `license` is filled only when enrichment is on.
+Groups by the licensed contractor when enrichment is on, otherwise by applicant. Owner-builders are excluded. Spelling variants of one company ("RONDO POOLS LLC", "Rondo Pools, LLC.") are merged into one row; placeholder names ("see ePermits", "not published") are dropped. `license` is filled only when enrichment is on.
 
 ## Pricing
 

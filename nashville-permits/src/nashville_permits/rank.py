@@ -3,25 +3,55 @@
 Groups by the licensed contractor when enrichment is present, otherwise by
 the applicant on the open dataset. Owner-builders ("SELF CONTRACTOR ...")
 are excluded because they are not a contractor anyone can hire.
+
+Metro's clerks spell one company several ways ("RONDO POOLS LLC",
+"Rondo Pools, LLC."), so grouping is done on a merge key that drops case,
+punctuation, and corporate suffixes. Ported from permit-pulse's analyze.py.
 """
 
 from __future__ import annotations
 
+import re
 import statistics
+
+# Names that are not a contractor identity and must never head a ranking.
+_GENERIC = {"", "see epermits", "unverified", "not published", "none", "n/a"}
+# Placeholder substrings for owner-self-contracted jobs; they front many
+# unrelated homeowners, not one business.
+_GENERIC_SUBSTR = ("self contractor", "see applicant", "owner is contractor")
+# Stripped only when building the merge KEY; the displayed name keeps its form.
+_SUFFIX_RE = re.compile(
+    r"\b(LLC|L\.L\.C|INC|CO|CORP|LP|LLP|LTD|PLLC|COMPANY|ENTERPRISE|ENTERPRISES)\b"
+)
+
+
+def _is_generic(name: str) -> bool:
+    low = name.strip().lower()
+    return low in _GENERIC or any(s in low for s in _GENERIC_SUBSTR)
+
+
+def _merge_key(name: str) -> str:
+    """Collapse case / punctuation / corporate-suffix noise for grouping."""
+    key = name.upper()
+    key = _SUFFIX_RE.sub(" ", key)  # before punctuation, so "L.L.C." still matches
+    key = re.sub(r"[.,&]", " ", key)
+    key = re.sub(r"\s+", " ", key).strip()
+    return key or name.upper().strip()
 
 
 def _key_and_name(rec: dict) -> tuple[str, str, str | None] | None:
     enr = rec.get("enrichment") or {}
     contractor = enr.get("contractor") or {}
     if contractor.get("company"):
-        if contractor.get("is_owner_builder") or contractor["company"].upper().startswith("SELF CONTRACTOR"):
+        if contractor.get("is_owner_builder") or _is_generic(contractor["company"]):
             return None
-        name = contractor["company"]
-        return name.upper(), name, contractor.get("license")
+        name = contractor["company"].strip()
+        return _merge_key(name), name, contractor.get("license")
     applicant = rec.get("applicant")
-    if not applicant or rec.get("applicant_is_owner"):
+    if not applicant or rec.get("applicant_is_owner") or _is_generic(applicant):
         return None
-    return applicant.upper(), applicant, None
+    applicant = applicant.strip()
+    return _merge_key(applicant), applicant, None
 
 
 def rank(records: list[dict], *, min_permits: int = 1, limit: int = 100) -> list[dict]:

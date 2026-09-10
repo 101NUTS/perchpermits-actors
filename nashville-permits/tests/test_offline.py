@@ -186,6 +186,31 @@ class RankTests(unittest.TestCase):
         self.assertEqual(rank.rank(recs, min_permits=2)[0]["rank"], 1)
         self.assertEqual(len(rank.rank(recs, min_permits=2)), 1)
 
+    def test_merge_key_collapses_spelling_variants(self):
+        for a, b in [
+            ("RONDO POOLS LLC", "Rondo Pools, LLC."),
+            ("RONDO POOLS, L.L.C.", "Rondo Pools Inc"),
+            ("Smith & Sons Roofing Co", "SMITH SONS ROOFING"),
+        ]:
+            self.assertEqual(rank._merge_key(a), rank._merge_key(b), (a, b))
+        self.assertNotEqual(rank._merge_key("Rondo Pools"), rank._merge_key("Rondo Roofing"))
+        self.assertEqual(rank._merge_key("LLC"), "LLC")  # never an empty key
+
+    def test_rank_merges_variants_and_drops_placeholders(self):
+        base = {"applicant_is_owner": False, "valuation": 1000, "date_issued": "2026-01-02", "zip": "37206", "scope_tags": [], "source": "issued", "address": "A", "description": "x"}
+        recs = [
+            dict(base, applicant="Rondo Pools, LLC.", permit_number="1"),
+            dict(base, applicant="RONDO POOLS LLC", permit_number="2"),
+            dict(base, applicant="Rondo Pools Inc", permit_number="3"),
+            dict(base, applicant="Blue Water Pools", permit_number="4"),
+            dict(base, applicant="Blue Water Pools", permit_number="5"),
+            dict(base, applicant="See ePermits", permit_number="6"),
+            dict(base, applicant="not published", permit_number="7"),
+            dict(base, applicant=None, enrichment={"contractor": {"company": "Owner is contractor"}}, permit_number="8"),
+        ]
+        rows = rank.rank(recs)
+        self.assertEqual([(r["contractor"], r["permits"]) for r in rows], [("Rondo Pools, LLC.", 3), ("Blue Water Pools", 2)])
+
 
 if __name__ == "__main__":
     unittest.main()
