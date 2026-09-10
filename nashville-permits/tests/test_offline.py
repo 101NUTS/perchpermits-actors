@@ -176,6 +176,52 @@ class DriftGuardTests(unittest.TestCase):
             service.enrich_one = original
 
 
+class FreshnessGuardTests(unittest.TestCase):
+    """preflight() must warn on a feed a week behind and stop on one a month behind,
+    and a holiday weekend (3 to 4 days) must pass clean."""
+
+    def _run(self, ages: dict[str, int]):
+        from datetime import date, timedelta
+        from src.nashville_permits import service
+        orig_schema, orig_newest = service.arcgis.check_schema, service.arcgis.newest_date
+        service.arcgis.check_schema = lambda layers: []
+        service.arcgis.newest_date = lambda layer: (date.today() - timedelta(days=ages[layer])).isoformat()
+        try:
+            return service.preflight("both")
+        finally:
+            service.arcgis.check_schema, service.arcgis.newest_date = orig_schema, orig_newest
+
+    def test_holiday_weekend_is_clean(self):
+        problems, warnings = self._run({"issued": 4, "applications": 3})
+        self.assertEqual((problems, warnings), ([], []))
+
+    def test_week_behind_warns_but_runs(self):
+        problems, warnings = self._run({"issued": 10, "applications": 2})
+        self.assertEqual(problems, [])
+        self.assertEqual(len(warnings), 1)
+        self.assertIn("issued", warnings[0])
+
+    def test_month_behind_stops_the_run(self):
+        problems, warnings = self._run({"issued": 40, "applications": 40})
+        self.assertEqual(len(problems), 2)
+        self.assertIn("looks dead", problems[0])
+
+    def test_freshness_query_failure_is_a_problem(self):
+        from src.nashville_permits import service
+        orig_schema, orig_newest = service.arcgis.check_schema, service.arcgis.newest_date
+        service.arcgis.check_schema = lambda layers: []
+
+        def boom(layer):
+            raise service.arcgis.ArcGISError("timeout")
+        service.arcgis.newest_date = boom
+        try:
+            problems, _ = service.preflight("issued")
+        finally:
+            service.arcgis.check_schema, service.arcgis.newest_date = orig_schema, orig_newest
+        self.assertEqual(len(problems), 1)
+        self.assertIn("freshness query failed", problems[0])
+
+
 class RankTests(unittest.TestCase):
     def test_rank_groups_and_skips_owners(self):
         recs = [

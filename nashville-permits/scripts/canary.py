@@ -15,6 +15,9 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
+from datetime import date  # noqa: E402
+
+from src.nashville_permits import arcgis  # noqa: E402
 from src.nashville_permits.epermits import NullCache  # noqa: E402
 from src.nashville_permits.service import EnrichmentDrift, enrich_permits, preflight, search_permits  # noqa: E402
 
@@ -34,6 +37,21 @@ def main(argv=None) -> int:
         problems.append({"check": "preflight", "severity": "broken", "detail": p})
     for w in warnings:
         problems.append({"check": "freshness", "severity": "degraded", "detail": w})
+
+    # Feed age per layer, reported every run so a slowdown is visible before the
+    # actor's own 7-day warning. Metro issues nothing on weekends, so 4 days is
+    # normal after a long weekend; 5 or more is worth a look.
+    ages = {}
+    for layer in ("issued", "applications"):
+        try:
+            newest = arcgis.newest_date(layer)
+            ages[layer] = (date.today() - date.fromisoformat(newest)).days if newest else None
+        except Exception as exc:  # noqa: BLE001
+            ages[layer] = f"error: {exc}"
+    report["feed_age_days"] = ages
+    for layer, age in ages.items():
+        if isinstance(age, int) and age >= 5 and not any(layer in w for w in warnings):
+            problems.append({"check": "feed_age", "severity": "degraded", "detail": f"{layer}: newest record {age} days old (under the actor's 7-day warning, but past a long weekend)"})
 
     records = []
     if not problems_pf:
