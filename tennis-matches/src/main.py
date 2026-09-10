@@ -126,5 +126,12 @@ async def main() -> None:
             charged += (await Actor.push_data(enriched, charged_event_name=EVENT_ENRICHED)).charged_count
         if plain:
             charged += (await Actor.push_data(plain, charged_event_name=EVENT_MATCH)).charged_count
+        archive = (inp.get("archiveDatasetName") or "").strip()
+        if archive and matches:
+            # Named datasets persist beyond the plan's run-data retention; used by the
+            # owner's own archive schedules. Not charged: the default dataset already was.
+            ds = await Actor.open_dataset(name=archive)
+            await ds.push_data(matches)
+            Actor.log.info(f"archived {len(matches)} matches to dataset '{archive}'")
         await Actor.set_status_message(f"Done: {len(enriched)} enriched + {len(plain)} plain matches, {client.requests_made} requests")
         Actor.log.info(f"pushed {len(matches)} matches, charged {charged} events")

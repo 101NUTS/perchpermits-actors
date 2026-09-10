@@ -104,6 +104,13 @@
             "minimum": 0.1,
             "maximum": 5,
             "sectionCaption": "Advanced"
+        },
+        "archiveDatasetName": {
+            "title": "Also append to a named dataset",
+            "type": "string",
+            "description": "Optional. Name of a dataset in your account to append every returned row to, so scheduled runs build a history that outlives run-data retention. Not charged again.",
+            "editor": "textfield",
+            "nullable": true
         }
     }
 }
