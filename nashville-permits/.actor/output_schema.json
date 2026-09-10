@@ -1,0 +1,19 @@
+{
+    "actorOutputSchemaVersion": 1,
+    "title": "Nashville Building Permits (Enriched) output",
+    "description": "One dataset row per permit (search mode) or per ranked contractor (contractors mode). Field reference is in the README.",
+    "properties": {
+        "results": {
+            "type": "string",
+            "title": "Results as JSON",
+            "description": "Every row from the run: normalized permits with the optional `enrichment` block, or ranked contractor rows.",
+            "template": "{{links.apiDefaultDatasetUrl}}?format=json&clean=true"
+        },
+        "resultsCsv": {
+            "type": "string",
+            "title": "Results as CSV",
+            "description": "The same rows as a flat CSV. Nested enrichment fields are flattened with dot-separated column names.",
+            "template": "{{links.apiDefaultDatasetUrl}}?format=csv&clean=true"
+        }
+    }
+}

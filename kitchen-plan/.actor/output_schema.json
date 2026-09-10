@@ -1,0 +1,31 @@
+{
+    "actorOutputSchemaVersion": 1,
+    "title": "Kitchen & Bath Floor Plan + Cabinet Takeoff output",
+    "description": "A dimensioned SVG floor plan, a CSV cabinet takeoff, and a JSON summary with quote-ready totals.",
+    "properties": {
+        "planSvg": {
+            "type": "string",
+            "title": "Floor plan (SVG)",
+            "description": "Dimensioned plan with walls, windows, openings, cabinet runs, appliances, island, and peninsulas.",
+            "template": "{{links.apiDefaultKeyValueStoreUrl}}/records/plan.svg"
+        },
+        "takeoffCsv": {
+            "type": "string",
+            "title": "Cabinet takeoff (CSV)",
+            "description": "One line per cabinet, filler, counter section, appliance opening, and fixture, widths in inches.",
+            "template": "{{links.apiDefaultKeyValueStoreUrl}}/records/takeoff.csv"
+        },
+        "summary": {
+            "type": "string",
+            "title": "Summary (JSON)",
+            "description": "Linear feet of base, upper, and tall cabinets, countertop and backsplash square feet, appliance and fixture lists, item counts.",
+            "template": "{{links.apiDefaultKeyValueStoreUrl}}/records/OUTPUT"
+        },
+        "takeoffRows": {
+            "type": "string",
+            "title": "Takeoff rows (JSON)",
+            "description": "The same takeoff lines as dataset items.",
+            "template": "{{links.apiDefaultDatasetUrl}}?format=json&clean=true"
+        }
+    }
+}

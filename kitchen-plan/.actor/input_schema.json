@@ -1,0 +1,177 @@
+{
+    "title": "Kitchen & Bath Floor Plan + Cabinet Takeoff",
+    "description": "Describe the room, its walls, cabinet runs, appliances, island, and peninsulas in one JSON object. Get back a dimensioned SVG floor plan, a cabinet takeoff CSV in inches, and quote-ready totals.",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "spec": {
+            "title": "Room spec",
+            "type": "object",
+            "description": "The room and everything in it. See the README for the full schema. Minimum: `room` {width, depth, height} and one `cabinet_runs[]` entry with `wall`, `start`, `end`, and `appliances[]` of {type, at, width}. Walls are north/south/east/west; positions run left to right along each wall as seen from inside the room.",
+            "editor": "json",
+            "prefill": {
+                "title": "Galley kitchen",
+                "room": {
+                    "width": 4.2,
+                    "depth": 3.6,
+                    "height": 2.7
+                },
+                "style": {
+                    "counter": "white_quartz"
+                },
+                "windows": [
+                    {
+                        "wall": "north",
+                        "u0": 1.75,
+                        "u1": 2.85,
+                        "z0": 1.05,
+                        "z1": 2.0
+                    }
+                ],
+                "openings": [
+                    {
+                        "wall": "south",
+                        "u0": 0.4,
+                        "u1": 1.3
+                    }
+                ],
+                "cabinet_runs": [
+                    {
+                        "wall": "north",
+                        "start": 0.0,
+                        "end": 4.2,
+                        "uppers": true,
+                        "appliances": [
+                            {
+                                "type": "fridge",
+                                "at": 0.0,
+                                "width": 0.9
+                            },
+                            {
+                                "type": "sink",
+                                "at": 1.9,
+                                "width": 0.8
+                            },
+                            {
+                                "type": "dishwasher",
+                                "at": 2.7,
+                                "width": 0.6
+                            },
+                            {
+                                "type": "range",
+                                "at": 3.3,
+                                "width": 0.76
+                            }
+                        ]
+                    }
+                ],
+                "island": {
+                    "x": 2.1,
+                    "y": 1.5,
+                    "width": 2.0,
+                    "depth": 0.9,
+                    "pendants": 2,
+                    "stools": 3
+                }
+            },
+            "default": {
+                "title": "Galley kitchen",
+                "room": {
+                    "width": 4.2,
+                    "depth": 3.6,
+                    "height": 2.7
+                },
+                "style": {
+                    "counter": "white_quartz"
+                },
+                "windows": [
+                    {
+                        "wall": "north",
+                        "u0": 1.75,
+                        "u1": 2.85,
+                        "z0": 1.05,
+                        "z1": 2.0
+                    }
+                ],
+                "openings": [
+                    {
+                        "wall": "south",
+                        "u0": 0.4,
+                        "u1": 1.3
+                    }
+                ],
+                "cabinet_runs": [
+                    {
+                        "wall": "north",
+                        "start": 0.0,
+                        "end": 4.2,
+                        "uppers": true,
+                        "appliances": [
+                            {
+                                "type": "fridge",
+                                "at": 0.0,
+                                "width": 0.9
+                            },
+                            {
+                                "type": "sink",
+                                "at": 1.9,
+                                "width": 0.8
+                            },
+                            {
+                                "type": "dishwasher",
+                                "at": 2.7,
+                                "width": 0.6
+                            },
+                            {
+                                "type": "range",
+                                "at": 3.3,
+                                "width": 0.76
+                            }
+                        ]
+                    }
+                ],
+                "island": {
+                    "x": 2.1,
+                    "y": 1.5,
+                    "width": 2.0,
+                    "depth": 0.9,
+                    "pendants": 2,
+                    "stools": 3
+                }
+            }
+        },
+        "units": {
+            "title": "Units used in the spec",
+            "type": "string",
+            "description": "Every length in `spec` is read in these units and converted to metres internally. Output widths are always in inches, summary totals in feet.",
+            "editor": "select",
+            "enum": [
+                "m",
+                "ft",
+                "in"
+            ],
+            "enumTitles": [
+                "Metres",
+                "Feet",
+                "Inches"
+            ],
+            "default": "m"
+        },
+        "title": {
+            "title": "Plan title",
+            "type": "string",
+            "description": "Printed on the plan. Defaults to `spec.title` or `spec.name`.",
+            "editor": "textfield",
+            "nullable": true
+        },
+        "validateOnly": {
+            "title": "Validate only",
+            "type": "boolean",
+            "description": "Check the spec and return errors and warnings without building anything. Not charged.",
+            "default": false
+        }
+    },
+    "required": [
+        "spec"
+    ]
+}

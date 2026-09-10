@@ -1,0 +1,43 @@
+{
+  "name": "nashville_sweetbriar_twostory",
+  "title": "Belmont Two-Story Kitchen",
+  "_source": "Public record example. 1320 Sweetbriar Ave, Nashville 37212 (Belmont / Hillsboro Village). Davidson County assessor: 2012 two-story frame house, 3,426 sq ft, 4 bed 3.5 bath, appraised $2,007,600. Metro permit 9/2026, Sapphire Development, $100,000: interior renovation of existing kitchen, relocating gas range and moving the island, new cabinetry. Large open kitchen typical for the house type; dimensions not measured.",
+  "room": { "width": 4.9, "depth": 4.3, "height": 2.9 },
+  "style": {
+    "cabinet_color": [0.90, 0.88, 0.83],
+    "island_color": [0.09, 0.17, 0.13],
+    "wall_color": [0.95, 0.94, 0.91],
+    "handle": "brushed_brass",
+    "door_style": "shaker",
+    "counter": "marble",
+    "floor": "oak"
+  },
+  "windows": [
+    { "wall": "north", "u0": 1.55, "u1": 3.05, "z0": 1.05, "z1": 2.35 }
+  ],
+  "openings": [
+    { "wall": "west", "u0": 0.4, "u1": 1.6, "z1": 2.3 }
+  ],
+  "cabinet_runs": [
+    {
+      "wall": "north",
+      "start": 0.0,
+      "end": 4.9,
+      "uppers": true,
+      "appliances": [
+        { "type": "fridge", "at": 0.0, "width": 0.92 },
+        { "type": "pantry", "at": 0.92, "width": 0.6 },
+        { "type": "sink", "at": 1.9, "width": 0.84 },
+        { "type": "dishwasher", "at": 2.74, "width": 0.6 },
+        { "type": "range", "at": 3.6, "width": 0.91 }
+      ]
+    }
+  ],
+  "island": { "x": 2.45, "y": 1.75, "width": 2.6, "depth": 1.1, "pendants": 3, "stools": 3 },
+  "lighting": { "sun_elevation_deg": 30, "sun_azimuth_deg": 20, "sun_strength": 4.0, "fill_strength": 40, "sky_strength": 0.04 },
+  "cameras": [
+    { "name": "corner", "pos": [4.5, 0.35, 1.6], "look_at": [1.6, 3.6, 0.95], "focal": 20 },
+    { "name": "island", "pos": [2.45, 0.2, 1.75], "look_at": [2.45, 4.0, 0.95], "focal": 24 },
+    { "name": "sink_detail", "pos": [2.3, 2.1, 1.5], "look_at": [2.3, 4.3, 1.25], "focal": 35 }
+  ]
+}

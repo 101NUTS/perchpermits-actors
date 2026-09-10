@@ -1,0 +1,200 @@
+{
+    "title": "Nashville Building Permits (Enriched)",
+    "description": "Search Davidson County, TN building permits and applications, optionally joined to the ePermits contractor, owner, sub-trade permit, and inspection data. Or rank the contractors behind the matching permits.",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "mode": {
+            "title": "Mode",
+            "type": "string",
+            "description": "`search` returns one row per permit. `contractors` returns one row per contractor, ranked by permit count and valuation across the matching permits.",
+            "editor": "select",
+            "enum": [
+                "search",
+                "contractors"
+            ],
+            "enumTitles": [
+                "Search permits",
+                "Rank contractors"
+            ],
+            "default": "search"
+        },
+        "datasets": {
+            "title": "Datasets",
+            "type": "string",
+            "description": "`issued` = permits already issued (date filter applies to issue date). `applications` = filed but not yet issued, an early signal (date filter applies to filing date). `both` merges them.",
+            "editor": "select",
+            "enum": [
+                "both",
+                "issued",
+                "applications"
+            ],
+            "enumTitles": [
+                "Issued + applications",
+                "Issued only",
+                "Applications only"
+            ],
+            "default": "both"
+        },
+        "dateFrom": {
+            "title": "Date from",
+            "type": "string",
+            "description": "ISO date (YYYY-MM-DD). Defaults to 90 days ago when no other narrowing filter is given.",
+            "editor": "datepicker",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+            "nullable": true
+        },
+        "dateTo": {
+            "title": "Date to",
+            "type": "string",
+            "description": "ISO date (YYYY-MM-DD), inclusive. Defaults to today.",
+            "editor": "datepicker",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+            "nullable": true
+        },
+        "scope": {
+            "title": "Scope of work",
+            "type": "string",
+            "description": "Preset classifier applied to the permit type, subtype, and description. Presets strip boilerplate (for example 'not to add a second kitchen') before matching.",
+            "editor": "select",
+            "enum": [
+                "any",
+                "kitchen",
+                "bathroom",
+                "interior_remodel",
+                "addition",
+                "new_construction",
+                "adu",
+                "roofing",
+                "pool",
+                "fence",
+                "deck",
+                "garage",
+                "demolition",
+                "solar",
+                "hvac",
+                "electrical",
+                "plumbing",
+                "foundation",
+                "windows_doors",
+                "commercial",
+                "multifamily",
+                "short_term_rental",
+                "sign"
+            ],
+            "default": "any"
+        },
+        "keyword": {
+            "title": "Keyword in description",
+            "type": "string",
+            "description": "Free-text substring matched against the permit description on the server (case-insensitive). Combine with a scope or use alone.",
+            "editor": "textfield",
+            "nullable": true
+        },
+        "address": {
+            "title": "Address contains",
+            "type": "string",
+            "description": "Substring of the street address, e.g. `1234 WOODLAND ST`. Metro stores addresses upper-case without unit numbers.",
+            "editor": "textfield",
+            "nullable": true
+        },
+        "parcel": {
+            "title": "Parcel ID",
+            "type": "string",
+            "description": "Exact Davidson County parcel ID, e.g. `08309024300`.",
+            "editor": "textfield",
+            "nullable": true
+        },
+        "zips": {
+            "title": "ZIP codes",
+            "type": "array",
+            "description": "Restrict to these ZIP codes.",
+            "editor": "stringList",
+            "nullable": true
+        },
+        "applicant": {
+            "title": "Applicant contains",
+            "type": "string",
+            "description": "Substring of the applicant / contact on the open dataset (the paperwork filer, often the contractor).",
+            "editor": "textfield",
+            "nullable": true
+        },
+        "permitNumber": {
+            "title": "Permit number",
+            "type": "string",
+            "description": "Exact permit number, e.g. `2026045225`. Use with `enrich` for a full case lookup.",
+            "editor": "textfield",
+            "nullable": true
+        },
+        "permitType": {
+            "title": "Permit type contains",
+            "type": "string",
+            "description": "Substring of Metro's permit type or subtype description, e.g. `Residential - Rehab`, `Swimming Pool`, `Demolition`.",
+            "editor": "textfield",
+            "nullable": true
+        },
+        "minValuation": {
+            "title": "Minimum declared cost (USD)",
+            "type": "integer",
+            "editor": "number",
+            "minimum": 0,
+            "nullable": true,
+            "description": "Only permits with a declared construction cost at or above this amount."
+        },
+        "maxValuation": {
+            "title": "Maximum declared cost (USD)",
+            "type": "integer",
+            "editor": "number",
+            "minimum": 0,
+            "nullable": true,
+            "description": "Only permits with a declared construction cost at or below this amount."
+        },
+        "residentialOnly": {
+            "title": "Residential only",
+            "type": "boolean",
+            "description": "Drop permits whose type or description reads as commercial.",
+            "default": false
+        },
+        "maxRecords": {
+            "title": "Max records",
+            "type": "integer",
+            "description": "Cap on rows returned (permits in search mode, contractors in contractors mode).",
+            "editor": "number",
+            "minimum": 1,
+            "maximum": 5000,
+            "default": 200
+        },
+        "enrich": {
+            "title": "Enrich from ePermits",
+            "type": "boolean",
+            "description": "Join each permit to Metro ePermits: licensed contractor (name, license, phone), property owner, required sub-trade permits with satisfied/outstanding status, and inspection stage. About one second per permit, politely rate-limited. Billed as `enriched-permit` instead of `permit`.",
+            "default": false
+        },
+        "enrichMaxAgeDays": {
+            "title": "Reuse cached enrichment younger than (days)",
+            "type": "integer",
+            "editor": "number",
+            "minimum": 0,
+            "maximum": 90,
+            "default": 7,
+            "description": "Enrichment fetched more recently than this is served from cache instead of re-querying ePermits. Set 0 to always refetch."
+        },
+        "maxPermitsScanned": {
+            "title": "Max permits to rank over",
+            "type": "integer",
+            "description": "Contractors mode only: how many matching permits (newest first) feed the ranking. Not billed; only the contractor rows are.",
+            "editor": "number",
+            "minimum": 10,
+            "maximum": 20000,
+            "default": 2000
+        },
+        "minPermits": {
+            "title": "Min permits per contractor",
+            "type": "integer",
+            "description": "Contractors mode only: hide contractors with fewer matching permits than this.",
+            "editor": "number",
+            "minimum": 1,
+            "default": 1
+        }
+    }
+}

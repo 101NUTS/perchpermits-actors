@@ -1,0 +1,33 @@
+{
+    "actorSpecification": 1,
+    "fields": {},
+    "views": {
+        "permits": {
+            "title": "Permits",
+            "transformation": {
+                "fields": ["permit_number", "status", "date_issued", "date_entered", "permit_type", "description", "address", "zip", "valuation", "applicant", "scope_tags", "enrichment.contractor.company", "enrichment.contractor.license", "enrichment.owner.name", "enrichment.inspection_stage", "enrichment.outstanding_sub_trades"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "permit_number": {"label": "Permit"},
+                    "status": {"label": "Status"},
+                    "date_issued": {"label": "Issued"},
+                    "date_entered": {"label": "Filed"},
+                    "permit_type": {"label": "Type"},
+                    "description": {"label": "Description"},
+                    "address": {"label": "Address"},
+                    "zip": {"label": "ZIP"},
+                    "valuation": {"label": "Valuation", "format": "number"},
+                    "applicant": {"label": "Applicant"},
+                    "scope_tags": {"label": "Scopes"},
+                    "enrichment.contractor.company": {"label": "Licensed contractor"},
+                    "enrichment.contractor.license": {"label": "License"},
+                    "enrichment.owner.name": {"label": "Owner"},
+                    "enrichment.inspection_stage": {"label": "Inspection stage"},
+                    "enrichment.outstanding_sub_trades": {"label": "Outstanding sub-trades"}
+                }
+            }
+        }
+    }
+}

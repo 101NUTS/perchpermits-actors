@@ -1,0 +1,43 @@
+{
+  "name": "nashville_anchorage_ranch",
+  "title": "1960 Brick Ranch Kitchen",
+  "_source": "Public record example. 5324 Anchorage Dr, Nashville 37220. Davidson County assessor: 1960 one-story brick ranch, 2,227 sq ft, 1,536 sq ft base footprint, full basement, 3 bed 1.5 bath, sold 6/2026 for $840,000. Metro permit 8/2026, Victory Builders LLC, $70,000: remodel kitchen, new cabinets and countertops, remove section of load-bearing wall. Kitchen dimensions are typical for the house type, not measured.",
+  "room": { "width": 3.6, "depth": 3.4, "height": 2.44 },
+  "style": {
+    "cabinet_color": [0.88, 0.88, 0.85],
+    "island_color": [0.10, 0.14, 0.22],
+    "wall_color": [0.93, 0.92, 0.89],
+    "handle": "black",
+    "door_style": "shaker"
+  },
+  "windows": [
+    { "wall": "north", "u0": 1.35, "u1": 2.40, "z0": 1.05, "z1": 1.95 }
+  ],
+  "openings": [
+    { "wall": "west", "u0": 0.3, "u1": 1.2, "z1": 2.05 }
+  ],
+  "cabinet_runs": [
+    {
+      "wall": "north",
+      "start": 0.0,
+      "end": 3.6,
+      "uppers": true,
+      "appliances": [
+        { "type": "fridge", "at": 0.0, "width": 0.9 },
+        { "type": "dishwasher", "at": 0.9, "width": 0.6 },
+        { "type": "sink", "at": 1.5, "width": 0.76 },
+        { "type": "range", "at": 2.7, "width": 0.76 }
+      ]
+    }
+  ],
+  "island": { "x": 1.8, "y": 1.4, "width": 1.6, "depth": 0.9, "pendants": 2, "stools": 2 },
+  "lighting": { "sun_elevation_deg": 30, "sun_azimuth_deg": 20, "sun_strength": 4.0, "fill_strength": 25, "sky_strength": 0.04 },
+  "elevations": ["north"],
+  "hero": "corner",
+  "cameras": [
+    { "name": "corner", "pos": [3.3, 0.3, 1.5], "look_at": [1.0, 3.0, 0.95], "focal": 18 },
+    { "name": "island", "pos": [1.8, 0.12, 1.65], "look_at": [1.8, 3.2, 0.9], "focal": 20 },
+    { "name": "sink_detail", "pos": [1.9, 1.6, 1.4], "look_at": [1.9, 3.4, 1.2], "focal": 32 },
+    { "name": "pano", "type": "pano", "pos": [1.8, 1.0, 1.5], "look_at": [1.8, 3.4, 1.5] }
+  ]
+}

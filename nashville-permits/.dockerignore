@@ -1,0 +1,10 @@
+.venv
+.cache
+storage
+apify_storage
+__pycache__
+*.pyc
+.git
+tests
+docs
+HANDOFF_selling_to_agents.md

@@ -1,0 +1,53 @@
+{
+  "name": "test_bathroom",
+  "title": "Hall Bathroom Concept",
+  "_source": "Synthetic test: 8x10 hall bath with alcove tub, toilet, 48 in. vanity.",
+  "room": { "width": 2.5, "depth": 3.0, "height": 2.44 },
+  "style": {
+    "cabinet_color": [0.55, 0.62, 0.55],
+    "wall_color": [0.94, 0.94, 0.92],
+    "handle": "black",
+    "door_style": "shaker",
+    "counter": "white_quartz",
+    "floor": "tile"
+  },
+  "windows": [
+    { "wall": "north", "u0": 0.35, "u1": 1.15, "z0": 1.35, "z1": 2.0 }
+  ],
+  "openings": [
+    { "wall": "south", "u0": 1.5, "u1": 2.3, "z1": 2.05 }
+  ],
+  "cabinet_runs": [
+    {
+      "wall": "north",
+      "kind": "bath",
+      "start": 0.0,
+      "end": 2.5,
+      "uppers": false,
+      "appliances": [
+        { "type": "tub", "at": 0.0, "width": 1.52 },
+        { "type": "toilet", "at": 1.85, "width": 0.5 }
+      ]
+    },
+    {
+      "wall": "west",
+      "kind": "bath",
+      "start": 0.0,
+      "end": 3.0,
+      "uppers": false,
+      "appliances": [
+        { "type": "vanity", "at": 0.85, "width": 1.22 }
+      ]
+    }
+  ],
+  "lighting": { "sun_elevation_deg": 35, "sun_azimuth_deg": 20, "sun_strength": 3.0, "fill_strength": 20, "sky_strength": 0.04 },
+  "elevations": ["west"],
+  "hero": "corner",
+  "cameras": [
+    { "name": "corner", "pos": [2.25, 0.35, 1.5], "look_at": [0.5, 2.7, 0.9], "focal": 17 },
+    { "name": "vanity", "pos": [2.2, 1.45, 1.35], "look_at": [0.0, 1.45, 1.05], "focal": 22 },
+    { "name": "tub", "pos": [1.6, 0.5, 1.45], "look_at": [0.7, 3.0, 0.8], "focal": 20 },
+    { "name": "pano", "type": "pano", "pos": [1.5, 1.2, 1.45], "look_at": [0.7, 3.0, 1.45] }
+  ],
+  "walkthrough": { "path": [[2.2, 0.4, 1.55], [1.6, 0.8, 1.5], [1.1, 1.3, 1.45]], "look_at": [0.6, 2.8, 0.9] }
+}

@@ -1,0 +1,15 @@
+{
+    "actorSpecification": 1,
+    "name": "kitchen-floor-plan-takeoff",
+    "title": "Kitchen & Bath Floor Plan + Cabinet Takeoff from JSON [$0.25/plan]",
+    "description": "Kitchen and bathroom floor plan (SVG), cabinet takeoff (CSV, inches), and quote totals (linear feet, countertop sq ft, appliances) from one JSON room spec. Metres, feet, or inches. Validates the layout and explains errors. No CAD, no rendering, two seconds. Try it free with your Apify credit; then $0.25 per plan.",
+    "version": "0.1",
+    "buildTag": "latest",
+    "dockerfile": "../Dockerfile",
+    "readme": "../README.md",
+    "input": "./input_schema.json",
+    "output": "./output_schema.json",
+    "minMemoryMbytes": 128,
+    "maxMemoryMbytes": 512,
+    "defaultMemoryMbytes": 256
+}
