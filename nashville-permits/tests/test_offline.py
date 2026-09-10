@@ -125,6 +125,17 @@ class DriftGuardTests(unittest.TestCase):
         self.assertIn("contractors", issues[0])
         self.assertIn("licenseNumber", issues[0])
 
+    def test_null_field_omitted_from_first_row_is_not_drift(self):
+        # OData drops null fields from a row; seen live 2026-09-10 on case 4948580,
+        # where the first condition had no dateCompleted and the guard aborted the run.
+        raw = json.loads((FIX / "epermits_4734385.json").read_text(encoding="utf-8"))
+        first = raw["conditions"]["value"][0]
+        first.pop("dateCompleted")
+        self.assertEqual(epermits.shape_issues(raw), [])
+        for r in raw["conditions"]["value"]:
+            r.pop("dateCompleted", None)
+        self.assertEqual(epermits.shape_issues(raw), ["conditions: fields missing: dateCompleted"])
+
     def test_transport_failure_is_not_a_shape_issue(self):
         raw = {ep: None for ep in epermits.ENDPOINTS}
         self.assertEqual(epermits.shape_issues(raw), [])

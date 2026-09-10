@@ -139,7 +139,14 @@ def shape_issues(raw: dict) -> list[str]:
         rows = data["value"]
         if not rows:
             continue
-        missing = [f for f in fields if f not in rows[0]]
+        # OData omits a field from a row when its value is null, so a field is
+        # only "gone" when no row in the response carries it. Checking rows[0]
+        # alone raised false drift alarms whenever the first condition or task
+        # happened to be incomplete (seen live 2026-09-10, case 4948580).
+        present = set()
+        for r in rows:
+            present.update(r.keys())
+        missing = [f for f in fields if f not in present]
         if missing:
             issues.append(f"{ep}: fields missing: {', '.join(missing)}")
     return issues
