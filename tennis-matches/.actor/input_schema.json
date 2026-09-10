@@ -1,0 +1,109 @@
+{
+    "title": "Tennis Matches + Odds, Form & Head-to-Head",
+    "description": "List ATP and WTA matches for a day (schedule or finished results), optionally joined to each match's detail page: bookmaker odds, rankings, form, surface record, and head-to-head.",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "mode": {
+            "title": "Mode",
+            "type": "string",
+            "description": "`schedule` lists the day's upcoming, live, and completed matches. `results` lists only finished matches for the day. `live` lists only matches in progress right now, with the current set scores (a snapshot; run again for an update). `live` ignores `date` and `days`.",
+            "editor": "select",
+            "enum": ["schedule", "results", "live"],
+            "enumTitles": ["Schedule (upcoming + live + finished today)", "Results (finished only)", "Live (in progress now)"],
+            "default": "schedule"
+        },
+        "date": {
+            "title": "Date",
+            "type": "string",
+            "description": "ISO date (YYYY-MM-DD). Defaults to today (UTC). Dates are the site's Central European calendar day.",
+            "editor": "datepicker",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+            "nullable": true
+        },
+        "days": {
+            "title": "Days",
+            "type": "integer",
+            "description": "How many consecutive days to list, starting at `date`. 1 to 14.",
+            "default": 1,
+            "minimum": 1,
+            "maximum": 14
+        },
+        "tour": {
+            "title": "Tour",
+            "type": "string",
+            "description": "ATP (men), WTA (women), or both. Includes Challenger, ITF, and UTR events listed under each tour.",
+            "editor": "select",
+            "enum": ["all", "atp", "wta"],
+            "enumTitles": ["ATP + WTA", "ATP", "WTA"],
+            "default": "all"
+        },
+        "doubles": {
+            "title": "Doubles instead of singles",
+            "type": "boolean",
+            "description": "Return doubles matches instead of singles.",
+            "default": false
+        },
+        "tournament": {
+            "title": "Tournament contains",
+            "type": "string",
+            "description": "Case-insensitive substring of the tournament name, e.g. `US Open`, `Challenger`, `Wimbledon`.",
+            "editor": "textfield",
+            "nullable": true
+        },
+        "player": {
+            "title": "Player contains",
+            "type": "string",
+            "description": "Case-insensitive substring of either player's listed name, e.g. `Alcaraz`.",
+            "editor": "textfield",
+            "nullable": true
+        },
+        "status": {
+            "title": "Status",
+            "type": "string",
+            "description": "Keep only matches in this state. Leave empty for all.",
+            "editor": "select",
+            "enum": ["", "scheduled", "in_progress", "finished"],
+            "enumTitles": ["Any", "Scheduled", "In progress", "Finished"],
+            "default": "",
+            "nullable": true
+        },
+        "maxMatches": {
+            "title": "Max matches",
+            "type": "integer",
+            "description": "Stop after this many matches. Each enriched match is one extra request (about one second).",
+            "default": 50,
+            "minimum": 1,
+            "maximum": 2000
+        },
+        "enrich": {
+            "title": "Enrich each match",
+            "type": "boolean",
+            "description": "Fetch every match's detail page: round, surface, rankings, this year's W/L by surface, head-to-head history, 15+ bookmakers' current and opening odds, both players' latest matches and form. Charged as `enriched-match` instead of `match`.",
+            "default": true
+        },
+        "latestMatches": {
+            "title": "Latest matches per player",
+            "type": "integer",
+            "description": "How many recent matches to include for each player when enriching (1 to 30).",
+            "default": 10,
+            "minimum": 1,
+            "maximum": 30
+        },
+        "oddsHistory": {
+            "title": "Include odds movement history",
+            "type": "boolean",
+            "description": "Add every recorded odds change per bookmaker (timestamped, site time). Larger rows.",
+            "default": false
+        },
+        "requestDelaySeconds": {
+            "title": "Delay between requests (seconds)",
+            "type": "number",
+            "description": "Politeness delay toward the source site. Lower is faster but risks throttling.",
+            "default": 0.4,
+            "minimum": 0.1,
+            "maximum": 5,
+            "sectionCaption": "Advanced"
+        }
+    }
+}

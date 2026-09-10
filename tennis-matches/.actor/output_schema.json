@@ -1,0 +1,19 @@
+{
+    "actorOutputSchemaVersion": 1,
+    "title": "Tennis Matches + Odds, Form & Head-to-Head output",
+    "description": "One dataset row per match. Field reference is in the README.",
+    "properties": {
+        "results": {
+            "type": "string",
+            "title": "Matches as JSON",
+            "description": "Every match from the run with the optional `enrichment` block (odds, form, head-to-head).",
+            "template": "{{links.apiDefaultDatasetUrl}}?format=json&clean=true"
+        },
+        "resultsCsv": {
+            "type": "string",
+            "title": "Matches as CSV",
+            "description": "The same rows flattened with dot-separated column names.",
+            "template": "{{links.apiDefaultDatasetUrl}}?format=csv&clean=true"
+        }
+    }
+}

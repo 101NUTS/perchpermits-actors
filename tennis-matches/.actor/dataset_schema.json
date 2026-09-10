@@ -1,0 +1,37 @@
+{
+    "actorSpecification": 1,
+    "fields": {},
+    "views": {
+        "matches": {
+            "title": "Matches",
+            "transformation": {
+                "fields": ["date", "start_utc", "tournament.name", "tournament.tour", "round", "surface", "home.name", "away.name", "odds.home", "odds.away", "status", "result.score", "enrichment.home.singles_rank", "enrichment.away.singles_rank", "enrichment.home.form.sequence", "enrichment.away.form.sequence", "enrichment.h2h.home_wins", "enrichment.h2h.away_wins", "enrichment.bookmaker_count", "match_url"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "date": {"label": "Date"},
+                    "start_utc": {"label": "Start (UTC)"},
+                    "tournament.name": {"label": "Tournament"},
+                    "tournament.tour": {"label": "Tour"},
+                    "round": {"label": "Round"},
+                    "surface": {"label": "Surface"},
+                    "home.name": {"label": "Player 1"},
+                    "away.name": {"label": "Player 2"},
+                    "odds.home": {"label": "Odds 1", "format": "number"},
+                    "odds.away": {"label": "Odds 2", "format": "number"},
+                    "status": {"label": "Status"},
+                    "result.score": {"label": "Score"},
+                    "enrichment.home.singles_rank": {"label": "Rank 1", "format": "number"},
+                    "enrichment.away.singles_rank": {"label": "Rank 2", "format": "number"},
+                    "enrichment.home.form.sequence": {"label": "Form 1"},
+                    "enrichment.away.form.sequence": {"label": "Form 2"},
+                    "enrichment.h2h.home_wins": {"label": "H2H 1", "format": "number"},
+                    "enrichment.h2h.away_wins": {"label": "H2H 2", "format": "number"},
+                    "enrichment.bookmaker_count": {"label": "Books", "format": "number"},
+                    "match_url": {"label": "Source", "format": "link"}
+                }
+            }
+        }
+    }
+}

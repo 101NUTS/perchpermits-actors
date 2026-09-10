@@ -1,0 +1,18 @@
+{
+    "actorSpecification": 1,
+    "name": "tennis-matches-odds-form",
+    "title": "Tennis Matches + Odds, Form & Head-to-Head [$0.02/match]",
+    "description": "ATP and WTA matches for any day, live or finished, with 15+ bookmakers' opening and current odds, rankings, last-10 form, surface record, and head-to-head in one JSON row per match. Filter by tour, tournament, player. Built for betting models and AI agents. $0.02 per enriched match.",
+    "version": "0.1",
+    "buildTag": "latest",
+    "dockerfile": "../Dockerfile",
+    "readme": "../README.md",
+    "input": "./input_schema.json",
+    "output": "./output_schema.json",
+    "storages": {
+        "dataset": "./dataset_schema.json"
+    },
+    "minMemoryMbytes": 256,
+    "maxMemoryMbytes": 1024,
+    "defaultMemoryMbytes": 512
+}
