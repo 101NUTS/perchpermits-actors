@@ -1,5 +1,18 @@
 <!doctype html>
 <html lang="en">
+<!--
+  Courtline is a placeholder brand. This page is yours to change.
+
+  Everything between <body> and the <script> at the bottom is plain HTML and
+  CSS: rename the brand, rewrite the hero, change the colours in :root, edit
+  or delete the Help section, add your logo. Sections you will want to touch
+  are marked with an EDIT comment.
+
+  Leave the <script> block alone unless you know what you are doing: the server
+  depends on the element ids (tokenInput, buyBtn, searchForm, results, ...)
+  and on the four API calls in it. Changing the search form fields also needs
+  a matching change to INPUT_FIELDS in lib.js; see the README.
+-->
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -160,6 +173,7 @@
 </style>
 </head>
 <body>
+<!-- EDIT: brand name, logo mark, nav links -->
 <header class="top">
   <div class="wrap">
     <a class="brand" href="#"><span class="mark">C</span>Courtline</a>
@@ -174,6 +188,7 @@
 </header>
 
 <main class="wrap">
+  <!-- EDIT: headline, pitch, and the fact pills; keep the numbers in step with .env (PACK_CREDITS, PACK_PRICE_CENTS, CREDITS_PER_ROW) -->
   <section class="hero">
     <h1>Every ATP and WTA match, priced by 15+ books, in one search.</h1>
     <p class="lead">Opening and current odds, fair probabilities with the margin removed, last-ten form, surface record, and the head-to-head. Buy credits once, spend them when you need them. Nothing expires.</p>
@@ -185,6 +200,7 @@
     </div>
   </section>
 
+  <!-- KEEP: search form. Field ids match INPUT_FIELDS in lib.js; add or remove fields in both places -->
   <section class="card search" id="search">
     <form id="searchForm">
       <div class="grid">
@@ -230,6 +246,7 @@
       </div>
     </section>
 
+    <!-- EDIT: pack size and price wording; the real numbers come from .env -->
     <section class="card pad" id="pricing">
       <h2>Credits</h2>
       <div class="price"><span class="big">$20</span><span class="per">for 200 credits, one time</span></div>
@@ -245,6 +262,7 @@
     </section>
   </div>
 
+  <!-- EDIT or DELETE: the three-step explainer -->
   <section id="how">
     <div class="steps">
       <div class="card step"><div class="n">1</div><h3>Buy a credit pack</h3><p>Checkout takes a minute. You come back with a key.</p></div>
@@ -259,6 +277,7 @@
     <div id="resultsList"></div>
   </section>
 
+  <!-- EDIT or DELETE: customer help. The refund line is a placeholder policy; make it match what you actually offer -->
   <section class="card pad" id="help" style="margin-top:20px">
     <h2>Help</h2>
     <div class="steps" style="margin-top:12px">
@@ -283,12 +302,14 @@
     </div>
   </section>
 
+  <!-- EDIT: footer. Keep a data credit and the odds disclaimer if your jurisdiction expects one -->
   <footer>
     <span>Data from the <a href="https://apify.com/perchpermits/tennis-matches-odds-form">Tennis Matches + Odds actor</a> on Apify. Odds are for information only.</span>
-    <span>Courtline is an independent storefront.</span>
+    <span>Courtline is an independent storefront.</span> <!-- EDIT: your name here -->
   </footer>
 </main>
 
+<!-- KEEP: the page logic. The server depends on the ids and the four API calls below. The example row at the end may be replaced with one from your own actor. -->
 <script>
 (function () {
   const $ = (id) => document.getElementById(id);

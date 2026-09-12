@@ -10,7 +10,20 @@ A small Node.js storefront that resells rows from a pay-per-event Apify actor fo
 This is a starter, not a product. Read the limitations section before taking real money.
 
 
-The page ships as a finished storefront named "Courtline" (a placeholder brand): a header, a hero, the search form, key and credit cards, a three-step explainer, and result cards with fair-probability bars. Light and dark follow the visitor's system setting. Rename it and restyle it in `public/index.html`; the JavaScript at the bottom of that file is the only part the server depends on (element ids and the four API calls).
+The page ships as a finished storefront named "Courtline", a placeholder brand. It is one HTML file, `public/index.html`, with no build step, so you edit it and reload.
+
+## Make it yours
+
+Open `public/index.html`. Every section you are expected to change is marked with an `<!-- EDIT -->` comment; the two marked `KEEP` are the search form ids and the script at the bottom, which the server depends on.
+
+1. **Brand.** Replace "Courtline" in the header, the `<title>`, and the footer. Swap the green square for your logo.
+2. **Words.** Rewrite the headline and pitch in the hero for your niche. Keep the numbers in the fact pills in step with `.env`.
+3. **Colours.** The palette is the `:root` block at the top of the `<style>`: one set for light, one for dark. Change `--accent` and the rest follow.
+4. **Help section.** Written for your customers: what the key is, how credits are spent, that they never expire, where the data comes from, refunds. Edit it or delete the whole `<section id="help">`. The refund line is a placeholder policy; make it match what you actually offer.
+5. **Explainer and footer.** Edit or delete the three steps. In the footer keep a data credit and the odds disclaimer if your jurisdiction expects one.
+6. **Example row.** The result card shown before the first search is a real archived match; replace it with a row from your own actor, or delete the `render([...], true)` call at the end of the script to show nothing.
+
+Do not rename the element ids in the form or the key and buy sections, and do not change the four `fetch` calls in the script. To change which fields the search sends, edit both the form and `INPUT_FIELDS` in `lib.js` (see below).
 
 ## How it works
 
