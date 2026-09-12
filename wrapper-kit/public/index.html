@@ -3,135 +3,193 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tennis odds lookup</title>
+<title>Courtline · tennis odds, form and head-to-head</title>
 <style>
   :root {
     color-scheme: light dark;
-    --bg: #ffffff;
-    --fg: #1a1a1a;
-    --muted: #666;
-    --border: #d0d0d0;
-    --accent: #1f5fbf;
-    --accent-fg: #fff;
-    --panel: #f6f6f6;
+    --bg: #f5f6f8;
+    --bg2: #ffffff;
+    --panel: #ffffff;
+    --line: #e2e5ea;
+    --fg: #121722;
+    --muted: #5d6675;
+    --accent: #1f9d55;
+    --accent-dim: #e6f6ec;
+    --accent-fg: #ffffff;
+    --blue: #2f66c9;
+    --amber: #b7791f;
+    --red: #c0392b;
+    --shadow: 0 1px 2px rgba(16, 24, 40, .06), 0 8px 24px rgba(16, 24, 40, .06);
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #141414;
-      --fg: #e8e8e8;
-      --muted: #9a9a9a;
-      --border: #3a3a3a;
-      --accent: #5b8ff0;
-      --accent-fg: #0b0b0b;
-      --panel: #1e1e1e;
+      --bg: #0b0e14;
+      --bg2: #0f131b;
+      --panel: #111520;
+      --line: #262c38;
+      --fg: #eceef2;
+      --muted: #969eac;
+      --accent: #5ed684;
+      --accent-dim: #1a3024;
+      --accent-fg: #0b0e14;
+      --blue: #5884dc;
+      --amber: #f0b23c;
+      --red: #e86060;
+      --shadow: 0 1px 2px rgba(0,0,0,.4), 0 12px 32px rgba(0,0,0,.35);
     }
   }
   * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
   body {
     margin: 0;
-    padding: 24px 16px 64px;
     background: var(--bg);
     color: var(--fg);
-    font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font: 15px/1.55 Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
   }
-  main { max-width: 1100px; margin: 0 auto; }
-  h1 { font-size: 22px; margin: 0 0 4px; }
-  h2 { font-size: 16px; margin: 0 0 12px; }
-  p { margin: 0 0 12px; }
-  .muted { color: var(--muted); }
-  section {
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 16px;
-    margin: 16px 0;
+  a { color: var(--blue); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+  header.top {
+    position: sticky; top: 0; z-index: 5;
+    background: color-mix(in srgb, var(--bg2) 88%, transparent);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  header.top .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 17px; color: var(--fg); letter-spacing: -.01em; }
+  .brand .mark { width: 28px; height: 28px; border-radius: 8px; background: var(--accent); display: grid; place-items: center; color: var(--accent-fg); font-weight: 800; font-size: 14px; }
+  nav { display: flex; gap: 22px; align-items: center; font-size: 14px; }
+  nav a { color: var(--muted); }
+  nav a:hover { color: var(--fg); text-decoration: none; }
+  .pill { display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; border-radius: 999px; border: 1px solid var(--line); background: var(--panel); font-size: 13px; color: var(--muted); }
+  .pill b { color: var(--fg); font-weight: 600; }
+
+  .hero { padding: 56px 0 28px; }
+  .hero h1 { font-size: 40px; line-height: 1.12; letter-spacing: -.02em; margin: 0 0 12px; max-width: 760px; }
+  .hero p.lead { font-size: 17px; color: var(--muted); margin: 0 0 24px; max-width: 680px; }
+  .facts { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 8px; }
+
+  .card {
     background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    box-shadow: var(--shadow);
   }
+  .search { padding: 22px; margin-top: 8px; }
+  .grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; }
+  @media (max-width: 900px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+  label { display: block; font-size: 12.5px; color: var(--muted); margin-bottom: 6px; font-weight: 500; letter-spacing: .01em; }
+  input, select {
+    font: inherit; width: 100%;
+    padding: 10px 12px;
+    border-radius: 9px;
+    border: 1px solid var(--line);
+    background: var(--bg2);
+    color: var(--fg);
+    outline: none;
+    transition: border-color .12s, box-shadow .12s;
+  }
+  input:focus, select:focus { border-color: var(--accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 22%, transparent); }
+  .actions { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin-top: 16px; }
   button {
-    font: inherit;
-    padding: 8px 14px;
-    border-radius: 6px;
+    font: inherit; font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 9px;
     border: 1px solid var(--accent);
     background: var(--accent);
     color: var(--accent-fg);
     cursor: pointer;
+    transition: transform .06s, filter .12s;
   }
-  button.secondary { background: transparent; color: var(--fg); border-color: var(--border); }
-  button:disabled { opacity: .5; cursor: default; }
-  input, select {
-    font: inherit;
-    padding: 7px 9px;
-    border-radius: 6px;
-    border: 1px solid var(--border);
-    background: var(--bg);
-    color: var(--fg);
-    width: 100%;
-  }
-  label { display: block; font-size: 13px; color: var(--muted); margin-bottom: 4px; }
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 12px;
-    margin-bottom: 12px;
-  }
-  .row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
-  code, .token {
-    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-    font-size: 13px;
-  }
-  .token {
-    display: block;
-    padding: 8px;
-    border: 1px dashed var(--border);
-    border-radius: 6px;
-    word-break: break-all;
-    background: var(--bg);
-    margin: 8px 0;
-  }
-  .status { min-height: 1.5em; margin-top: 8px; }
-  .error { color: #c0392b; }
-  .tablewrap { overflow-x: auto; margin-top: 12px; }
-  table { border-collapse: collapse; width: 100%; font-size: 13px; }
-  th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--border); white-space: nowrap; }
-  th { position: sticky; top: 0; background: var(--panel); }
-  td.num { text-align: right; font-variant-numeric: tabular-nums; }
-  #balance { font-weight: 600; }
+  button:hover { filter: brightness(1.05); }
+  button:active { transform: translateY(1px); }
+  button.secondary { background: transparent; color: var(--fg); border-color: var(--line); }
+  button:disabled { opacity: .5; cursor: default; transform: none; }
+  .status { min-height: 1.4em; font-size: 14px; color: var(--muted); }
+  .error { color: var(--red); }
+
+  .two { display: grid; grid-template-columns: 1.15fr .85fr; gap: 20px; margin-top: 20px; }
+  @media (max-width: 900px) { .two { grid-template-columns: 1fr; } }
+  .card h2 { font-size: 16px; margin: 0 0 6px; letter-spacing: -.01em; }
+  .card p { margin: 0 0 10px; color: var(--muted); font-size: 14px; }
+  .pad { padding: 20px 22px; }
+  .price { display: flex; align-items: baseline; gap: 8px; margin: 6px 0 4px; }
+  .price .big { font-size: 34px; font-weight: 800; letter-spacing: -.02em; color: var(--accent); }
+  .price .per { color: var(--muted); font-size: 14px; }
+  ul.checks { list-style: none; padding: 0; margin: 10px 0 16px; display: grid; gap: 7px; font-size: 14px; }
+  ul.checks li { display: flex; gap: 10px; align-items: flex-start; }
+  ul.checks li::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); margin-top: 8px; flex: none; }
+  .keyrow { display: flex; gap: 10px; align-items: center; }
+  .keyrow input { flex: 1; min-width: 0; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13px; }
+  .balance { margin-top: 10px; font-size: 14px; color: var(--muted); }
+  .balance b { color: var(--fg); font-size: 16px; }
+  .token { display: block; padding: 10px 12px; border: 1px dashed var(--accent); border-radius: 9px; word-break: break-all; background: var(--accent-dim); margin: 8px 0; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13px; }
+
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 20px; }
+  @media (max-width: 900px) { .steps { grid-template-columns: 1fr; } }
+  .step { padding: 18px 20px; }
+  .step .n { width: 26px; height: 26px; border-radius: 8px; background: var(--accent-dim); color: var(--accent); display: grid; place-items: center; font-weight: 700; font-size: 13px; margin-bottom: 10px; }
+  .step h3 { margin: 0 0 4px; font-size: 15px; }
+  .step p { margin: 0; color: var(--muted); font-size: 14px; }
+
+  .results { margin-top: 20px; }
+  .results h2 { font-size: 16px; margin: 0 0 4px; }
+  .results .sub { color: var(--muted); font-size: 13px; margin: 0 0 12px; }
+  .match { padding: 16px 18px; margin-bottom: 10px; display: grid; grid-template-columns: 1.1fr 1fr 1fr auto; gap: 14px; align-items: center; }
+  @media (max-width: 900px) { .match { grid-template-columns: 1fr 1fr; } }
+  .match .meta { color: var(--muted); font-size: 12.5px; margin-bottom: 4px; }
+  .match .players { font-weight: 600; font-size: 15px; }
+  .match .players .v { color: var(--muted); font-weight: 400; margin: 0 6px; }
+  .side { display: grid; gap: 4px; }
+  .side .lbl { font-size: 12px; color: var(--muted); }
+  .bar { height: 8px; border-radius: 999px; background: var(--line); overflow: hidden; }
+  .bar > i { display: block; height: 100%; background: var(--blue); }
+  .bar > i.fav { background: var(--accent); }
+  .side .val { font-variant-numeric: tabular-nums; font-size: 14px; display: flex; justify-content: space-between; gap: 8px; }
+  .side .val .odds { color: var(--muted); }
+  .score { text-align: right; font-variant-numeric: tabular-nums; font-size: 14px; }
+  .score .st { display: inline-block; padding: 3px 8px; border-radius: 999px; font-size: 12px; border: 1px solid var(--line); color: var(--muted); }
+  .score .st.live { color: var(--red); border-color: var(--red); }
+  .score .st.finished { color: var(--accent); border-color: var(--accent); }
+  .example { opacity: .92; }
+  .example .tag { font-size: 12px; color: var(--amber); border: 1px solid var(--amber); border-radius: 999px; padding: 2px 8px; display: inline-block; margin-bottom: 8px; }
+
+  footer { margin: 48px 0 40px; color: var(--muted); font-size: 13px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; border-top: 1px solid var(--line); padding-top: 18px; }
 </style>
 </head>
 <body>
-<main>
-  <h1>Tennis odds lookup</h1>
-  <p class="muted">ATP and WTA matches with bookmaker odds, form, and head-to-head. Buy credits once, spend them on searches. Credits never expire.</p>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#"><span class="mark">C</span>Courtline</a>
+    <nav>
+      <a href="#search">Search</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#how">How it works</a>
+      <span class="pill">Balance <b id="balance">-</b> credits</span>
+    </nav>
+  </div>
+</header>
 
-  <section id="buy">
-    <h2>Buy credits</h2>
-    <p>Each match row costs <span id="creditsPerRow">5</span> credits.</p>
-    <div class="row">
-      <button id="buyBtn">Buy 200 credits for $20</button>
-      <span class="muted">Payment handled by Stripe. No subscription.</span>
+<main class="wrap">
+  <section class="hero">
+    <h1>Every ATP and WTA match, priced by 15+ books, in one search.</h1>
+    <p class="lead">Opening and current odds, fair probabilities with the margin removed, last-ten form, surface record, and the head-to-head. Buy credits once, spend them when you need them. Nothing expires.</p>
+    <div class="facts">
+      <span class="pill"><b>5 credits</b> per match</span>
+      <span class="pill"><b>200 credits</b> for $20</span>
+      <span class="pill">Schedule, results, or live</span>
+      <span class="pill">CSV export</span>
     </div>
-    <div id="claimBox" hidden>
-      <p><strong>Save this, it is your key.</strong> It is the only way to spend your credits. It is stored in this browser too.</p>
-      <span class="token" id="claimToken"></span>
-    </div>
-    <div class="status" id="buyStatus"></div>
   </section>
 
-  <section id="key">
-    <h2>Your key</h2>
-    <div class="row">
-      <input id="tokenInput" placeholder="cus_xxx.hex" autocomplete="off" spellcheck="false" style="flex:1; min-width: 260px">
-      <button class="secondary" id="checkBtn">Check balance</button>
-    </div>
-    <div class="status">Balance: <span id="balance">-</span></div>
-  </section>
-
-  <section id="searchSection">
-    <h2>Search</h2>
+  <section class="card search" id="search">
     <form id="searchForm">
       <div class="grid">
         <div><label for="player">Player contains</label><input id="player" name="player" placeholder="Alcaraz"></div>
         <div><label for="tournament">Tournament contains</label><input id="tournament" name="tournament" placeholder="US Open"></div>
-        <div><label for="date">Date (YYYY-MM-DD)</label><input id="date" name="date" type="date"></div>
+        <div><label for="date">Date</label><input id="date" name="date" type="date"></div>
         <div><label for="mode">Mode</label>
           <select id="mode" name="mode">
             <option value="schedule">Schedule</option>
@@ -146,18 +204,64 @@
             <option value="wta">WTA</option>
           </select>
         </div>
-        <div><label for="maxMatches">Max rows</label><input id="maxMatches" name="maxMatches" type="number" min="1" value="10"></div>
+        <div><label for="maxMatches">Max matches</label><input id="maxMatches" name="maxMatches" type="number" min="1" value="10"></div>
       </div>
-      <div class="row">
-        <button type="submit" id="searchBtn">Search</button>
+      <div class="actions">
+        <button type="submit" id="searchBtn">Search matches</button>
         <button type="button" class="secondary" id="csvBtn" disabled>Download CSV</button>
         <span class="status" id="searchStatus"></span>
       </div>
     </form>
-    <div class="tablewrap" id="results"></div>
   </section>
 
-  <p class="muted">Powered by the <a href="https://apify.com/perchpermits/tennis-matches-odds-form">Tennis Matches + Odds actor</a> on Apify.</p>
+  <div class="two">
+    <section class="card pad" id="key">
+      <h2>Your key</h2>
+      <p>Paste the key you received after buying credits. It stays in this browser.</p>
+      <div class="keyrow">
+        <input id="tokenInput" placeholder="cus_xxx.hex" autocomplete="off" spellcheck="false">
+        <button class="secondary" id="checkBtn">Check balance</button>
+      </div>
+      <div class="balance">Credits left: <b id="balance2">-</b></div>
+      <div id="claimBox" hidden>
+        <p><strong>Save this, it is your key.</strong> It is the only way to spend your credits.</p>
+        <span class="token" id="claimToken"></span>
+      </div>
+    </section>
+
+    <section class="card pad" id="pricing">
+      <h2>Credits</h2>
+      <div class="price"><span class="big">$20</span><span class="per">for 200 credits, one time</span></div>
+      <ul class="checks">
+        <li><span>One match with odds, form, and head-to-head costs <b id="creditsPerRow">5</b> credits</span></li>
+        <li><span>Credits never expire, there is no subscription</span></li>
+        <li><span>Payment by card through Stripe</span></li>
+      </ul>
+      <div class="actions" style="margin-top:0">
+        <button id="buyBtn">Buy 200 credits</button>
+        <span class="status" id="buyStatus"></span>
+      </div>
+    </section>
+  </div>
+
+  <section id="how">
+    <div class="steps">
+      <div class="card step"><div class="n">1</div><h3>Buy a credit pack</h3><p>Checkout takes a minute. You come back with a key.</p></div>
+      <div class="card step"><div class="n">2</div><h3>Search</h3><p>A player, a tournament, a day, or everything live right now.</p></div>
+      <div class="card step"><div class="n">3</div><h3>Read or export</h3><p>Fair probabilities, the move since opening, form and head-to-head, or the whole thing as CSV.</p></div>
+    </div>
+  </section>
+
+  <section class="results" id="results">
+    <h2>Results</h2>
+    <p class="sub" id="resultsSub">An example row from a real match. Run a search to replace it.</p>
+    <div id="resultsList"></div>
+  </section>
+
+  <footer>
+    <span>Data from the <a href="https://apify.com/perchpermits/tennis-matches-odds-form">Tennis Matches + Odds actor</a> on Apify. Odds are for information only.</span>
+    <span>Courtline is an independent storefront.</span>
+  </footer>
 </main>
 
 <script>
@@ -187,7 +291,7 @@
     return data;
   }
 
-  function showBalance(n) { $("balance").textContent = n; }
+  function showBalance(n) { $("balance").textContent = n; $("balance2").textContent = n; }
 
   // Buy
   $("buyBtn").addEventListener("click", async () => {
@@ -213,6 +317,7 @@
         showBalance(d.credits);
         setStatus("buyStatus", "Credits added.");
         history.replaceState(null, "", location.pathname);
+        $("key").scrollIntoView({ behavior: "smooth" });
       })
       .catch((e) => setStatus("buyStatus", e.message, true));
   }
@@ -235,7 +340,7 @@
     }
     body.maxMatches = Number($("maxMatches").value) || 10;
     $("searchBtn").disabled = true;
-    setStatus("searchStatus", "Running (about a second per row)...");
+    setStatus("searchStatus", "Running, about a second per match...");
     try {
       const data = await api("/api/search", {
         method: "POST",
@@ -243,10 +348,11 @@
         body: JSON.stringify(body),
       });
       lastRows = data.rows || [];
-      render(lastRows);
+      render(lastRows, false);
       showBalance(data.credits_left);
-      setStatus("searchStatus", lastRows.length + " rows, " + data.charged + " credits charged.");
+      setStatus("searchStatus", lastRows.length + " matches, " + data.charged + " credits charged.");
       $("csvBtn").disabled = lastRows.length === 0;
+      $("results").scrollIntoView({ behavior: "smooth" });
     } catch (e) {
       setStatus("searchStatus", e.message, true);
     } finally {
@@ -261,33 +367,81 @@
   const COLUMNS = [
     ["Date", (r) => r.date || ""],
     ["Tournament", (r) => get(r, "tournament.name") || ""],
+    ["Round", (r) => r.round || ""],
+    ["Surface", (r) => r.surface || ""],
     ["Home", (r) => get(r, "home.name") || ""],
     ["Away", (r) => get(r, "away.name") || ""],
     ["Odds H", (r) => num(get(r, "odds.home")), "num"],
     ["Odds A", (r) => num(get(r, "odds.away")), "num"],
     ["Fair P(H)", (r) => pct(get(r, "enrichment.market.fair_prob_home")), "num"],
     ["Fair P(A)", (r) => pct(get(r, "enrichment.market.fair_prob_away")), "num"],
+    ["Opening P(H)", (r) => pct(get(r, "enrichment.market.opening_fair_prob_home")), "num"],
     ["Favorite", (r) => get(r, "enrichment.market.favorite") || ""],
+    ["Rank H", (r) => get(r, "enrichment.home.singles_rank") ?? ""],
+    ["Rank A", (r) => get(r, "enrichment.away.singles_rank") ?? ""],
+    ["Form H", (r) => get(r, "enrichment.home.form.sequence") || ""],
+    ["Form A", (r) => get(r, "enrichment.away.form.sequence") || ""],
+    ["H2H", (r) => { const h = get(r, "enrichment.h2h"); return h ? h.home_wins + "-" + h.away_wins : ""; }],
     ["Status", (r) => r.status || ""],
     ["Score", (r) => get(r, "result.score") || get(r, "enrichment.final_score") || ""],
   ];
 
-  function render(rows) {
-    const box = $("results");
-    if (!rows.length) { box.textContent = "No matches."; return; }
-    const table = document.createElement("table");
-    const thead = table.createTHead().insertRow();
-    for (const [name] of COLUMNS) { const th = document.createElement("th"); th.textContent = name; thead.appendChild(th); }
-    const tbody = table.createTBody();
-    for (const r of rows) {
-      const tr = tbody.insertRow();
-      for (const [, fn, cls] of COLUMNS) {
-        const td = tr.insertCell();
-        td.textContent = fn(r);
-        if (cls) td.className = cls;
-      }
-    }
-    box.replaceChildren(table);
+  function side(r, who, fav) {
+    const name = get(r, who + ".name") || "";
+    const p = get(r, "enrichment.market.fair_prob_" + who);
+    const odds = get(r, "odds." + who);
+    const rank = get(r, "enrichment." + who + ".singles_rank");
+    const form = get(r, "enrichment." + who + ".form.sequence");
+    const el = document.createElement("div");
+    el.className = "side";
+    const lbl = document.createElement("div"); lbl.className = "lbl";
+    lbl.textContent = name + (rank ? " · #" + rank : "") + (form ? " · " + form : "");
+    const bar = document.createElement("div"); bar.className = "bar";
+    const fill = document.createElement("i"); fill.style.width = (typeof p === "number" ? Math.round(p * 100) : 0) + "%";
+    if (fav === who) fill.className = "fav";
+    bar.appendChild(fill);
+    const val = document.createElement("div"); val.className = "val";
+    const pv = document.createElement("span"); pv.textContent = typeof p === "number" ? pct(p) + " fair" : "no price";
+    const ov = document.createElement("span"); ov.className = "odds"; ov.textContent = typeof odds === "number" ? "odds " + num(odds) : "";
+    val.append(pv, ov);
+    el.append(lbl, bar, val);
+    return el;
+  }
+
+  function matchCard(r, example) {
+    const card = document.createElement("article");
+    card.className = "card match" + (example ? " example" : "");
+    const left = document.createElement("div");
+    if (example) { const t = document.createElement("span"); t.className = "tag"; t.textContent = "example"; left.appendChild(t); }
+    const meta = document.createElement("div"); meta.className = "meta";
+    meta.textContent = [r.date, get(r, "tournament.name"), r.round, r.surface].filter(Boolean).join(" · ");
+    const players = document.createElement("div"); players.className = "players";
+    const h = document.createElement("span"); h.textContent = get(r, "home.name") || "";
+    const v = document.createElement("span"); v.className = "v"; v.textContent = "v";
+    const a = document.createElement("span"); a.textContent = get(r, "away.name") || "";
+    players.append(h, v, a);
+    const h2h = get(r, "enrichment.h2h");
+    const shift = get(r, "enrichment.market.prob_shift_home");
+    const line = document.createElement("div"); line.className = "meta";
+    line.textContent = [h2h ? "head-to-head " + h2h.home_wins + "-" + h2h.away_wins : "",
+                        typeof shift === "number" ? "moved " + (shift >= 0 ? "+" : "") + (shift * 100).toFixed(1) + " pts to home since opening" : "",
+                        get(r, "enrichment.bookmaker_count") ? get(r, "enrichment.bookmaker_count") + " books" : ""].filter(Boolean).join(" · ");
+    left.append(meta, players, line);
+    const fav = get(r, "enrichment.market.favorite");
+    const right = document.createElement("div"); right.className = "score";
+    const st = document.createElement("span"); st.className = "st " + (r.status === "in_progress" ? "live" : r.status || "");
+    st.textContent = r.status === "in_progress" ? "live" : r.status === "finished" ? "final" : "scheduled";
+    const sc = document.createElement("div"); sc.textContent = get(r, "result.score") || get(r, "enrichment.final_score") || (r.start_utc ? new Date(r.start_utc).toLocaleString() : "");
+    right.append(st, document.createElement("br"), sc);
+    card.append(left, side(r, "home", fav), side(r, "away", fav), right);
+    return card;
+  }
+
+  function render(rows, example) {
+    const box = $("resultsList");
+    $("resultsSub").textContent = example ? "An example row from a real match. Run a search to replace it." : rows.length + " matches. Fair probabilities have the bookmaker margin removed.";
+    if (!rows.length) { box.textContent = "No matches for that search."; return; }
+    box.replaceChildren(...rows.map((r) => matchCard(r, example)));
   }
 
   // CSV
@@ -302,6 +456,22 @@
     a.click();
     a.remove();
   });
+
+  // Example row until the first search: a real US Open semifinal from the actor's archive.
+  render([{
+    date: "2026-09-11", status: "finished", round: "semifinal", surface: "hard",
+    tournament: { name: "US Open" },
+    home: { name: "Sabalenka A." }, away: { name: "Pegula J." },
+    odds: { home: 1.51, away: 2.57 },
+    result: { score: "7-5, 6-2" },
+    enrichment: {
+      bookmaker_count: 15,
+      home: { singles_rank: 1, form: { sequence: "WWWWWWLWWL" } },
+      away: { singles_rank: 3, form: { sequence: "LWWWWWLWWW" } },
+      h2h: { home_wins: 10, away_wins: 4 },
+      market: { fair_prob_home: 0.631, fair_prob_away: 0.369, opening_fair_prob_home: 0.59, prob_shift_home: 0.041, favorite: "home" },
+    },
+  }], true);
 })();
 </script>
 </body>

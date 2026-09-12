@@ -9,6 +9,9 @@ A small Node.js storefront that resells rows from a pay-per-event Apify actor fo
 
 This is a starter, not a product. Read the limitations section before taking real money.
 
+
+The page ships as a finished storefront named "Courtline" (a placeholder brand): a header, a hero, the search form, key and credit cards, a three-step explainer, and result cards with fair-probability bars. Light and dark follow the visitor's system setting. Rename it and restyle it in `public/index.html`; the JavaScript at the bottom of that file is the only part the server depends on (element ids and the four API calls).
+
 ## How it works
 
 1. `POST /api/checkout` creates a Stripe Checkout Session in payment mode (one-time charge, no subscription) with `customer_creation=always` and the pack size in the session metadata. The browser is sent to Stripe.
