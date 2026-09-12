@@ -1,5 +1,6 @@
 """Canary for the permits actor: preflight both Metro feeds, run a small search,
-enrich two records from ePermits, and fail loudly if any layer is off.
+enrich two records from ePermits, probe up to three young pool applications for
+the all-open case, and fail loudly if any layer is off.
 
     python scripts/canary.py [--json] [--log]
     exit 0 = healthy, 1 = degraded, 2 = broken
@@ -73,6 +74,33 @@ def main(argv=None) -> int:
                     problems.append({"check": "enrich_fields", "severity": "degraded", "detail": "enriched rows carry no contractor"})
             except EnrichmentDrift as exc:
                 problems.append({"check": "enrich", "severity": "broken", "detail": f"drift: {exc}"})
+
+    # All-open probe. A permit whose conditions are all still open carries no
+    # dateCompleted on any row (OData drops nulls), which tripped the drift
+    # guard on 2026-09-12 in a way two recent kitchen permits never show. Fresh
+    # pool applications are the surest place to find one, so enrich up to
+    # three of them and record whether an all-open permit was seen and passed.
+    if not problems_pf:
+        probe: dict = {"tried": 0, "all_open_seen": 0, "enriched_ok": 0}
+        try:
+            young = search_permits(datasets="applications", scope="pool", max_records=3)
+            probe["tried"] = len(young)
+            if young:
+                enrich_permits(young, NullCache(), limit=3, max_age_days=7)
+                for r in young:
+                    e = r.get("enrichment") or {}
+                    if e.get("status") in ("ok", "partial"):
+                        probe["enriched_ok"] += 1
+                        subs = e.get("sub_trade_permits") or []
+                        if subs and not any(s.get("satisfied") for s in subs):
+                            probe["all_open_seen"] += 1
+                if probe["tried"] and not probe["enriched_ok"]:
+                    problems.append({"check": "all_open_probe", "severity": "degraded", "detail": f"0 of {probe['tried']} pool applications enriched"})
+        except EnrichmentDrift as exc:
+            problems.append({"check": "all_open_probe", "severity": "broken", "detail": f"drift on young pool applications: {exc}"})
+        except Exception as exc:  # noqa: BLE001
+            problems.append({"check": "all_open_probe", "severity": "degraded", "detail": f"{type(exc).__name__}: {exc}"})
+        report["all_open_probe"] = probe
 
     report["seconds"] = round(time.time() - t0, 1)
     report["problems"] = problems
