@@ -78,14 +78,15 @@ def main(argv=None) -> int:
             if missing:
                 problems.append({"check": "enrich_fields", "severity": "broken", "detail": f"{r['event_ticker']} enrichment missing {missing}"})
                 break
-        with_fc = sum(1 for r in enriched if (r["enrichment"]["forecast"] or {}).get("high_f") is not None)
+        # A ladder open after its local day has begun to close out (west-coast ladders seen
+        # from a Central-time midnight) has no daily-forecast period left; the actor then
+        # uses the hourly forecast. Count a forecast on a strike from either source.
+        with_fc = sum(1 for r in enriched if (r["enrichment"]["analysis"]["forecast"] or {}).get("ticker"))
         with_obs = sum(1 for r in enriched if (r["enrichment"]["observations"] or {}).get("count"))
         with_hit = sum(1 for r in enriched if (r["enrichment"]["analysis"]["projected"] or {}).get("ticker"))
         report.update({"with_forecast": with_fc, "with_observations": with_obs, "with_projected_bracket": with_hit})
         if enriched:
-            # Daily-forecast highs exist for every ladder until the day is nearly over; the
-            # low period drops out of the daily feed by mid-morning, so it is not checked here.
-            check("forecast_coverage", with_fc >= 0.8 * len(enriched), f"{with_fc}/{len(enriched)} have a daily forecast high", problems, "degraded")
+            check("forecast_coverage", with_fc >= 0.8 * len(enriched), f"{with_fc}/{len(enriched)} have a forecast on a strike (daily or hourly)", problems, "degraded")
             check("projected_bracket", with_hit >= 0.9 * len(enriched), f"{with_hit}/{len(enriched)} projected extremes land on a strike", problems, "degraded")
             check("observation_coverage", with_obs >= 0.5 * len(enriched), f"{with_obs}/{len(enriched)} have observations today (low early in the day)", problems, "degraded")
 
