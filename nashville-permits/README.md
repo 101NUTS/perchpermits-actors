@@ -216,6 +216,53 @@ Set `maxTotalChargeUsd` on the run to cap spend. Enrichment is trimmed to what t
 - Metro Nashville [ePermits](https://epermits.nashville.gov/) public case search.
 - Building permits are open public records under Tennessee's Public Records Act (T.C.A. 10-7-503). This actor republishes what those sources already publish and adds organization, not surveillance. Do not use contact details for unsolicited marketing where prohibited.
 
+## Use it from Clay or Zapier
+
+No code needed. Both tools call this actor with your own Apify account, so you pay the per-record prices above and nothing else.
+
+### Clay: contractors into a table, then emails and phones
+
+The `contractors` mode produces the list an outbound team wants: every licensed contractor doing a kind of work in Nashville, ranked by permit count, with their license number and the ZIP codes they work in. Clay then does what it is good at, finding the people behind each company.
+
+1. In a Clay table, click **Add enrichment**, search for **Apify**, and pick **Import data from Apify Actor**. Connect your Apify account when asked.
+2. Choose the actor `perchpermits/nashville-building-permits` and paste this input:
+
+   ```json
+   {
+     "mode": "contractors",
+     "scope": "pool",
+     "dateFrom": "2025-09-01",
+     "minPermits": 2,
+     "enrich": true
+   }
+   ```
+
+   Change `scope` to any preset from the Input table (`kitchen`, `roofing`, `solar`, `adu`, and so on). `enrich: true` groups by the licensed contractor rather than the paperwork applicant; leave it on for this use.
+3. Each contractor row lands in the table with `contractor`, `license`, `permits`, `total_valuation`, `zips`, and `scopes` as columns. Add Clay's own enrichments on top: a company-domain lookup on `contractor`, then a work-email or phone waterfall, then your outreach step.
+4. To keep the list fresh, use **Run Apify Actor** instead with **auto-update** on and a scheduled row, or run the import on a Clay schedule. One run a week is plenty; permits move slowly.
+
+For a per-address workflow (one property per row, for example a list of addresses you already own), use **Run Apify Actor** with `"mode": "search"` and put the Clay column token where the value goes, keeping the key in quotes and the token unquoted:
+
+```json
+{ "mode": "search", "address": /Address, "dateFrom": "2024-01-01", "enrich": true }
+```
+
+That returns the permits on that address with the licensed contractor, the owner, and the inspection status in the `enrichment` block.
+
+### Zapier: a weekly permit feed into Sheets, Slack, or a CRM
+
+1. Create a Zap with **Schedule by Zapier** as the trigger (every Monday, say).
+2. Add the **Apify** action **Run Actor** (synchronous), choose this actor, and give it an input such as:
+
+   ```json
+   { "mode": "search", "scope": "kitchen", "dateFrom": "{{last week}}", "enrich": true, "maxRecords": 100 }
+   ```
+
+   Zapier's date formatter step can produce the `dateFrom` value (today minus 7 days, formatted `YYYY-MM-DD`).
+3. Add the Apify action **Fetch Dataset Items** on the run's default dataset, then send each item wherever you work: a Google Sheets row, a Slack message, a HubSpot or Pipedrive company.
+
+Zapier's own trigger **Actor Run Finished** also works if you prefer to schedule the run in the Apify Console and let Zapier pick up the output.
+
 ## Wrap this in an afternoon
 
 Reselling these records behind your own search box is allowed and expected; it is what the per-record price is for. A zero-dependency starter kit does it: a one-page storefront, Stripe credit packs that never expire (no subscription), and one call to this actor per search. Point it at `perchpermits/nashville-building-permits`, set your price per record, and deploy anywhere Node runs. Source and setup: [wrapper-kit](https://github.com/101NUTS/perchpermits-actors/tree/master/wrapper-kit). Keep the data-policy line above on your page.

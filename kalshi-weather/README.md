@@ -137,6 +137,10 @@ With `analysis: true`, each enriched row also carries:
 
 Apify's free credit covers a few hundred enriched ladders. With a budget set, the actor works out how many ladders it can join, joins those, and returns the rest plain; analyses are capped the same way after the join. Rows without an NWS station are always plain. Nothing is charged for a row that is not returned.
 
+## Use it from Zapier or Clay
+
+No code needed; both call the actor with your own Apify account and you pay the per-row prices above. In Zapier, a **Schedule** trigger (for example 06:00 and 14:00 local), the Apify action **Run Actor** (synchronous) with `{ "status": "open", "stations": ["NYC", "MDW", "MIA"], "enrich": true }`, then **Fetch Dataset Items** into a Google Sheet or a Slack channel gives you each open ladder next to the NWS forecast and running observations. In Clay, **Import data from Apify Actor** with the same input fills a table with one ladder per row.
+
 ## Wrap this in an afternoon
 
 Reselling these rows behind your own search box is allowed and expected; it is what the per-row price is for. A zero-dependency starter kit does it: a one-page storefront, Stripe credit packs that never expire (no subscription), and one call to this actor per search. Point it at `perchpermits/kalshi-weather-markets-nws`, set your price per ladder, and deploy anywhere Node runs. Source and setup: [wrapper-kit](https://github.com/101NUTS/perchpermits-actors/tree/master/wrapper-kit). At $0.02 an enriched ladder here, a $0.10 charge per ladder on your side leaves about 80% before Stripe's fee.

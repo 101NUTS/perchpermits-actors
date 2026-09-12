@@ -112,6 +112,10 @@ Pay per event. Free-tier credit covers a few hundred matches.
 
 If `maxTotalChargeUsd` is set, the actor works out up front how many matches it can enrich within the budget, enriches those, and returns the rest plain; previews are capped the same way after enrichment. A run is never charged for rows it did not return. Failed enrichment (site error, layout change) is returned plain and charged as `match`.
 
+## Use it from Zapier or Clay
+
+No code needed; both call the actor with your own Apify account and you pay the per-row prices above. In Zapier, a **Schedule** trigger each morning, the Apify action **Run Actor** (synchronous) with `{ "mode": "schedule", "tour": "atp", "enrich": true, "maxMatches": 30 }`, then **Fetch Dataset Items** into a Google Sheet, a Slack channel, or a Notion database gives you the day's card with odds and form before play starts. In Clay, **Import data from Apify Actor** with the same input fills a table with one match per row.
+
 ## Wrap this in an afternoon
 
 Reselling these rows behind your own search box is allowed and expected; it is what the per-row price is for. A zero-dependency starter kit does it: a one-page storefront, Stripe credit packs that never expire (no subscription), and one call to this actor per search. Point it at `perchpermits/tennis-matches-odds-form`, set your price per row, and deploy anywhere Node runs. Source and setup: [wrapper-kit](https://github.com/101NUTS/perchpermits-actors/tree/master/wrapper-kit). At $0.02 an enriched row here, a $0.10 charge per row on your side leaves about 80% before Stripe's fee.
