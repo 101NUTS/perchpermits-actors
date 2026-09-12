@@ -60,6 +60,7 @@ One player's next match with the full odds movement from every bookmaker:
 | `enrich` | boolean | Fetch each match's detail page. Default true. One request per match, about a second each. |
 | `latestMatches` | 1 to 30 | Recent matches per player when enriching. Default 10. |
 | `oddsHistory` | boolean | Include every recorded odds change per bookmaker. Default false. |
+| `preview` | boolean | Add a written `preview` to each enriched row (below). Default false. Charged as `match-preview` on top of `enriched-match`. |
 | `requestDelaySeconds` | number | Politeness delay toward the source. Default 0.4. |
 
 ## Output
@@ -93,6 +94,12 @@ With `enrich` (default), the `enrichment` block adds:
 | `final_score` | For finished matches, the detail page's own score line, e.g. `2 : 1 (4-6, 6-4, 7-6(8))`. |
 | `home.partner`, `away.partner` | Doubles only: the second player of each pair. Rankings and bio describe the first-listed player. |
 
+With `preview: true`, each enriched row also carries:
+
+| Field | Meaning |
+|---|---|
+| `preview` | `{text, model, generated_at}`: 90 to 140 words written by Claude from the row's own numbers: what the market prices and how it moved, then which of the form, surface, ranking, and head-to-head facts support or cut against that price. It names no winner and recommends nothing; a null field in the row is reported as missing, never guessed. `null` when the model could not produce one (that row is not charged the preview event). Absent when `preview` is off or the budget ran out. |
+
 ## Pricing
 
 Pay per event. Free-tier credit covers a few hundred matches.
@@ -101,8 +108,13 @@ Pay per event. Free-tier credit covers a few hundred matches.
 |---|---|---|
 | `enriched-match` | $0.02 | A match row with the `enrichment` block (odds, form, head-to-head). |
 | `match` | $0.002 | A plain match row (`enrich: false`, or the budget ran out). |
+| `match-preview` | $0.10 | An enriched row that also carries a written `preview`. Charged in addition to `enriched-match`, only for rows where `preview` is not null. |
 
-If `maxTotalChargeUsd` is set, the actor works out up front how many matches it can enrich within the budget, enriches those, and returns the rest plain. A run is never charged for rows it did not return. Failed enrichment (site error, layout change) is returned plain and charged as `match`.
+If `maxTotalChargeUsd` is set, the actor works out up front how many matches it can enrich within the budget, enriches those, and returns the rest plain; previews are capped the same way after enrichment. A run is never charged for rows it did not return. Failed enrichment (site error, layout change) is returned plain and charged as `match`.
+
+## Wrap this in an afternoon
+
+Reselling these rows behind your own search box is allowed and expected; it is what the per-row price is for. A zero-dependency starter kit does it: a one-page storefront, Stripe credit packs that never expire (no subscription), and one call to this actor per search. Point it at `perchpermits/tennis-matches-odds-form`, set your price per row, and deploy anywhere Node runs. Source and setup: [wrapper-kit](https://github.com/101NUTS/perchpermits-actors/tree/master/wrapper-kit). At $0.02 an enriched row here, a $0.10 charge per row on your side leaves about 80% before Stripe's fee.
 
 ## Limits and honesty
 

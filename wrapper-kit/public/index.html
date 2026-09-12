@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tennis odds lookup</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --fg: #1a1a1a;
+    --muted: #666;
+    --border: #d0d0d0;
+    --accent: #1f5fbf;
+    --accent-fg: #fff;
+    --panel: #f6f6f6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141414;
+      --fg: #e8e8e8;
+      --muted: #9a9a9a;
+      --border: #3a3a3a;
+      --accent: #5b8ff0;
+      --accent-fg: #0b0b0b;
+      --panel: #1e1e1e;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 24px 16px 64px;
+    background: var(--bg);
+    color: var(--fg);
+    font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 1100px; margin: 0 auto; }
+  h1 { font-size: 22px; margin: 0 0 4px; }
+  h2 { font-size: 16px; margin: 0 0 12px; }
+  p { margin: 0 0 12px; }
+  .muted { color: var(--muted); }
+  section {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px 0;
+    background: var(--panel);
+  }
+  button {
+    font: inherit;
+    padding: 8px 14px;
+    border-radius: 6px;
+    border: 1px solid var(--accent);
+    background: var(--accent);
+    color: var(--accent-fg);
+    cursor: pointer;
+  }
+  button.secondary { background: transparent; color: var(--fg); border-color: var(--border); }
+  button:disabled { opacity: .5; cursor: default; }
+  input, select {
+    font: inherit;
+    padding: 7px 9px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    color: var(--fg);
+    width: 100%;
+  }
+  label { display: block; font-size: 13px; color: var(--muted); margin-bottom: 4px; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  .row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+  code, .token {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 13px;
+  }
+  .token {
+    display: block;
+    padding: 8px;
+    border: 1px dashed var(--border);
+    border-radius: 6px;
+    word-break: break-all;
+    background: var(--bg);
+    margin: 8px 0;
+  }
+  .status { min-height: 1.5em; margin-top: 8px; }
+  .error { color: #c0392b; }
+  .tablewrap { overflow-x: auto; margin-top: 12px; }
+  table { border-collapse: collapse; width: 100%; font-size: 13px; }
+  th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--border); white-space: nowrap; }
+  th { position: sticky; top: 0; background: var(--panel); }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  #balance { font-weight: 600; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Tennis odds lookup</h1>
+  <p class="muted">ATP and WTA matches with bookmaker odds, form, and head-to-head. Buy credits once, spend them on searches. Credits never expire.</p>
+
+  <section id="buy">
+    <h2>Buy credits</h2>
+    <p>Each match row costs <span id="creditsPerRow">5</span> credits.</p>
+    <div class="row">
+      <button id="buyBtn">Buy 200 credits for $20</button>
+      <span class="muted">Payment handled by Stripe. No subscription.</span>
+    </div>
+    <div id="claimBox" hidden>
+      <p><strong>Save this, it is your key.</strong> It is the only way to spend your credits. It is stored in this browser too.</p>
+      <span class="token" id="claimToken"></span>
+    </div>
+    <div class="status" id="buyStatus"></div>
+  </section>
+
+  <section id="key">
+    <h2>Your key</h2>
+    <div class="row">
+      <input id="tokenInput" placeholder="cus_xxx.hex" autocomplete="off" spellcheck="false" style="flex:1; min-width: 260px">
+      <button class="secondary" id="checkBtn">Check balance</button>
+    </div>
+    <div class="status">Balance: <span id="balance">-</span></div>
+  </section>
+
+  <section id="searchSection">
+    <h2>Search</h2>
+    <form id="searchForm">
+      <div class="grid">
+        <div><label for="player">Player contains</label><input id="player" name="player" placeholder="Alcaraz"></div>
+        <div><label for="tournament">Tournament contains</label><input id="tournament" name="tournament" placeholder="US Open"></div>
+        <div><label for="date">Date (YYYY-MM-DD)</label><input id="date" name="date" type="date"></div>
+        <div><label for="mode">Mode</label>
+          <select id="mode" name="mode">
+            <option value="schedule">Schedule</option>
+            <option value="results">Results</option>
+            <option value="live">Live</option>
+          </select>
+        </div>
+        <div><label for="tour">Tour</label>
+          <select id="tour" name="tour">
+            <option value="all">ATP + WTA</option>
+            <option value="atp">ATP</option>
+            <option value="wta">WTA</option>
+          </select>
+        </div>
+        <div><label for="maxMatches">Max rows</label><input id="maxMatches" name="maxMatches" type="number" min="1" value="10"></div>
+      </div>
+      <div class="row">
+        <button type="submit" id="searchBtn">Search</button>
+        <button type="button" class="secondary" id="csvBtn" disabled>Download CSV</button>
+        <span class="status" id="searchStatus"></span>
+      </div>
+    </form>
+    <div class="tablewrap" id="results"></div>
+  </section>
+
+  <p class="muted">Powered by the <a href="https://apify.com/perchpermits/tennis-matches-odds-form">Tennis Matches + Odds actor</a> on Apify.</p>
+</main>
+
+<script>
+(function () {
+  const $ = (id) => document.getElementById(id);
+  const tokenInput = $("tokenInput");
+  let lastRows = [];
+
+  try { tokenInput.value = localStorage.getItem("wrapper_token") || ""; } catch {}
+  tokenInput.addEventListener("change", () => {
+    try { localStorage.setItem("wrapper_token", tokenInput.value.trim()); } catch {}
+  });
+
+  function setStatus(id, text, isError) {
+    const el = $(id);
+    el.textContent = text || "";
+    el.className = "status" + (isError ? " error" : "");
+  }
+
+  async function api(path, opts) {
+    const headers = Object.assign({}, opts && opts.headers);
+    const token = tokenInput.value.trim();
+    if (token) headers["Authorization"] = "Bearer " + token;
+    const res = await fetch(path, Object.assign({}, opts, { headers }));
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok) throw new Error(data.error || ("HTTP " + res.status));
+    return data;
+  }
+
+  function showBalance(n) { $("balance").textContent = n; }
+
+  // Buy
+  $("buyBtn").addEventListener("click", async () => {
+    setStatus("buyStatus", "Opening checkout...");
+    try {
+      const { url } = await api("/api/checkout", { method: "POST" });
+      location.href = url;
+    } catch (e) { setStatus("buyStatus", e.message, true); }
+  });
+
+  // Claim after Stripe redirect
+  const sessionId = new URLSearchParams(location.search).get("session_id");
+  if (sessionId) {
+    setStatus("buyStatus", "Confirming payment...");
+    fetch("/api/claim?session_id=" + encodeURIComponent(sessionId))
+      .then((r) => r.json().then((d) => ({ ok: r.ok, d })))
+      .then(({ ok, d }) => {
+        if (!ok) throw new Error(d.error || "Claim failed");
+        $("claimToken").textContent = d.token;
+        $("claimBox").hidden = false;
+        tokenInput.value = d.token;
+        try { localStorage.setItem("wrapper_token", d.token); } catch {}
+        showBalance(d.credits);
+        setStatus("buyStatus", "Credits added.");
+        history.replaceState(null, "", location.pathname);
+      })
+      .catch((e) => setStatus("buyStatus", e.message, true));
+  }
+
+  // Balance
+  $("checkBtn").addEventListener("click", async () => {
+    try {
+      const { credits } = await api("/api/balance");
+      showBalance(credits);
+    } catch (e) { showBalance("-"); setStatus("searchStatus", e.message, true); }
+  });
+
+  // Search
+  $("searchForm").addEventListener("submit", async (ev) => {
+    ev.preventDefault();
+    const body = {};
+    for (const id of ["player", "tournament", "date", "mode", "tour"]) {
+      const v = $(id).value.trim();
+      if (v) body[id] = v;
+    }
+    body.maxMatches = Number($("maxMatches").value) || 10;
+    $("searchBtn").disabled = true;
+    setStatus("searchStatus", "Running (about a second per row)...");
+    try {
+      const data = await api("/api/search", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body),
+      });
+      lastRows = data.rows || [];
+      render(lastRows);
+      showBalance(data.credits_left);
+      setStatus("searchStatus", lastRows.length + " rows, " + data.charged + " credits charged.");
+      $("csvBtn").disabled = lastRows.length === 0;
+    } catch (e) {
+      setStatus("searchStatus", e.message, true);
+    } finally {
+      $("searchBtn").disabled = false;
+    }
+  });
+
+  const get = (o, path) => path.split(".").reduce((a, k) => (a == null ? undefined : a[k]), o);
+  const pct = (v) => (typeof v === "number" ? (v * 100).toFixed(1) + "%" : "");
+  const num = (v) => (typeof v === "number" ? v.toFixed(2) : (v ?? ""));
+
+  const COLUMNS = [
+    ["Date", (r) => r.date || ""],
+    ["Tournament", (r) => get(r, "tournament.name") || ""],
+    ["Home", (r) => get(r, "home.name") || ""],
+    ["Away", (r) => get(r, "away.name") || ""],
+    ["Odds H", (r) => num(get(r, "odds.home")), "num"],
+    ["Odds A", (r) => num(get(r, "odds.away")), "num"],
+    ["Fair P(H)", (r) => pct(get(r, "enrichment.market.fair_prob_home")), "num"],
+    ["Fair P(A)", (r) => pct(get(r, "enrichment.market.fair_prob_away")), "num"],
+    ["Favorite", (r) => get(r, "enrichment.market.favorite") || ""],
+    ["Status", (r) => r.status || ""],
+    ["Score", (r) => get(r, "result.score") || get(r, "enrichment.final_score") || ""],
+  ];
+
+  function render(rows) {
+    const box = $("results");
+    if (!rows.length) { box.textContent = "No matches."; return; }
+    const table = document.createElement("table");
+    const thead = table.createTHead().insertRow();
+    for (const [name] of COLUMNS) { const th = document.createElement("th"); th.textContent = name; thead.appendChild(th); }
+    const tbody = table.createTBody();
+    for (const r of rows) {
+      const tr = tbody.insertRow();
+      for (const [, fn, cls] of COLUMNS) {
+        const td = tr.insertCell();
+        td.textContent = fn(r);
+        if (cls) td.className = cls;
+      }
+    }
+    box.replaceChildren(table);
+  }
+
+  // CSV
+  $("csvBtn").addEventListener("click", () => {
+    const esc = (v) => '"' + String(v ?? "").replace(/"/g, '""') + '"';
+    const lines = [COLUMNS.map(([n]) => esc(n)).join(",")];
+    for (const r of lastRows) lines.push(COLUMNS.map(([, fn]) => esc(fn(r))).join(","));
+    const a = document.createElement("a");
+    a.href = "data:text/csv;charset=utf-8," + encodeURIComponent(lines.join("\n"));
+    a.download = "matches.csv";
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+  });
+})();
+</script>
+</body>
+</html>

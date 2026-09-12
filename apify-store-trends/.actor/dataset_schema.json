@@ -1,0 +1,70 @@
+{
+    "actorSpecification": 1,
+    "fields": {},
+    "views": {
+        "actors": {
+            "title": "Actors",
+            "description": "One row per store actor: demand, reliability, rating, price, gap signals, and the change since the previous snapshot.",
+            "transformation": {
+                "fields": ["actor", "target", "query_match", "users_30d", "users_7d", "users_90d", "users_total", "runs_30d", "fail_rate_30d", "rating", "reviews", "price", "notice", "days_since_last_run", "gap_signals", "delta.users_30d_change", "delta.is_new", "snapshot_at", "url", "row_type"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "actor": {"label": "Actor"},
+                    "target": {"label": "Target"},
+                    "query_match": {"label": "Matches query", "format": "boolean"},
+                    "users_30d": {"label": "Users 30d", "format": "number"},
+                    "users_7d": {"label": "Users 7d", "format": "number"},
+                    "users_90d": {"label": "Users 90d", "format": "number"},
+                    "users_total": {"label": "Users total", "format": "number"},
+                    "runs_30d": {"label": "Runs 30d", "format": "number"},
+                    "fail_rate_30d": {"label": "Fail rate 30d", "format": "number"},
+                    "rating": {"label": "Rating", "format": "number"},
+                    "reviews": {"label": "Reviews", "format": "number"},
+                    "price": {"label": "Price"},
+                    "notice": {"label": "Notice"},
+                    "days_since_last_run": {"label": "Days idle", "format": "number"},
+                    "gap_signals": {"label": "Gap signals"},
+                    "delta.users_30d_change": {"label": "Users 30d change", "format": "number"},
+                    "delta.is_new": {"label": "New", "format": "boolean"},
+                    "snapshot_at": {"label": "Snapshot"},
+                    "url": {"label": "Store page", "format": "link"},
+                    "row_type": {"label": "Row"}
+                }
+            }
+        },
+        "targets": {
+            "title": "Targets",
+            "description": "One row per target bucket: demand, actor count, the leader and its share, quality, broken actors, and the A to G signals.",
+            "transformation": {
+                "fields": ["target", "target_kind", "hostility", "users_30d", "actors", "active_actors", "leader", "leader_share", "leader_rating", "leader_reviews", "leader_fail_rate", "leader_price", "weighted_rating", "best_rated", "best_rating", "broken_actors", "signals", "delta.users_30d_change", "leader_url", "row_type"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "target": {"label": "Target"},
+                    "target_kind": {"label": "Kind"},
+                    "hostility": {"label": "Hostility"},
+                    "users_30d": {"label": "Users 30d", "format": "number"},
+                    "actors": {"label": "Actors", "format": "number"},
+                    "active_actors": {"label": "Active", "format": "number"},
+                    "leader": {"label": "Leader"},
+                    "leader_share": {"label": "Leader share", "format": "number"},
+                    "leader_rating": {"label": "Leader rating", "format": "number"},
+                    "leader_reviews": {"label": "Leader reviews", "format": "number"},
+                    "leader_fail_rate": {"label": "Leader fail rate", "format": "number"},
+                    "leader_price": {"label": "Leader price"},
+                    "weighted_rating": {"label": "Weighted rating", "format": "number"},
+                    "best_rated": {"label": "Best rated"},
+                    "best_rating": {"label": "Best rating", "format": "number"},
+                    "broken_actors": {"label": "Broken", "format": "number"},
+                    "signals": {"label": "Signals"},
+                    "delta.users_30d_change": {"label": "Users 30d change", "format": "number"},
+                    "leader_url": {"label": "Leader page", "format": "link"},
+                    "row_type": {"label": "Row"}
+                }
+            }
+        }
+    }
+}

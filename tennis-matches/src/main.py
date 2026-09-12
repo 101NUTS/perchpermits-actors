@@ -6,10 +6,14 @@ Pay-per-event events (configured in Apify Console, charged here):
     enriched-match  one match row joined to its detail page: round, surface,
                     rankings, surface W/L, head-to-head, bookmaker odds with
                     openings, and both players' latest matches
+    match-preview   a written read of an enriched row by Claude (`preview`
+                    field), charged on top of enriched-match, only for rows
+                    that actually got one
 
 The actor charges through push_data(charged_event_name=...), so the platform
 stops both the charge and the row when the caller's budget is reached. The
-slow part, enrichment, is capped up front to what the budget allows.
+slow part, enrichment, is capped up front to what the budget allows; previews
+are capped the same way after enrichment.
 """
 
 from __future__ import annotations
@@ -18,11 +22,13 @@ from datetime import date
 
 from apify import Actor
 
+from .tennis_matches import preview
 from .tennis_matches.fetch import Client
 from .tennis_matches.service import SourceDrift, enrich_matches, list_matches
 
 EVENT_MATCH = "match"
 EVENT_ENRICHED = "enriched-match"
+EVENT_PREVIEW = "match-preview"
 
 
 def _enrich_cap(n_records: int, plain_event: str, rich_event: str) -> int | None:
@@ -41,6 +47,43 @@ def _enrich_cap(n_records: int, plain_event: str, rich_event: str) -> int | None
         return cm.calculate_max_event_charge_count_within_limit(rich_event)
     k = int((remaining - n_records * pp) / (pe - pp))
     return max(0, min(n_records, k))
+
+
+def _extra_cap(n_rich: int, n_plain: int, plain_event: str, rich_event: str, extra_event: str) -> int | None:
+    """How many of the `n_rich` enriched rows can also carry the extra event so that
+    the whole run still fits max_total_charge_usd. None means unlimited."""
+    cm = Actor.get_charging_manager()
+    info = cm.get_pricing_info()
+    if not info.is_pay_per_event:
+        return None
+    remaining = cm.get_max_total_charge_usd() - cm.calculate_total_charged_amount()
+    if not remaining.is_finite():
+        return None
+    prices = info.per_event_prices
+    px = prices.get(extra_event)
+    if px is None or px <= 0:
+        return 0
+    base = n_rich * (prices.get(rich_event) or 0) + n_plain * (prices.get(plain_event) or 0)
+    return max(0, min(n_rich, int((remaining - base) / px)))
+
+
+async def _add_previews(enriched: list[dict], n_plain: int) -> int:
+    """Attach `preview` to as many enriched rows as the budget and the key allow. Returns the count to charge."""
+    info = Actor.get_charging_manager().get_pricing_info()
+    if info.is_pay_per_event and EVENT_PREVIEW not in info.per_event_prices:
+        Actor.log.error(f"Event '{EVENT_PREVIEW}' has no price configured; previews skipped")
+        return 0
+    if not preview.available():
+        Actor.log.error("ANTHROPIC_API_KEY is not set on this actor; previews skipped")
+        return 0
+    cap = _extra_cap(len(enriched), n_plain, EVENT_MATCH, EVENT_ENRICHED, EVENT_PREVIEW)
+    limit = len(enriched) if cap is None else min(len(enriched), cap)
+    if limit < len(enriched):
+        Actor.log.warning(f"Budget allows {limit} previews; {len(enriched) - limit} enriched rows go without.")
+    if not limit:
+        return 0
+    await Actor.set_status_message(f"Writing {limit} match previews")
+    return preview.attach_previews(enriched, limit=limit, progress=Actor.log.info)
 
 
 def _parse_date(s: str | None) -> date | None:
@@ -121,9 +164,14 @@ async def main() -> None:
             return
         if failed:
             Actor.log.warning(f"{len(failed)} of {len(attempted)} enrichments failed; those rows are returned plain")
+        previews = 0
+        if bool(inp.get("preview", False)) and enriched:
+            previews = await _add_previews(enriched, len(plain))
         charged = 0
         if enriched:
             charged += (await Actor.push_data(enriched, charged_event_name=EVENT_ENRICHED)).charged_count
+            if previews:
+                charged += (await Actor.charge(EVENT_PREVIEW, count=previews)).charged_count
         if plain:
             charged += (await Actor.push_data(plain, charged_event_name=EVENT_MATCH)).charged_count
         archive = (inp.get("archiveDatasetName") or "").strip()

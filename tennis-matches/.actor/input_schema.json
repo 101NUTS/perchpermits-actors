@@ -96,6 +96,12 @@
             "description": "Add every recorded odds change per bookmaker (timestamped, site time). Larger rows.",
             "default": false
         },
+        "preview": {
+            "title": "Write a match preview",
+            "type": "boolean",
+            "description": "Add a `preview` field to each enriched row: 90 to 140 words by Claude on what the row's own numbers say (market, movement, form, surface, head-to-head). No pick, no invented facts. Charged as `match-preview` on top of `enriched-match`, only for rows that got one. Needs `enrich`.",
+            "default": false
+        },
         "requestDelaySeconds": {
             "title": "Delay between requests (seconds)",
             "type": "number",

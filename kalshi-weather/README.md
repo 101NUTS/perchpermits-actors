@@ -54,6 +54,7 @@ Just the ladders, no NWS join, cheapest:
 | `maxEvents` | integer | 100 | Stop after this many ladders. Open ladders on a normal day: about 48. |
 | `enrich` | boolean | true | Join to the NWS station. Charged as `enriched-event` instead of `event`. |
 | `includeHourlyPeriods` | boolean | false | Keep every hourly forecast period for the target day in the row. |
+| `analysis` | boolean | false | Add a written `analysis_text` to each enriched row (below). Charged as `ladder-analysis` on top of `enriched-event`. |
 | `requestDelaySeconds` | number | 0.25 | Delay between requests to either API. |
 | `archiveDatasetName` | string | none | Also append every row to this named dataset in your account, for a history that outlives run retention. Not charged again. |
 
@@ -120,14 +121,25 @@ One row per ladder. Every field below is present on every row; values are `null`
 
 The temperature Kalshi settles on is the official climate report's whole-degree max or min. Observations are hourly (some stations report more often) and can miss the exact peak minute, so `observations.max_f` is a floor on the day's high, not the final value.
 
+With `analysis: true`, each enriched row also carries:
+
+| Field | Meaning |
+|---|---|
+| `analysis_text` | `{text, model, generated_at}`: 90 to 140 words written by Claude from the row's own numbers: where the market puts its weight and what it expects, where the NWS forecast and the observations so far land and how far that sits from the market, and what settled if the report is in. It recommends nothing; a null field in the row is reported as missing, never guessed. `null` when the model could not produce one (that row is not charged the analysis event). Absent when `analysis` is off or the budget ran out. |
+
 ## Pricing
 
 | Event | Price | What it is |
 |---|---|---|
 | `event` | $0.002 | One ladder, plain. |
 | `enriched-event` | $0.02 | One ladder joined to its NWS station. |
+| `ladder-analysis` | $0.10 | An enriched ladder that also carries a written `analysis_text`. Charged in addition to `enriched-event`, only for rows where it is not null. |
 
-Apify's free credit covers a few hundred enriched ladders. With a budget set, the actor works out how many ladders it can join, joins those, and returns the rest plain. Rows without an NWS station are always plain. Nothing is charged for a row that is not returned.
+Apify's free credit covers a few hundred enriched ladders. With a budget set, the actor works out how many ladders it can join, joins those, and returns the rest plain; analyses are capped the same way after the join. Rows without an NWS station are always plain. Nothing is charged for a row that is not returned.
+
+## Wrap this in an afternoon
+
+Reselling these rows behind your own search box is allowed and expected; it is what the per-row price is for. A zero-dependency starter kit does it: a one-page storefront, Stripe credit packs that never expire (no subscription), and one call to this actor per search. Point it at `perchpermits/kalshi-weather-markets-nws`, set your price per ladder, and deploy anywhere Node runs. Source and setup: [wrapper-kit](https://github.com/101NUTS/perchpermits-actors/tree/master/wrapper-kit). At $0.02 an enriched ladder here, a $0.10 charge per ladder on your side leaves about 80% before Stripe's fee.
 
 ## What it refuses to do
 

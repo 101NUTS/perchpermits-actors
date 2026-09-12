@@ -1,0 +1,3297 @@
+{
+  "data": {
+    "total": 5683,
+    "count": 50,
+    "offset": 0,
+    "limit": 50,
+    "desc": false,
+    "items": [
+      {
+        "title": "Google Trends Scraper",
+        "name": "google-trends-scraper",
+        "username": "apify",
+        "stats": {
+          "totalBuilds": 359,
+          "totalRuns": 607699,
+          "totalUsers": 13033,
+          "totalUsers7Days": 466,
+          "totalUsers30Days": 1302,
+          "totalUsers90Days": 2734,
+          "lastRunStartedAt": "2026-09-11T10:18:12.910Z",
+          "totalMetamorphs": 7692,
+          "publicActorRunStats30Days": {
+            "ABORTED": 2080,
+            "FAILED": 554,
+            "SUCCEEDED": 13694,
+            "TIMED-OUT": 5419,
+            "TOTAL": 21747
+          },
+          "actorReviewCount": 32,
+          "actorReviewRating": 3.677352332297748,
+          "bookmarkCount": 244
+        },
+        "description": "Scrape data from Google Trends by search terms or URLs. Specify locations, define time ranges, select categories to get interest by subregion and over time, related queries and topics, and more. Export scraped data, run the scraper via API, schedule and monitor runs, or integrate with other tools.",
+        "categories": [
+          "SEO_TOOLS",
+          "NEWS"
+        ],
+        "pictureUrl": "https://images.apifyusercontent.com/qOG20fT7VeksOfWaZcKWF2uicKnl4CBImLMn87Ef8FY/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMuYW1hem9uYXdzLmNvbS9EeU5RRVlEajlhd2ZHUWY5QS9hQUZuZjQ2d2t3M2pTbnE0Zy1Hb29nbGVfVHJlbmRzX1NjcmFwZXIucG5n.webp",
+        "notice": "NONE",
+        "bookmarkCount": 246,
+        "actorReviewRating": 3.677352332297747,
+        "actorReviewCount": 32,
+        "badge": null,
+        "isWhiteListedForAgenticPayments": false,
+        "userFullName": "Apify",
+        "userPictureUrl": "https://images.apifyusercontent.com/W831qifiDbg1ltpsHQIGyWH55ztmmv7T4EILHVqoFU4/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vSTdzZWx3YUVOam9GRG9Td3J3ODFQYXc2SEpXSjJRZk0tNzhMa1ZxcEtEQS9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZXbk5qVFhkR1VqVklOMlZEZEZkMGVXZ3RjSEp2Wm1sc1pTMVBiamhzU0U1bGJrSnZMV0Z3YVdaNUxYTjViV0p2YkMxamIyeHZjbk10YldGeVoybHVMbk4yWnk1d2JtYy5wbmc.webp",
+        "currentPricingInfo": {
+          "minimalMaxTotalChargeUsd": null,
+          "isPPEPlatformUsagePaidByUser": true,
+          "pricingModel": "PAY_PER_EVENT",
+          "isPriceChangeNotificationSuppressed": false,
+          "pricingPerEvent": {
+            "actorChargeEvents": {
+              "apify-default-dataset-item": {
+                "eventTitle": "Result",
+                "eventDescription": "Single result in the default dataset.",
+                "isOneTimeEvent": false,
+                "eventTieredPricingUsd": {
+                  "FREE": {
+                    "tieredEventPriceUsd": 0.003
+                  },
+                  "BRONZE": {
+                    "tieredEventPriceUsd": 0.001
+                  },
+                  "SILVER": {
+                    "tieredEventPriceUsd": 0.0005
+                  },
+                  "GOLD": {
+                    "tieredEventPriceUsd": 0.0003
+                  },
+                  "PLATINUM": {
+                    "tieredEventPriceUsd": 0.00015
+                  },
+                  "DIAMOND": {
+                    "tieredEventPriceUsd": 0.0001
+                  }
+                },
+                "isPrimaryEvent": true
+              }
+            }
+          },
+          "createdAt": "2026-06-30T12:42:38.684Z",
+          "startedAt": "2026-06-30T12:42:38.684Z",
+          "apifyMarginPercentage": 0.2
+        },
+        "id": "DyNQEYDj9awfGQf9A",
+        "url": "https://apify.com/apify/google-trends-scraper"
+      },
+      {
+        "title": "Google Trends Scraper",
+        "name": "google-trends-fast-scraper",
+        "username": "data_xplorer",
+        "stats": {
+          "totalBuilds": 498,
+          "totalRuns": 382831,
+          "totalUsers": 1672,
+          "totalUsers7Days": 145,
+          "totalUsers30Days": 362,
+          "totalUsers90Days": 741,
+          "lastRunStartedAt": "2026-09-11T10:07:57.142Z",
+          "publicActorRunStats30Days": {
+            "ABORTED": 107,
+            "FAILED": 6,
+            "SUCCEEDED": 28099,
+            "TIMED-OUT": 34,
+            "TOTAL": 28246
+          },
+          "actorReviewCount": 4,
+          "actorReviewRating": 4.882045380583565,
+          "bookmarkCount": 67
+        },
+        "description": "Get instant access to 🔥 daily trending searches by country and analyze Google Trends keyword search trends. This ultimate API alternative gives developers and data scientists programmatic access to Google Trends data without limitations.",
+        "categories": [
+          "AUTOMATION",
+          "INTEGRATIONS",
+          "SEO_TOOLS"
+        ],
+        "pictureUrl": "https://images.apifyusercontent.com/MXfH-pbED7fGFvEgO7XwgTZ5pBdim_9bwfwGlA2-R7w/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vdzhDZkhEa1FxZXphcnFNb2QtYWN0b3ItbldoTTd2VFB1MTZsY3d1SWcteVFydGNXRkprYi1MZW9uYXJkb19QaG9lbml4XzEwX0FfbW9kZXJuX21pbmltYWxpc3RfbG9nb19mb3JfYV9Hb29nbGVfVHJlbl8w.webp",
+        "notice": "NONE",
+        "bookmarkCount": 74,
+        "actorReviewRating": 4.882045380583564,
+        "actorReviewCount": 4,
+        "badge": null,
+        "isWhiteListedForAgenticPayments": true,
+        "userFullName": "Data Xplorer",
+        "userPictureUrl": "https://images.apifyusercontent.com/hiJrUFK0QGV5WRo9HZBMJpzBpc00qhcSRuwvc96j-lg/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vdHpITjAzMXlGWjU4MWFVRXJZaVllWGRTSldiMEhhWnZzeGwwdjFHaWtUdy9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZkemhEWmtoRWExRnhaWHBoY25GTmIyUXRjSEp2Wm1sc1pTMUJWMmRDZUZOMWJVNW9MVVpzZFhoZlJHVjJYMEp5WVc1a1gwNWhiV1ZmV0hCc2IzSmxja3h2WjI5ZlEyOXVZMlZ3ZEY5VWFHVmZiRzluYjE5emFHOTFiR1JmWm1WaGRIVnlYekE.webp",
+        "currentPricingInfo": {
+          "minimalMaxTotalChargeUsd": null,
+          "pricingModel": "PAY_PER_EVENT",
+          "isPriceChangeNotificationSuppressed": false,
+          "pricingPerEvent": {
+            "actorChargeEvents": {
+              "apify-actor-start": {
+                "eventTitle": "Actor Start",
+                "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+                "isOneTimeEvent": true,
+                "eventPriceUsd": 0.02
+              },
+              "apify-default-dataset-item": {
+                "eventTitle": "result",
+                "eventDescription": "Single result in the default dataset.",
+                "isOneTimeEvent": false,
+                "eventTieredPricingUsd": {
+                  "GOLD": {
+                    "tieredEventPriceUsd": 0.0005
+                  },
+                  "PLATINUM": {
+                    "tieredEventPriceUsd": 0.0005
+                  },
+                  "DIAMOND": {
+                    "tieredEventPriceUsd": 0.0005
+                  },
+                  "SILVER": {
+                    "tieredEventPriceUsd": 0.00075
+                  },
+                  "BRONZE": {
+                    "tieredEventPriceUsd": 0.001
+                  },
+                  "FREE": {
+                    "tieredEventPriceUsd": 0.002
+                  }
+                },
+                "isPrimaryEvent": true
+              }
+            }
+          },
+          "startedAt": "2026-06-28T16:17:59.028Z",
+          "createdAt": "2026-06-14T16:17:59.449Z",
+          "apifyMarginPercentage": 0.2,
+          "notifiedAboutFutureChangeAt": "2026-06-14T16:18:20.973Z",
+          "notifiedAboutRentalToPpePriceChangeAt": "2026-06-15T15:18:20.009Z"
+        },
+        "id": "nWhM7vTPu16lcwuIg",
+        "url": "https://apify.com/data_xplorer/google-trends-fast-scraper"
+      },
+      {
+        "title": "Google Trends Scraper — Interest, Regions & Queries",
+        "name": "google-trends-scraper",
+        "username": "khadinakbar",
+        "stats": {
+          "totalBuilds": 33,
+          "totalRuns": 2281,
+          "totalUsers": 270,
+          "totalUsers7Days": 47,
+          "totalUsers30Days": 102,
+          "totalUsers90Days": 168,
+          "lastRunStartedAt": "2026-09-11T08:09:30.286Z",
+          "actorReviewCount": 0,
+          "actorReviewRating": 0,
+          "bookmarkCount": 3,
+          "publicActorRunStats30Days": {
+            "ABORTED": 16,
+            "FAILED": 120,
+            "SUCCEEDED": 900,
+            "TIMED-OUT": 4,
+            "TOTAL": 1040
+          }
+        },
+        "description": "Extract all 5 Google Trends data types: keyword interest over time, by region, related queries, related topics & daily trending searches. No API key. MCP/API-ready.",
+        "categories": [
+          "SEO_TOOLS",
+          "MARKETING",
+          "MCP_SERVERS"
+        ],
+        "pictureUrl": "https://images.apifyusercontent.com/oMTdOCBvV5zUMBiW51ZK49WG_2_QQ_3zpvyZ7dRBEVk/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vcU5IdjFhTkZKZGk3cUNwV2UtYWN0b3IteUlQbnYyYUtHRG1SbWdveTEtQnZ0ZDhNenhKdC0xMjI0NjE4NS5wbmc.webp",
+        "notice": "NONE",
+        "bookmarkCount": 3,
+        "actorReviewRating": 0,
+        "actorReviewCount": 0,
+        "badge": null,
+        "isWhiteListedForAgenticPayments": false,
+        "userFullName": "Khadin Akbar",
+        "userPictureUrl": "https://images.apifyusercontent.com/HbwQpQhiljFdnh_PO70uT83X5JYxLKszGnmTkdJFssQ/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20veWdCaE5vQ05rTzJNYmI1ZFpkdEJlX3JaSEZ1b2llWTBHS1V1Z2JOZVROdy9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZjVTVJZGpGaFRrWktaR2szY1VOd1YyVXRjSEp2Wm1sc1pTMXZPWGhqUmtwVlNFNUpMVGs1TmtSRE1UZ3lMVGt6UlVNdE5EQTVNaTA1UlRORExUa3dOa1UwTmpJd1JqWkJRbDgwWHpVd01EVmZZeTVxY0dWbi5qcGVn.webp",
+        "currentPricingInfo": {
+          "minimalMaxTotalChargeUsd": null,
+          "isPPEPlatformUsagePaidByUser": true,
+          "pricingModel": "PAY_PER_EVENT",
+          "isPriceChangeNotificationSuppressed": true,
+          "pricingPerEvent": {
+            "actorChargeEvents": {
+              "result-item": {
+                "eventTitle": "Result item",
+                "eventDescription": "One data record — an interest data point, regional value, related query, topic, or trending search.",
+                "isOneTimeEvent": false,
+                "eventPriceUsd": 0.005,
+                "isPrimaryEvent": true
+              },
+              "apify-actor-start": {
+                "eventTitle": "Actor Start",
+                "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+                "isOneTimeEvent": true,
+                "eventPriceUsd": 0.00005
+              }
+            }
+          },
+          "createdAt": "2026-07-21T20:29:25.273Z",
+          "startedAt": "2026-07-21T20:29:25.273Z",
+          "apifyMarginPercentage": 0.2
+        },
+        "id": "yIPnv2aKGDmRmgoy1",
+        "url": "https://apify.com/khadinakbar/google-trends-scraper"
+      },
+      {
+        "title": "Google Trends Daily Scraper - Real-Time Trending Keywords API",
+        "name": "google-trends-scraper",
+        "username": "vnx0",
+        "stats": {
+          "totalBuilds": 34,
+          "totalRuns": 76406,
+          "totalUsers": 663,
+          "totalUsers7Days": 48,
+          "totalUsers30Days": 119,
+          "totalUsers90Days": 263,
+          "lastRunStartedAt": "2026-09-11T10:00:24.709Z",
+          "actorReviewCount": 1,
+          "actorReviewRating": 5,
+          "bookmarkCount": 10,
+          "publicActorRunStats30Days": {
+            "ABORTED": 0,
+            "FAILED": 59,
+            "SUCCEEDED": 13016,
+            "TIMED-OUT": 1,
+            "TOTAL": 13076
+          }
+        },
+        "description": "Extract real-time trending searches from Google Trends \"Trending Now\" feed. Get daily trending keywords with traffic scores, news articles, and images for 40+ countries. Ideal for SEO monitoring, content strategy, market research, and trend analysis. No login or API key required.",
+        "categories": [
+          "AUTOMATION",
+          "SEO_TOOLS",
+          "NEWS"
+        ],
+        "pictureUrl": "https://images.apifyusercontent.com/eEee_J83oo0GZpFy8mJAHG3n4MYs2KoyHGaNbWDK9rA/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vc3JJTmExMVdpVUpUSDZGeUwtYWN0b3ItSmEwRFVWOWs2MWdOS1hKNkwtTWc2Y0dsN1V6Mi1nb29nbGVfdHJlbmRzLnN2Zy5wbmc.webp",
+        "notice": "NONE",
+        "bookmarkCount": 10,
+        "actorReviewRating": 5,
+        "actorReviewCount": 1,
+        "badge": null,
+        "isWhiteListedForAgenticPayments": true,
+        "userFullName": "Vnx0",
+        "userPictureUrl": "https://images.apifyusercontent.com/oxrh4-AUDbRy415PiUqUkHUOXt0-9CYLz7n11LYitwM/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vbDQ1Y1E0aktmbjBjLXppd2FVR0dLNkpkUFNqLVFuMmN1V0R3cnBsNmZfcy9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTlzYURNdVoyOXZaMnhsZFhObGNtTnZiblJsYm5RdVkyOXRMMkV2UVVObk9HOWpTMTlWY2paSVlrNUZjazVtTlhWUU9VNWpWVGx1WVdsSExWQnRWVTQ0UW5oMU1rVmFiR0ZDUW5KbVpXRnhWREZNV1Qxek9UWXRZdw.webp",
+        "currentPricingInfo": {
+          "minimalMaxTotalChargeUsd": null,
+          "pricingModel": "PAY_PER_EVENT",
+          "isPriceChangeNotificationSuppressed": false,
+          "pricingPerEvent": {
+            "actorChargeEvents": {
+              "apify-default-dataset-item": {
+                "eventTitle": "result",
+                "eventDescription": "Single result in the default dataset.",
+                "isOneTimeEvent": false,
+                "eventPriceUsd": 0.0012,
+                "isPrimaryEvent": true
+              }
+            }
+          },
+          "startedAt": "2026-04-26T17:02:44.766Z",
+          "createdAt": "2026-04-12T17:02:46.071Z",
+          "apifyMarginPercentage": 0.2,
+          "notifiedAboutFutureChangeAt": "2026-04-12T17:03:08.018Z"
+        },
+        "id": "Ja0DUV9k61gNKXJ6L",
+        "url": "https://apify.com/vnx0/google-trends-scraper"
+      },
+      {
+        "title": "Google Trends Scraper",
+        "name": "google-trends-scraper",
+        "username": "automation-lab",
+        "stats": {
+          "totalBuilds": 40,
+          "totalRuns": 7517,
+          "totalUsers": 278,
+          "totalUsers7Days": 21,
+          "totalUsers30Days": 59,
+          "totalUsers90Days": 110,
+          "lastRunStartedAt": "2026-09-11T09:30:12.901Z",
+          "actorReviewCount": 0,
+          "actorReviewRating": 0,
+          "bookmarkCount": 0,
+          "publicActorRunStats30Days": {
+            "ABORTED": 16,
+            "FAILED": 4,
+            "SUCCEEDED": 2522,
+            "TIMED-OUT": 3,
+            "TOTAL": 2545
+          }
+        },
+        "description": "Scrape Google Trends: daily trending searches and keyword analysis. Get interest over time, related queries, and regional interest. Two modes: trending (pure HTTP, dirt cheap) and keyword analysis. Flat output for CSV/Excel. Pay per result.",
+        "categories": [
+          "SEO_TOOLS",
+          "MARKETING"
+        ],
+        "pictureUrl": "https://images.apifyusercontent.com/bajg-bUwplLlpfjsv9RaF9YFHAmwtQ1moqbGg-0-dt8/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vbnRIQ25oTlVrelhSN25iVVotYWN0b3ItNWhBRVE0bXRISHJ2dXhKV1ctQWQwdzE0QnpVMS1hY3Rvci1pY29uLnBuZw.webp",
+        "notice": "NONE",
+        "bookmarkCount": 0,
+        "actorReviewRating": 0,
+        "actorReviewCount": 0,
+        "badge": null,
+        "isWhiteListedForAgenticPayments": true,
+        "userFullName": "Stas Persiianenko",
+        "userPictureUrl": "https://images.apifyusercontent.com/2BFUHuGfbLY2pRm_Mp4LyoIgIzEX6NVldfIQNo9wi9E/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vVGVzYlZ0a2twdnh2M09nRWxvYThCdkdLX1NrNXdTck1sZWl2Ni1jeG9hSS9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloZG1GMFlYSnpMbWRwZEdoMVluVnpaWEpqYjI1MFpXNTBMbU52YlM5MUx6Z3pNekU1TWo5MlBUUQ.webp",
+        "currentPricingInfo": {
+          "pricingModel": "PAY_PER_EVENT",
+          "startedAt": "2026-08-25T20:04:15.603Z",
+          "pricingPerEvent": {
+            "actorChargeEvents": {
+              "start": {
+                "eventTitle": "Run started",
+                "eventDescription": "One-time cost per run.",
+                "eventPriceUsd": 0.005,
+                "isOneTimeEvent": true
+              },
+              "trend-scraped": {
+                "eventTitle": "Trending topic scraped",
+                "eventDescription": "Cost per trending topic extracted.",
+                "eventTieredPricingUsd": {
+                  "FREE": {
+                    "tieredEventPriceUsd": 0.00115
+                  },
+                  "BRONZE": {
+                    "tieredEventPriceUsd": 0.001
+                  },
+                  "SILVER": {
+                    "tieredEventPriceUsd": 0.00078
+                  },
+                  "GOLD": {
+                    "tieredEventPriceUsd": 0.0006
+                  },
+                  "PLATINUM": {
+                    "tieredEventPriceUsd": 0.0004
+                  },
+                  "DIAMOND": {
+                    "tieredEventPriceUsd": 0.00036
+                  }
+                }
+              },
+              "keyword-analyzed": {
+                "eventTitle": "Keyword analyzed",
+                "eventDescription": "Cost per keyword (interest over time + related queries + regional interest).",
+                "eventTieredPricingUsd": {
+                  "FREE": {
+                    "tieredEventPriceUsd": 0.138
+                  },
+                  "BRONZE": {
+                    "tieredEventPriceUsd": 0.12
+                  },
+                  "SILVER": {
+                    "tieredEventPriceUsd": 0.0936
+                  },
+                  "GOLD": {
+                    "tieredEventPriceUsd": 0.072
+                  },
+                  "PLATINUM": {
+                    "tieredEventPriceUsd": 0.048
+                  },
+                  "DIAMOND": {
+                    "tieredEventPriceUsd": 0.0336
+                  }
+                },
+                "isPrimaryEvent": true
+              }
+            }
+          },
+          "apifyMarginPercentage": 0.2,
+          "notifiedAboutFutureChangeAt": "2026-05-31T14:06:33.288Z",
+          "createdAt": "2026-08-25T20:04:15.702Z"
+        },
+        "id": "5hAEQ4mtHHrvuxJWW",
+        "url": "https://apify.com/automation-lab/google-trends-scraper"
+      },
+      {
+        "title": "Google Trends Scraper",
+        "name": "google-trends-scraper",
+        "username": "leadsbrary",
+        "stats": {
+          "totalBuilds": 6,
+          "totalRuns": 16698,
+          "totalUsers": 31,
+          "totalUsers7Days": 6,
+          "totalUsers30Days": 18,
+          "totalUsers90Days": 21,
+          "lastRunStartedAt": "2026-09-11T09:50:49.133Z",
+          "actorReviewCount": 0,
+          "actorReviewRating": 0,
+          "bookmarkCount": 0,
+          "publicActorRunStats30Days": {
+            "ABORTED": 43,
+            "FAILED": 2,
+            "SUCCEEDED": 15553,
+            "TIMED-OUT": 6,
+            "TOTAL": 15604
+          }
+        },
+        "description": "FAST & CHEAP — $1 / 1,000 results. Scrape Google Trends by keyword or URL: trends over time, subregions, related queries/topics, locations, time ranges and categories. Export data, run via API, schedule and monitor runs.",
+        "categories": [
+          "AUTOMATION",
+          "SEO_TOOLS",
+          "SOCIAL_MEDIA"
+        ],
+        "pictureUrl": "https://images.apifyusercontent.com/AZB-loptE8uoV1zOqWuBE5e1O1aERLKyAcTbfn7VX4E/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vZnE1NHZrTTh1V3VsbktBbnItYWN0b3ItemhHVWZ1MFkxc3VEZ2dTMnUtOG9UazlrMjRQaC1Hb29nbGUtVHJlbmRzLUxvZ28tU3F1YXJlLUluc2lnaHQtUGxhdGZvcm1zLndlYnA.webp",
+        "notice": "NONE",
+        "bookmarkCount": 1,
+        "actorReviewRating": 5,
+        "actorReviewCount": 1,
+        "badge": null,
+        "isWhiteListedForAgenticPayments": false,
+        "userFullName": "Alexandre Manguis",
+        "userPictureUrl": "https://images.apifyusercontent.com/6qUz5dNbUY4MxtuEJnD24yjux-mhBKAPNSneJdoy92A/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vRThDZUlyMEJBS3JVSnIwQVkwcWN5VDNuNnNaMklkUmp0UEFzSTRuSUFhVS9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZabkUxTkhaclRUaDFWM1ZzYmt0QmJuSXRjSEp2Wm1sc1pTMDBXWEpaVFhaQlQyRnpMV3h2WjI5ZmNISnZabWxzWlM1d2JtYy5wbmc.webp",
+        "currentPricingInfo": {
+          "minimalMaxTotalChargeUsd": null,
+          "isPPEPlatformUsagePaidByUser": true,
+          "pricingModel": "PAY_PER_EVENT",
+          "isPriceChangeNotificationSuppressed": false,
+          "pricingPerEvent": {
+            "actorChargeEvents": {
+              "apify-actor-start": {
+                "eventTitle": "Actor Start",
+                "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+                "isOneTimeEvent": true,
+                "eventPriceUsd": 0.00005
+              },
+              "apify-default-dataset-item": {
+                "eventTitle": "result",
+                "eventDescription": "Single result in the default dataset.",
+                "isOneTimeEvent": false,
+                "eventTieredPricingUsd": {
+                  "FREE": {
+                    "tieredEventPriceUsd": 0.0012
+                  },
+                  "BRONZE": {
+                    "tieredEventPriceUsd": 0.00115
+                  },
+                  "SILVER": {
+                    "tieredEventPriceUsd": 0.001125
+                  },
+                  "GOLD": {
+                    "tieredEventPriceUsd": 0.001
+                  },
+                  "PLATINUM": {
+                    "tieredEventPriceUsd": 0.001
+                  },
+                  "DIAMOND": {
+                    "tieredEventPriceUsd": 0.001
+                  }
+                },
+                "isPrimaryEvent": true
+              }
+            }
+          },
+          "startedAt": "2026-05-20T08:17:31.373Z",
+          "createdAt": "2026-05-20T08:17:31.469Z",
+          "apifyMarginPercentage": 0.2
+        },
+        "id": "zhGUfu0Y1suDggS2u",
+        "url": "https://apify.com/leadsbrary/google-trends-scraper"
+      },
+      {
+        "title": "Google RealTime Trends Data Scraper",
+        "name": "google-realtime-trends-data-scraper",
+        "username": "easyapi",
+        "stats": {
+          "totalBuilds": 20,
+          "totalRuns": 7956,
+          "totalUsers": 222,
+          "totalUsers7Days": 3,
+          "totalUsers30Days": 6,
+          "totalUsers90Days": 27,
+          "lastRunStartedAt": "2026-09-11T06:30:00.238Z",
+          "publicActorRunStats30Days": {
+            "ABORTED": 1,
+            "FAILED": 0,
+            "SUCCEEDED": 189,
+            "TIMED-OUT": 0,
+            "TOTAL": 190
+          },
+          "actorReviewCount": 1,
+          "actorReviewRating": 5,
+          "bookmarkCount": 7
+        },
+        "description": "Real-time Google Trends data scraper that monitors trending search keywords across 40+ countries worldwide. Updated every 10 minutes, perfect for market research, content planning, and trend analysis. Get instant access to what's trending globally! 🌍🔍",
+        "categories": [
+          "SEO_TOOLS",
+          "SOCIAL_MEDIA"
+        ],
+        "pictureUrl": "https://images.apifyusercontent.com/6fiGYjLwuexo_sTbhRwssfSpQSbg1s-IQ4qKv5pixsg/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vb09IWE1BdjhrSW1VQ3BIZmYvZVhUaXVtZHZ1Tmk4NGxDaHgtSWNvblBhcmtUcmVuZC5wbmc.webp",
+        "notice": "NONE",
+        "bookmarkCount": 10,
+        "actorReviewRating": 5,
+        "actorReviewCount": 1,
+        "badge": null,
+        "isWhiteListedForAgenticPayments": false,
+        "userFullName": "EasyApi",
+        "userPictureUrl": "https://images.apifyusercontent.com/jRLSQe923-AZF5qiNGrNkBM5HUiZ1P4YoVdpVX9TgXU/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vV2JMcHh6U0dRV0xpLUlzd3Q0UUtZcEZDUWlJcTRHck5WeGpFczh5b0R4cy9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZka1ZNWXpseFZGUnBORkJHY1U1MFJsVXZPVk5vWjBoYVlWQTJiemRaU1hCa1YwVXRhV052YmpFeU9DNXdibWMucG5n.webp",
+        "currentPricingInfo": {
+          "minimalMaxTotalChargeUsd": null,
+          "isPPEPlatformUsagePaidByUser": true,
+          "pricingModel": "PAY_PER_EVENT",
+          "isPriceChangeNotificationSuppressed": false,
+          "pricingPerEvent": {
+            "actorChargeEvents": {
+              "apify-default-dataset-item": {
+                "eventTitle": "result",
+                "eventDescription": "Single result in the default dataset.",
+                "isOneTimeEvent": false,
+                "eventPriceUsd": 0.00299,
+                "isPrimaryEvent": true
+              },
+              "apify-actor-start": {
+                "eventTitle": "Actor Start",
+                "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+                "isOneTimeEvent": true,
+                "eventPriceUsd": 0.09
+              }
+            }
+          },
+          "startedAt": "2026-05-18T06:58:39.917Z",
+          "createdAt": "2026-05-04T06:58:40.537Z",
+          "apifyMarginPercentage": 0.2,
+          "notifiedAboutFutureChangeAt": "2026-05-04T06:59:01.097Z"
+        },
+        "id": "oOHXMAv8kImUCpHff",
+        "url": "https://apify.com/easyapi/google-realtime-trends-data-scraper"
+      },
+      {
+        "title": "Google Trends Trending Now",
+        "name": "google-trends-trending-now",
+        "username": "data_xplorer",
+        "stats": {
+          "totalBuilds": 18,
+          "totalRuns": 6797,
+          "totalUsers": 213,
+          "totalUsers7Days": 27,
+          "totalUsers30Days": 44,
+          "totalUsers90Days": 106,
+          "lastRunStartedAt": "2026-09-11T08:17:00.702Z",
+          "actorReviewCount": 1,
+          "actorReviewRating": 5,
+          "bookmarkCount": 7,
+          "publicActorRunStats30Days": {
+            "ABORTED": 1,
+            "FAILED": 0,
+            "SUCCEEDED": 1796,
+            "TIMED-OUT": 0,
+            "TOTAL": 1797
+          }
+        },
+        "description": "🔥 BEST GOOGLE TRENDS SCRAPER: Scrape Google Trends trending searches in real time. Get search volume, categories, and related terms for 45+ countries. Perfect for SEO, market research, and content strategy.",
+        "categories": [
+          "SEO_TOOLS",
+          "NEWS",
+          "AUTOMATION"
+        ],
+        "pictureUrl": "https://images.apifyusercontent.com/6wxEtdE_HvipdGZIV71DAB5d8RsrQ15Wuu8_vC4nY2A/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vdzhDZkhEa1FxZXphcnFNb2QtYWN0b3ItWkJJZ2xHNHdFWWxhRzJ4UGktdjh5VkRhV3Y2Ti1GbHV4X0Rldl9BX21vZGVybl9zbGVla19sb2dvX2Zvcl9Hb29nbGVfVHJlbmRpbmdfTm93X2ZlYXR1cmluZ18w.webp",
+        "notice": "NONE",
+        "bookmarkCount": 11,
+        "actorReviewRating": 4.999999999999999,
+        "actorReviewCount": 2,
+        "badge": null,
+        "isWhiteListedForAgenticPayments": true,
+        "userFullName": "Data Xplorer",
+        "userPictureUrl": "https://images.apifyusercontent.com/hiJrUFK0QGV5WRo9HZBMJpzBpc00qhcSRuwvc96j-lg/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vdHpITjAzMXlGWjU4MWFVRXJZaVllWGRTSldiMEhhWnZzeGwwdjFHaWtUdy9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZkemhEWmtoRWExRnhaWHBoY25GTmIyUXRjSEp2Wm1sc1pTMUJWMmRDZUZOMWJVNW9MVVpzZFhoZlJHVjJYMEp5WVc1a1gwNWhiV1ZmV0hCc2IzSmxja3h2WjI5ZlEyOXVZMlZ3ZEY5VWFHVmZiRzluYjE5emFHOTFiR1JmWm1WaGRIVnlYekE.webp",
+        "currentPricingInfo": {
+          "minimalMaxTotalChargeUsd": null,
+          "pricingModel": "PAY_PER_EVENT",
+          "isPriceChangeNotificationSuppressed": false,
+          "pricingPerEvent": {
+            "actorChargeEvents": {
+              "apify-default-dataset-item": {
+                "eventTitle": "result",
+                "eventDescription": "Single result in the default dataset.",
+                "isOneTimeEvent": false,
+                "eventTieredPricingUsd": {
+                  "FREE": {
+                    "tieredEventPriceUsd": 0.001
+                  },
+                  "BRONZE": {
+                    "tieredEventPriceUsd": 0.00075
+                  },
+                  "SILVER": {
+                    "tieredEventPriceUsd": 0.0005
+                  },
+                  "GOLD": {
+                    "tieredEventPriceUsd": 0.00025
+                  },
+                  "PLATINUM": {
+                    "tieredEventPriceUsd": 0.00025
+                  },
+                  "DIAMOND": {
+                    "tieredEventPriceUsd": 0.00025
+                  }
+                },
+                "isPrimaryEvent": true
+              },
+              "apify-actor-start": {
+                "eventTitle": "Actor Start",
+                "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+                "isOneTimeEvent": true,
+                "eventPriceUsd": 0.02
+              }
+            }
+          },
+          "startedAt": "2026-06-28T16:23:49.964Z",
+          "createdAt": "2026-06-14T16:23:50.189Z",
+          "apifyMarginPercentage": 0.2,
+          "notifiedAboutFutureChangeAt": "2026-06-14T16:24:11.099Z"
+        },
+        "id": "ZBIglG4wEYlaG2xPi",
+        "url": "https://apify.com/data_xplorer/google-trends-trending-now"
+      },
+      {
+        "title": "Google Trends Keywords Discovery Tool 📊",
+        "name": "google-trends-keywords-discovery-tool",
+        "username": "easyapi",
+        "stats": {
+          "totalBuilds": 5,
+          "totalRuns": 1850,
+          "totalUsers": 188,
+          "totalUsers7Days": 6,
+          "totalUsers30Days": 22,
+          "totalUsers90Days": 40,
+          "lastRunStartedAt": "2026-09-11T04:03:47.627Z",
+          "publicActorRunStats30Days": {
+            "ABORTED": 11,
+            "FAILED": 0,
+            "SUCCEEDED": 343,
+            "TIMED-OUT": 4,
+            "TOTAL": 358
+          },
+          "actorReviewCount": 1,
+          "actorReviewRating": 5,
+          "bookmarkCount": 3
+        },
+        "description": "🔍 Unlock powerful insights from Google Trends with real-time data extraction. Get comprehensive trending topics, rising queries, and search interest patterns across regions. Perfect for market research, content strategy, and trend analysis.",
+        "categories": [
+          "SEO_TOOLS",
+          "INTEGRATIONS",
+          "OTHER"
+        ],
+        "pictureUrl": "https://images.apifyusercontent.com/Rv2qyM3p4urxqXT3a9RTiJ39LgI9wNxm4EXj8oNa53U/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vdkVMYzlxVFRpNFBGcU50RlUtYWN0b3Itc1NPWUxpSzBhR2tjcjdkU3QtVGc3anFuVnZEWi1GbHVlbnRUYXJnZXRBcnJvdzE2RmlsbGVkLnBuZw.webp",
+        "notice": "NONE",
+        "bookmarkCount": 3,
+        "actorReviewRating": 5,
+        "actorReviewCount": 1,
+        "badge": null,
+        "isWhiteListedForAgenticPayments": false,
+        "userFullName": "EasyApi",
+        "userPictureUrl": "https://images.apifyusercontent.com/jRLSQe923-AZF5qiNGrNkBM5HUiZ1P4YoVdpVX9TgXU/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vV2JMcHh6U0dRV0xpLUlzd3Q0UUtZcEZDUWlJcTRHck5WeGpFczh5b0R4cy9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZka1ZNWXpseFZGUnBORkJHY1U1MFJsVXZPVk5vWjBoYVlWQTJiemRaU1hCa1YwVXRhV052YmpFeU9DNXdibWMucG5n.webp",
+        "currentPricingInfo": {
+          "minimalMaxTotalChargeUsd": null,
+          "isPPEPlatformUsagePaidByUser": true,
+          "pricingModel": "PAY_PER_EVENT",
+          "isPriceChangeNotificationSuppressed": false,
+          "pricingPerEvent": {
+            "actorChargeEvents": {
+              "apify-default-dataset-item": {
+                "eventTitle": "result",
+                "eventDescription": "Single result in the default dataset.",
+                "isOneTimeEvent": false,
+                "eventPriceUsd": 0.00299,
+                "isPrimaryEvent": true
+              },
+              "apify-actor-start": {
+                "eventTitle": "Actor Start",
+                "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+                "isOneTimeEvent": true,
+                "eventPriceUsd": 0.09
+              }
+            }
+          },
+          "startedAt": "2026-05-18T04:33:26.489Z",
+          "createdAt": "2026-05-04T04:33:26.971Z",
+          "apifyMarginPercentage": 0.2,
+          "notifiedAboutFutureChangeAt": "2026-05-04T04:33:47.286Z"
+        },
+        "id": "sSOYLiK0aGkcr7dSt",
+        "url": "https://apify.com/easyapi/google-trends-keywords-discovery-tool"
+      },
+      {
+        "title": "Google Trends Scraper",
+        "name": "google-trends",
+        "username": "data_ops_main",
+        "stats": {
+          "totalBuilds": 5,
+          "totalRuns": 19366,
+          "totalUsers": 148,
+          "totalUsers7Days": 9,
+          "totalUsers30Days": 31,
+          "totalUsers90Days": 80,
+          "lastRunStartedAt": "2026-09-11T10:00:07.052Z",
+          "actorReviewCount": 0,
+          "actorReviewRating": 0,
+          "bookmarkCount": 0,
+          "publicActorRunStats30Days": {
+            "ABORTED": 44,
+            "FAILED": 2,
+            "SUCCEEDED": 3409,
+            "TIMED-OUT": 14,
+            "TOTAL": 3469
+          }
+        },
+        "description": "Scrapes Google Trends data for a list of keywords. Outputs precise trend metrics — average interest, direction, peak, growth rate, volatility, and composite trend score - to the Apify dataset.",
+        "categories": [
+          "DEVELOPER_TOOLS",
+          "SEO_TOOLS",
+          "OTHER"
+        ],
+        "pictureUrl": "https://images.apifyusercontent.com/p1XtpNed9z2NgloeXhpIgNwNf4GDfFY-qUK051NOp18/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vYmJGN0JOTDlFdkU5aDVJZG8tYWN0b3ItS1l5WXVMeWdFaFU3Tlp3Z2QtZEZqQzJ6TkdLZy1nb29nbGUtdHJlbmQucG5n.webp",
+        "notice": "NONE",
+        "bookmarkCount": 0,
+        "actorReviewRating": 0,
+        "actorReviewCount": 0,
+        "badge": null,
+        "isWhiteListedForAgenticPayments": true,
+        "userFullName": "yourlocalhost",
+        "userPictureUrl": "https://images.apifyusercontent.com/KXuuGl0lP8JpGfvRfW5qSVPW1tJdOtAfp_ATz-2yX3o/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vWnA5VFpCRk1HTWo4LVhWbXR1YkVRUTFVdjY2VmdiRWZLdW1rdnVvbUpjSS9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZZbUpHTjBKT1REbEZka1U1YURWSlpHOHRjSEp2Wm1sc1pTMW1Ra1o1TTBoYVNtSk9MWFp2YkhWekxXWmhkbWxqYjI0dWNHNW4ucG5n.webp",
+        "currentPricingInfo": {
+          "minimalMaxTotalChargeUsd": null,
+          "pricingModel": "PAY_PER_EVENT",
+          "isPriceChangeNotificationSuppressed": false,
+          "pricingPerEvent": {
+            "actorChargeEvents": {
+              "apify-default-dataset-item": {
+                "eventTitle": "result",
+                "eventDescription": "Single result in the default dataset.",
+                "isOneTimeEvent": false,
+                "eventPriceUsd": 0.003,
+                "isPrimaryEvent": true
+              },
+              "google-trends": {
+                "eventTitle": "Google Trend Actor",
+                "eventDescription": "Charged when the Actor starts running. Covers initialization and infrastructure costs.",
+                "isOneTimeEvent": false,
+                "eventPriceUsd": 0.0005
+              },
+              "apify-actor-start": {
+                "eventTitle": "Actor Start",
+                "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+                "isOneTimeEvent": true,
+                "eventPriceUsd": 0.0005
+              }
+            }
+          },
+          "startedAt": "2026-07-21T16:50:36.497Z",
+          "createdAt": "2026-07-07T16:50:36.950Z",
+          "apifyMarginPercentage": 0.2,
+          "notifiedAboutFutureChangeAt": "2026-07-07T16:50:58.064Z",
+          "notifiedAboutChangeAt": "2026-07-21T17:05:44.854Z"
+        },
+        "id": "KYyYuLygEhU7NZwgd",
+        "url": "https://apify.com/data_ops_main/google-trends"
+      },
+      {
+        "title": "Google Trends Scraper — Fast & Reliable",
+        "name": "google-trends-scraper",
+        "username": "signalbench",
+        "stats": {
+          "totalBuilds": 10,
+          "totalRuns": 7147,
+          "totalUsers": 22,
+          "totalUsers7Days": 5,
+          "totalUsers30Days": 9,
+          "totalUsers90Days": 15,
+          "actorReviewCount": 0,
+          "actorReviewRating": 0,
+          "bookmarkCount": 0,
+          "lastRunStartedAt": "2026-09-11T06:50:01.364Z",
+          "publicActorRunStats30Days": {
+            "ABORTED": 0,
+            "FAILED": 10,
+            "SUCCEEDED": 3808,
+            "TIMED-OUT": 27,
+            "TOTAL": 3845
+          }
+        },
+        "description": "Scrape Google Trends interest over time, interest by region, related queries, and related topics for any keyword. API-based (no browser), built for reliability. Export to JSON, CSV, Excel.",
+        "categories": [
+          "SEO_TOOLS",
+          "NEWS"
+        ],
+        "pictureUrl": "https://images.apifyusercontent.com/FcTDkiHrS-9bTLUHwTUG3YMTE60RVhF5wrX1YC8awFI/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vZ0pRczFWRGsyVnpiSWhZZnQtYWN0b3Itd0d6ZkpQdURYUnljNU9JcUUtWkM5eTl3SlpIZy1Hb29nbGVfVHJlbmRzX0ljb24uc3ZnLnBuZw.webp",
+        "notice": "NONE",
+        "bookmarkCount": 2,
+        "actorReviewRating": 5,
+        "actorReviewCount": 1,
+        "badge": null,
+        "isWhiteListedForAgenticPayments": false,
+        "userFullName": "SignalBench",
+        "userPictureUrl": "https://images.apifyusercontent.com/_X1i_eznFSF0xlDpfeycWgegsCmZa_9Tx2LnA5rpPV4/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20veUJMRkEtMk11LUxydmVYM05LYlh5Tm0wcWxTN1F0TzJQeXh3bENtYUx4dy9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZaMHBSY3pGV1JHc3lWbnBpU1doWlpuUXRjSEp2Wm1sc1pTMDBkbk0zYUdsblNreG5MVWRsYldsdWFWOUhaVzVsY21GMFpXUmZTVzFoWjJWZmQyOXJObkp2ZDI5ck5uSnZkMjlyTmk1d2JtYy5wbmc.webp",
+        "currentPricingInfo": {
+          "minimalMaxTotalChargeUsd": 1,
+          "isPPEPlatformUsagePaidByUser": true,
+          "pricingModel": "PAY_PER_EVENT",
+          "isPriceChangeNotificationSuppressed": false,
+          "reasonForChange": "Platform usage (proxy and compute) was previously included in the flat rate. Google Trends proxy traffic has become expensive to sustain, so from September 9 usage is billed at cost. The per-keyword rate is unchanged at $5.00 / 1,000.",
+          "pricingPerEvent": {
+            "actorChargeEvents": {
+              "apify-default-dataset-item": {
+                "eventTitle": "Keyword scraped",
+                "eventDescription": "One keyword fully analyzed (interest over time + selected extras). Failed keywords are never charged.",
+                "isOneTimeEvent": false,
+                "eventPriceUsd": 0.005,
+                "isPrimaryEvent": true
+              },
+              "apify-actor-start": {
+                "eventTitle": "Actor Start",
+                "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+                "isOneTimeEvent": true,
+                "eventPriceUsd": 0.00005
+              }
+            }
+          },
+          "startedAt": "2026-09-09T17:59:14.553Z",
+          "createdAt": "2026-08-26T17:59:14.962Z",
+          "apifyMarginPercentage": 0.2,
+          "notifiedAboutFutureChangeAt": "2026-08-26T17:59:35.323Z",
+          "notifiedAboutChangeAt": "2026-09-09T18:05:55.608Z"
+        },
+        "id": "wGzfJPuDXRyc5OIqE",
+        "url": "https://apify.com/signalbench/google-trends-scraper"
+      },
+      {
+        "title": "Google Trends Scraper",
+        "name": "google-trends-scraper",
+        "username": "akash9078",
+        "stats": {
+          "totalBuilds": 18,
+          "totalRuns": 1490,
+          "totalUsers": 40,
+          "totalUsers7Days": 1,
+          "totalUsers30Days": 5,
+          "totalUsers90Days": 8,
+          "lastRunStartedAt": "2026-09-11T10:01:17.242Z",
+          "actorReviewCount": 0,
+          "actorReviewRating": 0,
+          "bookmarkCount": 1,
+          "publicActorRunStats30Days": {
+            "ABORTED": 0,
+            "FAILED": 3,
+            "SUCCEEDED": 472,
+            "TIMED-OUT": 29,
+            "TOTAL": 504
+          }
+        },
+        "description": "Extract trending searches from Google Trends for any country and language. Provides real-time search trends with volume, growth metrics, status, and related searches.",
+        "categories": [
+          "SEO_TOOLS",
+          "DEVELOPER_TOOLS",
+          "OTHER"
+        ],
+        "pictureUrl": "https://images.apifyusercontent.com/Kv9raB_ZTcJ2fJ7f2fTv-u1zNKGlAgeqYJxFLRMqbfk/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vR1dYQkJOSWdtNWdKSDV2VWwtYWN0b3ItWlFyWWdkS2ZDTzJuUTMzbFItVjBnR3llUlpzQy1ndHJlbmQucG5n.webp",
+        "notice": "NONE",
+        "bookmarkCount": 1,
+        "actorReviewRating": 0,
+        "actorReviewCount": 0,
+        "badge": null,
+        "isWhiteListedForAgenticPayments": true,
+        "userFullName": "Akash Kumar Naik",
+        "userPictureUrl": "https://images.apifyusercontent.com/ninLEVJqdO_JQoc_Vvm9JRK8ntZJHLHASVGZrQ9yP0E/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vUTFTNFVXSVJoVVU5UTFDdlFaRzJlWWx1ejhoR0xVWUhEWGFtVlJJWGFuWS9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZSMWRZUWtKT1NXZHROV2RLU0RWMlZXd3RjSEp2Wm1sc1pTMU9kMUZhTmpKV1ptWXdMVUZyWVhOb01TNXdibWMucG5n.webp",
+        "currentPricingInfo": {
+          "minimalMaxTotalChargeUsd": null,
+          "pricingModel": "PAY_PER_EVENT",
+          "isPriceChangeNotificationSuppressed": false,
+          "pricingPerEvent": {
+            "actorChargeEvents": {
+              "apify-actor-start": {
+                "eventTitle": "Actor Start",
+                "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+                "isOneTimeEvent": true,
+                "eventPriceUsd": 0.00005,
+                "isPrimaryEvent": true
+              },
+              "apify-default-dataset-item": {
+                "eventTitle": "result",
+                "eventDescription": "Single result in the default dataset.",
+                "isOneTimeEvent": false,
+                "eventPriceUsd": 0.00001
+              },
+              "trending-search": {
+                "eventTitle": "trending-search",
+                "eventDescription": "One trending search result scraped from Google Trends. Includes search term, volume metrics, growth percentage, status, and related searches. This is the primary charged event.",
+                "isOneTimeEvent": false,
+                "eventPriceUsd": 0.005
+              }
+            }
+          },
+          "startedAt": "2026-02-26T16:27:52.213Z",
+          "createdAt": "2026-02-26T16:27:53.730Z",
+          "apifyMarginPercentage": 0.2
+        },
+        "id": "ZQrYgdKfCO2nQ33lR",
+        "url": "https://apify.com/akash9078/google-trends-scraper"
+      },
+      {
+        "title": "Google Trends Scraper — Interest Over Time, Related Queries",
+        "name": "google-trends-scraper",
+        "username": "steadyfetch",
+        "stats": {
+          "totalBuilds": 77,
+          "totalRuns": 5120,
+          "totalUsers": 63,
+          "totalUsers7Days": 9,
+          "totalUsers30Days": 19,
+          "totalUsers90Days": 43,
+          "lastRunStartedAt": "2026-09-11T13:36:50.927Z",
+          "actorReviewCount": 0,
+          "actorReviewRating": 0,
+          "bookmarkCount": 1,
+          "publicActorRunStats30Days": {
+            "ABORTED": 0,
+            "FAILED": 1,
+            "SUCCEEDED": 1788,
+            "TIMED-OUT": 2,
+            "TOTAL": 1791
+          }
+        },
+        "description": "Google Trends as stable JSON: interest over time, related queries, related topics, region breakdown, compare and trending now — one row per keyword and surface, API and MCP ready. 99% of runs succeed. No start fee, no minimum, never charged for a failed or empty fetch.",
+        "categories": [
+          "SEO_TOOLS",
+          "AI",
+          "NEWS"
+        ],
+        "pictureUrl": "https://images.apifyusercontent.com/DSKN7EnEh454Yw5xAfX3zs5hhZeXisbxK3_fcsNg5Co/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vUEVWQ2Z1a2dyekV5OHAyQmYtYWN0b3ItTzJpZEY2aUkySTFET2RMTDMtOXJvd2VCb1M2Vy1nb29nbGUtdHJlbmRzLXNjcmFwZXIucG5n.webp",
+        "notice": "NONE",
+        "bookmarkCount": 1,
+        "actorReviewRating": 0,
+        "actorReviewCount": 0,
+        "badge": null,
+        "isWhiteListedForAgenticPayments": true,
+        "userFullName": "Steadyfetch Team",
+        "userPictureUrl": "https://images.apifyusercontent.com/8Z-ZzrPTv7I0J9zt9R5cO2FB4B6LE4IQ092x5T34-jM/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vbVVsR3FROVZDMmlQRDBzaEpJS3ZTVXROTlI1QVF3LTRDZWllb1pTZ0Rqay9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZVRVZXUTJaMWEyZHlla1Y1T0hBeVFtWXRjSEp2Wm1sc1pTMUZZV05hY2xoSFJuSmFMV3h2WjI4dWNHNW4ucG5n.webp",
+        "currentPricingInfo": {
+          "minimalMaxTotalChargeUsd": 0.05,
+          "pricingModel": "PAY_PER_EVENT",
+          "isPriceChangeNotificationSuppressed": false,
+          "reasonForChange": "Pricing is all-inclusive — we cover all platform usage. This aligns the tier discounts with that model. Base price unchanged; still no start fee, no charge for failed or empty results, and caps work as before.",
+          "pricingPerEvent": {
+            "actorChargeEvents": {
+              "apify-default-dataset-item": {
+                "eventTitle": "Trend report",
+                "eventDescription": "One keyword × one surface payload — a full timeline, a complete related-queries set, a region table, or one trending-now row. Failed or empty fetches are never charged.",
+                "isOneTimeEvent": false,
+                "eventTieredPricingUsd": {
+                  "FREE": {
+                    "tieredEventPriceUsd": 0.009
+                  },
+                  "BRONZE": {
+                    "tieredEventPriceUsd": 0.0085
+                  },
+                  "SILVER": {
+                    "tieredEventPriceUsd": 0.008
+                  },
+                  "GOLD": {
+                    "tieredEventPriceUsd": 0.0075
+                  },
+                  "PLATINUM": {
+                    "tieredEventPriceUsd": 0.0075
+                  },
+                  "DIAMOND": {
+                    "tieredEventPriceUsd": 0.0075
+                  }
+                },
+                "isPrimaryEvent": true
+              }
+            }
+          },
+          "startedAt": "2026-08-19T21:42:51.257Z",
+          "createdAt": "2026-08-05T21:42:52.022Z",
+          "apifyMarginPercentage": 0.2,
+          "notifiedAboutFutureChangeAt": "2026-08-05T21:43:12.337Z",
+          "notifiedAboutChangeAt": "2026-08-19T22:05:39.741Z"
+        },
+        "id": "O2idF6iI2I1DOdLL3",
+        "url": "https://apify.com/steadyfetch/google-trends-scraper"
+      },
+      {
+        "title": "Google Trends Scraper — Trending Searches & Interest Over Time",
+        "name": "google-trends-scraper",
+        "username": "maged120",
+        "stats": {
+          "totalBuilds": 26,
+          "totalRuns": 225,
+          "totalUsers": 17,
+          "totalUsers7Days": 3,
+          "totalUsers30Days": 5,
+          "totalUsers90Days": 5,
+          "lastRunStartedAt": "2026-09-11T05:26:43.016Z",
+          "actorReviewCount": 0,
+          "actorReviewRating": 0,
+          "bookmarkCount": 0,
+          "publicActorRunStats30Days": {
+            "ABORTED": 0,
+            "FAILED": 0,
+            "SUCCEEDED": 71,
+            "TIMED-OUT": 0,
+            "TOTAL": 71
+          }
+        },
+        "description": "Extract data from Google Trends — trending searches, interest-over-time graphs, related queries, and regional interest breakdowns for any keyword.",
+        "categories": [
+          "AUTOMATION",
+          "SEO_TOOLS"
+        ],
+        "pictureUrl": "https://images.apifyusercontent.com/POMiV2NEfwk7bK38xZcOU68CrxycZAyvHiH4eeYuFWQ/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vdGFoaDIweGp1aWxLckdFanEtYWN0b3ItcW9jRHJoVUdnYmp3UkZRQTgtQ05pQnFaZ1BlVy1nb29nbGUtYWQtbWFuYWdlci1sb2dvLWljb24taGlnaC1yZXNvbHV0aW9uLWZyZWUtdmVjdG9yLmpwZw.webp",
+        "notice": "NONE",
+        "bookmarkCount": 0,
+        "actorReviewRating": 0,
+        "actorReviewCount": 0,
+        "badge": null,
+        "isWhiteListedForAgenticPayments": true,
+        "userFullName": "Maged",
+        "userPictureUrl": "https://images.apifyusercontent.com/kYr8_wummFTqWrsCcLjt1oQJV2qx3V8U7SfTHEQc0pY/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vT3hlSkxsbFRmQnJxX0VKR1VTVExWeVVjS2pNS0FxT2xYZ2FxWDFyck9Hcy9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZkR0ZvYURJd2VHcDFhV3hMY2tkRmFuRXRjSEp2Wm1sc1pTMVNaREJhWWpGc1YxRk9MVmRvWVhSelFYQndYMGx0WVdkbFh6SXdNalV0TURndE16QmZZWFJmTVM0d01DNHlPRjlCVFM1cWNHVm4uanBlZw.webp",
+        "currentPricingInfo": {
+          "minimalMaxTotalChargeUsd": null,
+          "pricingModel": "PAY_PER_EVENT",
+          "isPriceChangeNotificationSuppressed": false,
+          "pricingPerEvent": {
+            "actorChargeEvents": {
+              "apify-default-dataset-item": {
+                "eventTitle": "result",
+                "eventDescription": "Single result in the default dataset.",
+                "isOneTimeEvent": false,
+                "eventTieredPricingUsd": {
+                  "FREE": {
+                    "tieredEventPriceUsd": 0.015
+                  },
+                  "BRONZE": {
+                    "tieredEventPriceUsd": 0.0087
+                  },
+                  "SILVER": {
+                    "tieredEventPriceUsd": 0.00733
+                  },
+                  "GOLD": {
+                    "tieredEventPriceUsd": 0.005
+                  },
+                  "PLATINUM": {
+                    "tieredEventPriceUsd": 0.005
+                  },
+                  "DIAMOND": {
+                    "tieredEventPriceUsd": 0.005
+                  }
+                },
+                "isPrimaryEvent": true
+              },
+              "apify-actor-start": {
+                "eventTitle": "Actor Start",
+                "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+                "isOneTimeEvent": true,
+                "eventPriceUsd": 0.00005
+              }
+            }
+          },
+          "startedAt": "2026-07-15T15:34:06.627Z",
+          "createdAt": "2026-07-01T15:34:04.789Z",
+          "apifyMarginPercentage": 0.2,
+          "notifiedAboutFutureChangeAt": "2026-07-01T15:34:25.092Z",
+          "notifiedAboutChangeAt": "2026-07-15T15:35:39.947Z"
+        },
+        "id": "qocDrhUGgbjwRFQA8",
+        "url": "https://apify.com/maged120/google-trends-scraper"
+      },
+      {
+        "title": "Google Trends Data API",
+        "name": "google-trends-data-api",
+        "username": "danthedataman",
+        "stats": {
+          "totalBuilds": 16,
+          "totalRuns": 165,
+          "totalUsers": 10,
+          "totalUsers7Days": 1,
+          "totalUsers30Days": 7,
+          "totalUsers90Days": 9,
+          "lastRunStartedAt": "2026-09-11T01:18:15.812Z",
+          "actorReviewCount": 0,
+          "actorReviewRating": 0,
+          "bookmarkCount": 0,
+          "publicActorRunStats30Days": {
+            "ABORTED": 1,
+            "FAILED": 1,
+            "SUCCEEDED": 78,
+            "TIMED-OUT": 0,
+            "TOTAL": 80
+          }
+        },
+        "description": "Scrape Google Trends interest over time, interest by region, and related/rising queries for any keyword, country and date range. Reliable, proxy-aware, no API key needed.",
+        "categories": [
+          "SEO_TOOLS"
+        ],
+        "pictureUrl": "https://images.apifyusercontent.com/ijaesVqxRn5j5sonJzZkERphdwQKVCLe0vx0l_2CjU8/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vdFlYWHBMNkdXcnd6NThBalUtYWN0b3ItaDJSZjF6QWptaThoTnNxbjEtREMyZ0dzaERmdS10cmVuZHMtaWNvbi5wbmc.webp",
+        "notice": "NONE",
+        "bookmarkCount": 0,
+        "actorReviewRating": 0,
+        "actorReviewCount": 0,
+        "badge": null,
+        "isWhiteListedForAgenticPayments": true,
+        "userFullName": "Eli J",
+        "userPictureUrl": "https://images.apifyusercontent.com/9kLTk8nu2AdjJO780NRH3jcCNk9A4iGQ8MpBCfd14zQ/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vUDBBYU1iVC04T0VYMEg2ZDY0anBzQ1RZSTNBc2RKNm9hb0xuSGNPbmpMZy9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTlzYURNdVoyOXZaMnhsZFhObGNtTnZiblJsYm5RdVkyOXRMMkV2UVVObk9HOWpTMnRRUVdjMWFtaDNVVjh0WlhOQk4wNU1WMlJ1U0hkVFZFSm1kMGhsTm1GR0xVbFRMWFI1UzE4MFFVWm9XRXhoVVQxek9UWXRZdw.webp",
+        "currentPricingInfo": {
+          "pricingModel": "PAY_PER_EVENT",
+          "pricingPerEvent": {
+            "actorChargeEvents": {
+              "apify-actor-start": {
+                "eventTitle": "Actor Start",
+                "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+                "eventPriceUsd": 0.00005,
+                "isOneTimeEvent": true
+              },
+              "apify-default-dataset-item": {
+                "eventTitle": "Result",
+                "eventDescription": "One row of Google Trends data written to the dataset (one date point, one region, or one related query).",
+                "eventTieredPricingUsd": {
+                  "FREE": {
+                    "tieredEventPriceUsd": 0.0015
+                  },
+                  "BRONZE": {
+                    "tieredEventPriceUsd": 0.0008
+                  },
+                  "SILVER": {
+                    "tieredEventPriceUsd": 0.0004
+                  },
+                  "GOLD": {
+                    "tieredEventPriceUsd": 0.00025
+                  },
+                  "PLATINUM": {
+                    "tieredEventPriceUsd": 0.00012
+                  },
+                  "DIAMOND": {
+                    "tieredEventPriceUsd": 0.00008
+                  }
+                },
+                "isPrimaryEvent": true
+              }
+            }
+          },
+          "createdAt": "2026-07-26T18:53:15.661Z",
+          "startedAt": "2026-07-26T18:53:15.661Z",
+          "apifyMarginPercentage": 0.2
+        },
+        "id": "h2Rf1zAjmi8hNsqn1",
+        "url": "https://apify.com/danthedataman/google-trends-data-api"
+      },
+      {
+        "title": "Google Trends Scraper API",
+        "name": "google-trends-scraper",
+        "username": "cleanscrape",
+        "stats": {
+          "totalBuilds": 9,
+          "totalRuns": 154,
+          "totalUsers": 6,
+          "totalUsers7Days": 2,
+          "totalUsers30Days": 3,
+          "totalUsers90Days": 6,
+          "lastRunStartedAt": "2026-09-11T00:48:40.842Z",
+          "actorReviewCount": 0,
+          "actorReviewRating": 0,
+          "bookmarkCount": 0,
+          "publicActorRunStats30Days": {
+            "ABORTED": 0,
+            "FAILED": 0,
+            "SUCCEEDED": 104,
+            "TIMED-OUT": 0,
+            "TOTAL": 104
+          }
+        },
+        "description": "Scrape Google Trends reliably — interest over time, related & rising queries, interest by region, and trending searches. Clean normalized JSON/CSV output.",
+        "categories": [
+          "SEO_TOOLS",
+          "DEVELOPER_TOOLS",
+          "ECOMMERCE"
+        ],
+        "notice": "NONE",
+        "bookmarkCount": 1,
+        "actorReviewRating": 0,
+        "actorReviewCount": 0,
+        "badge": null,
+        "isWhiteListedForAgenticPayments": true,
+        "userFullName": "CleanScrape",
+        "userPictureUrl": "https://images.apifyusercontent.com/IcA1qsLgRe_cqGhB-dq0kxGtyn_bPGtTqbRYgCL2Vo8/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vcmZmbEJMMnh5X1JkejU4eDJ1eUdESnoyZG5rX1V5SU4yejJwdjgwSC1tMC9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZjbVJTY1ZGalVFSlBZbW95UWpkUll6UXRjSEp2Wm1sc1pTMWpTRkpEZDBoM2NFOVZMV05zWldGdWMyTnlZWEJsTFd4dloyOHVjRzVuLnBuZw.webp",
+        "currentPricingInfo": {
+          "minimalMaxTotalChargeUsd": null,
+          "pricingModel": "PAY_PER_EVENT",
+          "isPriceChangeNotificationSuppressed": false,
+          "pricingPerEvent": {
+            "actorChargeEvents": {
+              "apify-actor-start": {
+                "eventTitle": "Actor Start",
+                "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+                "isOneTimeEvent": true,
+                "eventPriceUsd": 0.05
+              },
+              "apify-default-dataset-item": {
+                "eventTitle": "result",
+                "eventDescription": "Single result in the default dataset.",
+                "isOneTimeEvent": false,
+                "eventPriceUsd": 0.003,
+                "isPrimaryEvent": true
+              }
+            }
+          },
+          "startedAt": "2026-07-16T18:24:06.149Z",
+          "createdAt": "2026-07-16T18:24:06.269Z",
+          "apifyMarginPercentage": 0.2
+        },
+        "id": "MVxk4wLke8EdMiob1",
+        "url": "https://apify.com/cleanscrape/google-trends-scraper"
+      },
+      {
+        "title": "Google Trends Scraper",
+        "name": "google-trends-scraper",
+        "username": "trendlab",
+        "stats": {
+          "totalBuilds": 4,
+          "totalRuns": 768,
+          "totalUsers": 21,
+          "totalUsers7Days": 5,
+          "totalUsers30Days": 12,
+          "totalUsers90Days": 14,
+          "lastRunStartedAt": "2026-09-10T22:32:34.674Z",
+          "actorReviewCount": 0,
+          "actorReviewRating": 0,
+          "bookmarkCount": 0,
+          "publicActorRunStats30Days": {
+            "ABORTED": 3,
+            "FAILED": 0,
+            "SUCCEEDED": 370,
+            "TIMED-OUT": 3,
+            "TOTAL": 376
+          }
+        },
+        "description": "Extract Google Trends data: interest over time, related queries, rising topics, and regional interest for any keyword. Fast, reliable, AI-ready JSON output.",
+        "categories": [
+          "SEO_TOOLS",
+          "AI"
+        ],
+        "pictureUrl": "https://images.apifyusercontent.com/GKO7dOwLALo_yOC1GbY6uHLrRjzm0ZVkEAGWQVikoP0/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vNnFwSVpJVjVISTlQT1NwSkktYWN0b3ItMVBBS2MxSFNnUVYzYVh0cFUtclNUd2o2MG5vYy1pY29uLnBuZw.webp",
+        "notice": "NONE",
+        "bookmarkCount": 0,
+        "actorReviewRating": 0,
+        "actorReviewCount": 0,
+        "badge": null,
+        "isWhiteListedForAgenticPayments": false,
+        "userFullName": "Cheoljae Lee",
+        "currentPricingInfo": {
+          "minimalMaxTotalChargeUsd": null,
+          "isPPEPlatformUsagePaidByUser": true,
+          "pricingModel": "PAY_PER_EVENT",
+          "isPriceChangeNotificationSuppressed": false,
+          "pricingPerEvent": {
+            "actorChargeEvents": {
+              "apify-actor-start": {
+                "eventTitle": "Actor Start",
+                "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+                "isOneTimeEvent": true,
+                "eventPriceUsd": 0.001
+              },
+              "apify-default-dataset-item": {
+                "eventTitle": "Keyword analyzed",
+                "eventDescription": "One keyword fully analyzed (interest over time, related queries, regions)",
+                "isOneTimeEvent": false,
+                "eventPriceUsd": 0.005,
+                "isPrimaryEvent": true
+              }
+            }
+          },
+          "startedAt": "2026-07-07T07:10:48.604Z",
+          "createdAt": "2026-07-07T07:10:48.537Z",
+          "apifyMarginPercentage": 0.2,
+          "notifiedAboutChangeAt": "2026-07-13T10:36:16.097Z"
+        },
+        "id": "1PAKc1HSgQV3aXtpU",
+        "url": "https://apify.com/trendlab/google-trends-scraper"
+      },
+      {
+        "title": "Google Trends Scraper — Keyword Interest & Related Queries",
+        "name": "google-trends-scraper",
+        "username": "nexgendata",
+        "stats": {
+          "totalBuilds": 27,
+          "totalRuns": 235,
+          "totalUsers": 14,
+          "totalUsers7Days": 0,
+          "totalUsers30Days": 0,
+          "totalUsers90Days": 5,
+          "lastRunStartedAt": "2026-09-11T06:58:50.996Z",
+          "actorReviewCount": 0,
+          "actorReviewRating": 0,
+          "bookmarkCount": 0,
+          "publicActorRunStats30Days": {
+            "ABORTED": 0,
+            "FAILED": 0,
+            "SUCCEEDED": 31,
+            "TIMED-OUT": 0,
+            "TOTAL": 31
+          }
+        },
+        "description": "Extract Google Trends data — search interest over time, related queries, geographic breakdown & trending topics. Build market research, content calendars & SEO strategies. Pay per query. No API key. Pay per record.",
+        "categories": [
+          "SEO_TOOLS"
+        ],
+        "pictureUrl": "https://images.apifyusercontent.com/stVwCVWWH3VloF_ymxRkD8zWIkEvMgqLHxg0HY8ZBy0/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vUFFZaExmMkt1NllxeUNXYngtYWN0b3ItV2gyelM2M3E4QWRGYXEyTTQtcVY2Ym5CTUl0RS1pY29uLnBuZw.webp",
+        "notice": "NONE",
+        "bookmarkCount": 0,
+        "actorReviewRating": 0,
+        "actorReviewCount": 0,
+        "badge": null,
+        "isWhiteListedForAgenticPayments": true,
+        "userFullName": "NexGenData",
+        "userPictureUrl": "https://images.apifyusercontent.com/DFoEfAV1iSBokBNjpIZdoeMlxK2y6UEav2Se4BxUDrI/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20veU5Nancta2JUQ2FFN3lQUTNGZnR1SHBQX0FoWkVNVlVFLTdfSVFOTjNzby9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZVRkZaYUV4bU1rdDFObGx4ZVVOWFluZ3RjSEp2Wm1sc1pTMXVSMmRzVGxZeU5VVkRMVzVuWkMxemRHRmphMlZrTFd4dlkydDFjQzFrWVhKckxuQnVady5wbmc.webp",
+        "currentPricingInfo": {
+          "pricingModel": "PAY_PER_EVENT",
+          "startedAt": "2026-08-28T01:27:58.000Z",
+          "reasonForChange": "Price DECREASE $0.08 -> $0.05 (Steve-authorized 2026-08-27): mid-point between the prior $0.02 and current $0.08 to test demand recovery. Decreases take effect immediately (no advance notice required).",
+          "pricingPerEvent": {
+            "actorChargeEvents": {
+              "apify-actor-start": {
+                "eventTitle": "Actor Start",
+                "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+                "isOneTimeEvent": true,
+                "eventPriceUsd": 0.00005,
+                "isPrimaryEvent": false
+              },
+              "apify-default-dataset-item": {
+                "eventTitle": "Trend record",
+                "eventDescription": "Single result in the default dataset.",
+                "eventPriceUsd": 0.05,
+                "isPrimaryEvent": true
+              }
+            }
+          },
+          "createdAt": "2026-08-28T01:27:58.757Z",
+          "apifyMarginPercentage": 0.2,
+          "notifiedAboutChangeAt": "2026-08-28T01:35:52.044Z"
+        },
+        "id": "Wh2zS63q8AdFaq2M4",
+        "url": "https://apify.com/nexgendata/google-trends-scraper"
+      },
+      {
+        "title": "Free Google Trends API — Interest Over Time + Related",
+        "name": "free-google-trends-scraper",
+        "username": "s-r",
+        "stats": {
+          "totalBuilds": 29,
+          "totalRuns": 8590,
+          "totalUsers": 108,
+          "totalUsers7Days": 11,
+          "totalUsers30Days": 26,
+          "totalUsers90Days": 56,
+          "lastRunStartedAt": "2026-09-11T10:04:11.000Z",
+          "actorReviewCount": 0,
+          "actorReviewRating": 0,
+          "bookmarkCount": 1,
+          "publicActorRunStats30Days": {
+            "ABORTED": 0,
+            "FAILED": 0,
+            "SUCCEEDED": 820,
+            "TIMED-OUT": 0,
+            "TOTAL": 820
+          }
+        },
+        "description": "Hosted google trends scraper that returns structured JSON without the captcha-solving, proxy-rotation, and site-update maintenance you'd otherwise own. Run it from the Apify Store with one click, or call it from your own service via the Apify API.",
+        "categories": [
+          "MARKETING",
+          "BUSINESS"
+        ],
+        "notice": "NONE",
+        "bookmarkCount": 1,
+        "actorReviewRating": 0,
+        "actorReviewCount": 0,
+        "badge": null,
+        "isWhiteListedForAgenticPayments": true,
+        "userFullName": "SR",
+        "userPictureUrl": "https://images.apifyusercontent.com/0Jsfrod6O50LzPQ7MPpFm47dJEdICS01fuz--1M4kBE/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vNUl1ZEw2WGQ0dzNZOGNJbVZ2WGF6ajFBQUtiTTF5LUFsd2RKTXk5RFNZQS9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZWRlZaV201SVpqTjNSVVJqY1hGemIyZ3RjSEp2Wm1sc1pTMTRZVW8wUjJ4Wk5URTNMV2x0WVdkbGN5NXdibWMucG5n.webp",
+        "currentPricingInfo": {
+          "pricingModel": "PAY_PER_EVENT",
+          "pricingPerEvent": {
+            "actorChargeEvents": {
+              "trend_query": {
+                "eventTitle": "Trend query analyzed",
+                "eventDescription": "One keyword with timeseries + regions + related queries + topics",
+                "eventPriceUsd": 0.005,
+                "isPrimaryEvent": true
+              }
+            }
+          },
+          "startedAt": "2026-05-12T19:39:27.000Z",
+          "createdAt": "2026-04-28T19:39:29.032Z",
+          "apifyMarginPercentage": 0.2
+        },
+        "id": "1hOOW2SvNeygPfSTy",
+        "url": "https://apify.com/s-r/free-google-trends-scraper"
+      },
+      {
+        "title": "Google Trends Scraper",
+        "name": "google-trends-scraper",
+        "username": "sourabhbgp",
+        "stats": {
+          "totalBuilds": 14,
+          "totalRuns": 11894,
+          "totalUsers": 73,
+          "totalUsers7Days": 4,
+          "totalUsers30Days": 8,
+          "totalUsers90Days": 22,
+          "lastRunStartedAt": "2026-09-11T08:06:28.991Z",
+          "actorReviewCount": 0,
+          "actorReviewRating": 0,
+          "bookmarkCount": 1,
+          "publicActorRunStats30Days": {
+            "ABORTED": 0,
+            "FAILED": 0,
+            "SUCCEEDED": 213,
+            "TIMED-OUT": 0,
+            "TOTAL": 213
+          }
+        },
+        "description": "Extract Google Trends data: daily trending searches, keyword interest over time, related queries and topics, regional interest. 150+ countries, category filters, Google property selection (Web, YouTube, News, Images, Shopping). From $1 per 1,000 trending results.",
+        "categories": [
+          "SEO_TOOLS",
+          "LEAD_GENERATION"
+        ],
+        "pictureUrl": "https://images.apifyusercontent.com/odUlKJLWCbO4r9RZKfIoUE2lVKQlgYcEu9XP2Em3tpk/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vMnBoS0RNN3hBYWZCUG9xNTItYWN0b3IteGVEdnA4WThoNUNGNmE3eTIta1VpWFJkbGd5MC1pY29uLnBuZw.webp",
+        "notice": "NONE",
+        "bookmarkCount": 1,
+        "actorReviewRating": 0,
+        "actorReviewCount": 0,
+        "badge": null,
+        "isWhiteListedForAgenticPayments": true,
+        "userFullName": "Sourabh Kumar",
+        "userPictureUrl": "https://images.apifyusercontent.com/uq1C6hPqYQCuTGFe12JYd1mVAyxIgoxfdC4wYGxG0qQ/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vRlcxY1dscWc4TU9PVVhGM2pZMHpjWWV2T04tZVBMRWFobjk2RjVzQlpWUS9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZNbkJvUzBSTk4zaEJZV1pDVUc5eE5USXRjSEp2Wm1sc1pTMTVVVEkxVDB4bmFEbHNMVU5vWVhSSFVGUmZTVzFoWjJWZlFYQnlYekk0WDE4eU1ESTJYMTh3TVY4MU1WOHdNRjlCVFM1d2JtYy5wbmc.webp",
+        "currentPricingInfo": {
+          "pricingModel": "PAY_PER_EVENT",
+          "pricingPerEvent": {
+            "actorChargeEvents": {
+              "trending-result": {
+                "eventTitle": "Trending Result",
+                "eventDescription": "One trending search item with related news",
+                "eventPriceUsd": 0.001,
+                "isPrimaryEvent": true
+              },
+              "explore-result": {
+                "eventTitle": "Explore Result",
+                "eventDescription": "One keyword analysis result with interest over time, regional interest, related queries and related topics",
+                "eventPriceUsd": 0.002
+              },
+              "result": {
+                "eventTitle": "Result (legacy)",
+                "eventDescription": "Legacy single-event pricing; replaced by trending-result and explore-result",
+                "eventPriceUsd": 0.002
+              }
+            }
+          },
+          "startedAt": "2026-06-01T10:06:37.019Z",
+          "createdAt": "2026-05-17T10:06:38.323Z",
+          "apifyMarginPercentage": 0.2,
+          "notifiedAboutFutureChangeAt": "2026-05-17T10:06:58.866Z"
+        },
+        "id": "xeDvp8Y8h5CF6a7y2",
+        "url": "https://apify.com/sourabhbgp/google-trends-scraper"
+      },
+      {
+        "title": "Google Trends Scraper - Rising Queries, Interest & Geo",
+        "name": "google-trends-scraper",
+        "username": "viralanalyzer",
+        "stats": {
+          "totalBuilds": 21,
+          "totalRuns": 542,
+          "totalUsers": 27,
+          "totalUsers7Days": 0,
+          "totalUsers30Days": 3,
+          "totalUsers90Days": 6,
+          "lastRunStartedAt": "2026-09-11T00:50:25.110Z",
+          "actorReviewCount": 6,
+          "actorReviewRating": 4.911648900096226,
+          "bookmarkCount": 0,
+          "publicActorRunStats30Days": {
+            "ABORTED": 0,
+            "FAILED": 0,
+            "SUCCEEDED": 72,
+            "TIMED-OUT": 0,
+            "TOTAL": 72
+          }
+        },
+        "description": "Extract Google Trends data: search interest over time, related queries, rising topics, and regional breakdowns for any keyword.",
+        "categories": [
+          "SEO_TOOLS",
+          "MARKETING",
+          "BUSINESS"
+        ],
+        "pictureUrl": "https://images.apifyusercontent.com/T-V_5MdO0mg6QGSOCEBHGe9kFk2rQanfJorUGmWgm2g/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vcnBUYTM3bzFjdGZkRldaazktYWN0b3ItVkFkV2JuZVBKVUdpVUZhUWUtM1JSRENjNHN5cS1sb2dvLnBuZw.webp",
+        "notice": "NONE",
+        "bookmarkCount": 0,
+        "actorReviewRating": 4.911648900096226,
+        "actorReviewCount": 6,
+        "badge": null,
+        "isWhiteListedForAgenticPayments": true,
+        "userFullName": "viralanalyzer",
+        "userPictureUrl": "https://images.apifyusercontent.com/bq9e3NfkGUj5WU5BZQ3_ugsv8Wo1tahZWFfZU7qKtb0/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20veDNhdXVLLVNJTi1Ba0YxU09iQl8zMi1OUU9aTjBzMVBudnVTSE1HVEpScy9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZjbkJVWVRNM2J6RmpkR1prUmxkYWF6a3RjSEp2Wm1sc1pTMU1lWGRHUlU4eU9HOWhMV3h2WjI4dE5URXlMV0pzWVdOckxYQmhaR1JsWkM1d2JtYy5wbmc.webp",
+        "currentPricingInfo": {
+          "pricingModel": "PAY_PER_EVENT",
+          "startedAt": "2026-07-31T00:00:00.000Z",
+          "apifyMarginPercentage": 0.2,
+          "reasonForChange": "Competitive correction: $0.10/trend was 33x the market (leader apify $3/1k). Reduced to $0.005. User-approved 2026-07-16.",
+          "pricingPerEvent": {
+            "actorChargeEvents": {
+              "trend-scraped": {
+                "eventTitle": "Trend scraped",
+                "eventDescription": "Per Google Trends keyword result.",
+                "eventPriceUsd": 0.005,
+                "isPrimaryEvent": true
+              }
+            }
+          },
+          "createdAt": "2026-07-16T06:48:38.352Z",
+          "notifiedAboutFutureChangeAt": "2026-07-16T06:48:58.497Z",
+          "notifiedAboutChangeAt": "2026-08-05T15:06:15.890Z"
+        },
+        "id": "VAdWbnePJUGiUFaQe",
+        "url": "https://apify.com/viralanalyzer/google-trends-scraper"
+      },
+      {
+        "title": "Google Trends Scraper",
+        "name": "google-trends-scraper",
+        "username": "rastriq",
+        "stats": {
+          "totalBuilds": 15,
+          "totalRuns": 470,
+          "totalUsers": 22,
+          "totalUsers7Days": 4,
+          "totalUsers30Days": 10,
+          "totalUsers90Days": 18,
+          "lastRunStartedAt": "2026-09-11T10:15:33.898Z",
+          "actorReviewCount": 1,
+          "actorReviewRating": 5,
+          "bookmarkCount": 0,
+          "publicActorRunStats30Days": {
+            "ABORTED": 0,
+            "FAILED": 0,
+            "SUCCEEDED": 228,
+            "TIMED-OUT": 0,
+            "TOTAL": 228
+          }
+        },
+        "description": "Extract search interest data from Google Trends: interest over time, interest by region, related queries, and daily trending searches. Supports multiple keywords and countries in one run. No API key needed.",
+        "categories": [
+          "SEO_TOOLS"
+        ],
+        "pictureUrl": "https://images.apifyusercontent.com/GXtlGO1abOxxYptpa-oMuZ4FJQSjIHYBHy885krWVf8/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vUk5pVUFDMkZyYTlIbGFyMFAtYWN0b3ItQXJJMEN2OEJ5Tkg3SFU1eVotZ0ZyR3pGajJiai0xLkludHJvZHVjdGlvbi10by1Hb29nbGUtVHJlbmRzLWUxNjAzODkwOTgzOTg0LmpwZw.webp",
+        "notice": "NONE",
+        "bookmarkCount": 0,
+        "actorReviewRating": 5,
+        "actorReviewCount": 1,
+        "badge": null,
+        "isWhiteListedForAgenticPayments": true,
+        "userFullName": "Rastriq — Structured data from the world",
+        "userPictureUrl": "https://images.apifyusercontent.com/bz9XxY3F9diwBJSNYkN4rUnfwD4jkqAKGcKXWEiQZhk/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vU1JJNHhETTJZMlBONXlQLXhramhIQ1h2bFdFaXp3NmJZSmZJSTJzNVdBSS9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZVazVwVlVGRE1rWnlZVGxJYkdGeU1GQXRjSEp2Wm1sc1pTMVJRWEpNYUcxTVowVk9MV2x0WVdkbGJpNXdibWMucG5n.webp",
+        "currentPricingInfo": {
+          "minimalMaxTotalChargeUsd": null,
+          "pricingModel": "PAY_PER_EVENT",
+          "isPriceChangeNotificationSuppressed": false,
+          "pricingPerEvent": {
+            "actorChargeEvents": {
+              "apify-actor-start": {
+                "eventTitle": "Actor Start",
+                "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+                "isOneTimeEvent": true,
+                "eventPriceUsd": 0.002
+              },
+              "apify-default-dataset-item": {
+                "eventTitle": "result",
+                "eventDescription": "Single result in the default dataset.",
+                "isOneTimeEvent": false,
+                "eventPriceUsd": 0.0003,
+                "isPrimaryEvent": true
+              }
+            }
+          },
+          "startedAt": "2026-06-19T10:59:21.812Z",
+          "createdAt": "2026-06-05T10:59:21.373Z",
+          "apifyMarginPercentage": 0.2,
+          "notifiedAboutFutureChangeAt": "2026-06-05T10:59:41.516Z"
+        },
+        "id": "ArI0Cv8ByNH7HU5yZ",
+        "url": "https://apify.com/rastriq/google-trends-scraper"
+      },
+      {
+        "title": "Google Trends Scraper — Keywords & Related Queries",
+        "name": "google-trends-scraper",
+        "username": "joyouscam35875",
+        "stats": {
+          "totalBuilds": 4,
+          "totalRuns": 4356,
+          "totalUsers": 87,
+          "totalUsers7Days": 9,
+          "totalUsers30Days": 17,
+          "totalUsers90Days": 35,
+          "lastRunStartedAt": "2026-09-11T01:18:35.590Z",
+          "actorReviewCount": 0,
+          "actorReviewRating": 0,
+          "bookmarkCount": 0,
+          "publicActorRunStats30Days": {
+            "ABORTED": 2,
+            "FAILED": 6,
+            "SUCCEEDED": 462,
+            "TIMED-OUT": 0,
+            "TOTAL": 470
+          }
+        },
+        "description": "Scrape Google Trends: interest over time, related queries, regional data. For SEO and market research. $0.002/keyword.",
+        "categories": [
+          "SEO_TOOLS"
+        ],
+        "notice": "NONE",
+        "bookmarkCount": 3,
+        "actorReviewRating": 5,
+        "actorReviewCount": 1,
+        "badge": null,
+        "isWhiteListedForAgenticPayments": false,
+        "userFullName": "Ken Digital",
+        "userPictureUrl": "https://images.apifyusercontent.com/m2r1Aaq6fddWCHADIKKPD5xym3XQ_UoS_0I7ArzU2Wk/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vT2ExSGZVYkFBR24xWmNTMU9odWVkQjJhWEdNNUtQTXFhTllreTBBMV9kQS9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTkzZDNjdVozSmhkbUYwWVhJdVkyOXRMMkYyWVhSaGNpOWxZalV3T0dWalpEZGtOMkl4WVdaak9UazFZbVl5WlRJME1EWmhOVEF3WmpNNE1XTm1NbVpsWXpsbFpXRTFZV1psWmpFd1l6bGhORGhsTURjMVlXRmhQMlE5YUhSMGNITWxNMEVsTWtZbE1rWmpaRzR1WVhCcFpua3VZMjl0SlRKR2FXMW5KVEpHYVdOdmJuTWxNa1poYm05dWVXMXZkWE5mZFhObGNsOXdhV04wZFhKbExuQnVadw.webp",
+        "currentPricingInfo": {
+          "pricingModel": "FREE"
+        },
+        "id": "MEza3W5LSA3hVwvib",
+        "url": "https://apify.com/joyouscam35875/google-trends-scraper"
+      },
+      {
+        "title": "Google Trends Scraper — Trending Now, timelines & queries",
+        "name": "google-trends-scraper",
+        "username": "memo23",
+        "stats": {
+          "totalBuilds": 33,
+          "totalRuns": 788,
+          "totalUsers": 25,
+          "totalUsers7Days": 2,
+          "totalUsers30Days": 5,
+          "totalUsers90Days": 23,
+          "lastRunStartedAt": "2026-09-11T09:52:00.470Z",
+          "actorReviewCount": 1,
+          "actorReviewRating": 5,
+          "bookmarkCount": 0,
+          "publicActorRunStats30Days": {
+            "ABORTED": 1,
+            "FAILED": 37,
+            "SUCCEEDED": 291,
+            "TIMED-OUT": 0,
+            "TOTAL": 329
+          }
+        },
+        "description": "A Google Trends scraper that finishes. Trending Now with search volume and growth %, interest over time, by region, related queries and topics. Many terms x many countries in one run, back to 2004. Pure HTTP against the Trends JSON API, no browser. Seconds per run. JSON or CSV.",
+        "categories": [
+          "SEO_TOOLS",
+          "NEWS",
+          "AGENTS"
+        ],
+        "pictureUrl": "https://images.apifyusercontent.com/N6S3RmrX5tSqq9PDUwle_jigU05VU0RN-b5gjC8t2pc/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vbmduOHZSRVNUa3NleVdFNnAtYWN0b3ItZGpyYXJFWm5XSWtaZmFCdXItZTBMSzBDOUFKNC1nb29nbGVfdHJlbmRzLnBuZw.webp",
+        "notice": "NONE",
+        "bookmarkCount": 0,
+        "actorReviewRating": 5,
+        "actorReviewCount": 1,
+        "badge": null,
+        "isWhiteListedForAgenticPayments": true,
+        "userFullName": "Muhamed Didovic",
+        "userPictureUrl": "https://images.apifyusercontent.com/UWS1pm5ZK_CTekVvsOq-WWGxQTL9CtDAmNs39dAoxOQ/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vVWV2Smp2aUpCclh6Q1NrRUhpZ1pYWnlhYU1MMkhjUmlwSE9YSl9aVi1LNC9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZibWR1T0haU1JWTlVhM05sZVZkRk5uQXZTM0ZpY21RM2NuTk1ZbVJzVTFsa2FGY3RNVFl5T1RJNE5URXdNakU1TkM1cWNHVm4uanBlZw.webp",
+        "currentPricingInfo": {
+          "pricingModel": "PAY_PER_EVENT",
+          "apifyMarginPercentage": 0.2,
+          "minimalMaxTotalChargeUsd": null,
+          "startedAt": "2026-09-10T00:00:00.000Z",
+          "isPriceChangeNotificationSuppressed": true,
+          "pricingPerEvent": {
+            "actorChargeEvents": {
+              "apify-actor-start": {
+                "eventTitle": "Actor Start",
+                "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+                "isOneTimeEvent": true,
+                "eventPriceUsd": 0.01
+              },
+              "apify-default-dataset-item": {
+                "eventTitle": "Result",
+                "eventDescription": "One result in the default dataset.",
+                "isOneTimeEvent": false,
+                "isPrimaryEvent": true,
+                "eventPriceUsd": 0.003
+              }
+            }
+          },
+          "createdAt": "2026-08-25T19:08:02.218Z"
+        },
+        "id": "djrarEZnWIkZfaBur",
+        "url": "https://apify.com/memo23/google-trends-scraper"
+      },
+      {
+        "title": "Google Trends Scraper API 💎",
+        "name": "google-trends-scraper-api",
+        "username": "scraperpro",
+        "stats": {
+          "totalBuilds": 19,
+          "totalRuns": 323,
+          "totalUsers": 12,
+          "totalUsers7Days": 2,
+          "totalUsers30Days": 5,
+          "totalUsers90Days": 7,
+          "lastRunStartedAt": "2026-09-11T09:59:57.617Z",
+          "actorReviewCount": 1,
+          "actorReviewRating": 5,
+          "bookmarkCount": 1,
+          "publicActorRunStats30Days": {
+            "ABORTED": 0,
+            "FAILED": 11,
+            "SUCCEEDED": 65,
+            "TIMED-OUT": 0,
+            "TOTAL": 76
+          }
+        },
+        "description": "Extract Real-Time Trends, Historical Data, Regional Demand, and Related Queries. Native proxy rotation bypasses rate limits. Pay-per-result pricing.",
+        "categories": [
+          "SEO_TOOLS",
+          "ECOMMERCE",
+          "NEWS"
+        ],
+        "pictureUrl": "https://images.apifyusercontent.com/0hzgcNhz_w8jKHADkeW_itX0zhmXK0M18PbTPsIndHg/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vM1ByZFpVREtZWFVYWkxXTTMtYWN0b3ItdGc3WUZoTFZMWkl1YThneUgtM0Qzb2xOM3lmVi1nb29nbGVfdHJlbmRzX3NjcmFwZXIuanBlZw.webp",
+        "notice": "NONE",
+        "bookmarkCount": 1,
+        "actorReviewRating": 5,
+        "actorReviewCount": 1,
+        "badge": null,
+        "isWhiteListedForAgenticPayments": true,
+        "userFullName": "ScraperPro",
+        "userPictureUrl": "https://images.apifyusercontent.com/Gvvl_fmsBQ00SrgnNNXtqozPBIaRSfWQIHzDKT95iBE/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vaExzRnRXZjMwTmdaRFRLNE9ZODVvN3czVEdNSXBidUFKNjd1LUJWS0tyay9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTlzYURNdVoyOXZaMnhsZFhObGNtTnZiblJsYm5RdVkyOXRMMkV2UVVObk9HOWpTamh6UjNCaVNXeEpNazFPTW5kUVUwa3pWSFo1ZFZab2RWTkZOekJyWmxkdFZuRTNVSEp0V1hoNGMwVnRXRXhPVFE.webp",
+        "currentPricingInfo": {
+          "minimalMaxTotalChargeUsd": null,
+          "pricingModel": "PAY_PER_EVENT",
+          "isPriceChangeNotificationSuppressed": false,
+          "pricingPerEvent": {
+            "actorChargeEvents": {
+              "result-scraped": {
+                "eventTitle": "result",
+                "eventDescription": "Single result in the default dataset.",
+                "isOneTimeEvent": false,
+                "eventTieredPricingUsd": {
+                  "FREE": {
+                    "tieredEventPriceUsd": 0.0015
+                  },
+                  "BRONZE": {
+                    "tieredEventPriceUsd": 0.0014
+                  },
+                  "SILVER": {
+                    "tieredEventPriceUsd": 0.0013
+                  },
+                  "GOLD": {
+                    "tieredEventPriceUsd": 0.0012
+                  },
+                  "PLATINUM": {
+                    "tieredEventPriceUsd": 0.0012
+                  },
+                  "DIAMOND": {
+                    "tieredEventPriceUsd": 0.0012
+                  }
+                },
+                "isPrimaryEvent": true
+              },
+              "apify-actor-start": {
+                "eventTitle": "Actor Start",
+                "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+                "isOneTimeEvent": true,
+                "eventPriceUsd": 0.00005
+              }
+            }
+          },
+          "startedAt": "2026-07-14T09:33:26.779Z",
+          "createdAt": "2026-07-14T09:33:27.080Z",
+          "apifyMarginPercentage": 0.2,
+          "notifiedAboutChangeAt": "2026-07-14T09:35:38.212Z"
+        },
+        "id": "tg7YFhLVLZIua8gyH",
+        "url": "https://apify.com/scraperpro/google-trends-scraper-api"
+      },
+      {
+        "title": "Google Trends API",
+        "name": "google-trends-api",
+        "username": "fingolfin",
+        "stats": {
+          "totalBuilds": 1,
+          "totalRuns": 3129,
+          "totalUsers": 9,
+          "totalUsers7Days": 2,
+          "totalUsers30Days": 3,
+          "totalUsers90Days": 5,
+          "actorReviewCount": 0,
+          "actorReviewRating": 0,
+          "bookmarkCount": 0,
+          "lastRunStartedAt": "2026-09-11T09:15:59.817Z",
+          "publicActorRunStats30Days": {
+            "ABORTED": 0,
+            "FAILED": 0,
+            "SUCCEEDED": 1265,
+            "TIMED-OUT": 0,
+            "TOTAL": 1265
+          }
+        },
+        "description": "Scrape Google Trends data without official API. Get interest over time, interest by region, related queries, related topics, trending searches, and keyword suggestions. Supports all filters: geo, timeframe, category, and search property (web/YouTube/news/images/Google Shopping).",
+        "categories": [
+          "AI",
+          "OTHER",
+          "SEO_TOOLS"
+        ],
+        "pictureUrl": "https://images.apifyusercontent.com/ZzhQ5PimX3ZSv9-kyrc70fSWcldJU_RQd2ODWAyT7To/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vaVpBbmxuNjZVeFo2SUxIZ1ktYWN0b3ItVlZIUEplNUhtaHhoTFdlZXktMk9HTWNNR2Y3bC1pbWFnZXNfJTI4MSUyOS5qcGc.webp",
+        "notice": "NONE",
+        "bookmarkCount": 1,
+        "actorReviewRating": 0,
+        "actorReviewCount": 0,
+        "badge": null,
+        "isWhiteListedForAgenticPayments": true,
+        "userFullName": "Mate Papava",
+        "userPictureUrl": "https://images.apifyusercontent.com/m-4RoRwn83qy6uMx_7ITHf3C9YwsVm7Voh8JdKHdKvI/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vOFZNak5TZkR4akdRSzZkWFc5TXVQZG42V2NDemFHWTZJXzNKTjJMc2x1dy9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTlzYURNdVoyOXZaMnhsZFhObGNtTnZiblJsYm5RdVkyOXRMMkV2UVVObk9HOWpURW94U2tScFZuZDNVa1F0ZEdGNlV6bFVUakoxUkhCNE4ycDBNRVZCVGtoMmRuQkVjMll6WHpJeGJEVkNOVTk2UVhj.webp",
+        "currentPricingInfo": {
+          "minimalMaxTotalChargeUsd": null,
+          "pricingModel": "PAY_PER_EVENT",
+          "isPriceChangeNotificationSuppressed": false,
+          "pricingPerEvent": {
+            "actorChargeEvents": {
+              "apify-default-dataset-item": {
+                "eventTitle": "result",
+                "eventDescription": "Single result in the default dataset.",
+                "isOneTimeEvent": false,
+                "eventPriceUsd": 0.005,
+                "isPrimaryEvent": true
+              }
+            }
+          },
+          "startedAt": "2026-09-01T07:25:04.737Z",
+          "createdAt": "2026-08-18T07:25:02.264Z",
+          "apifyMarginPercentage": 0.2,
+          "notifiedAboutFutureChangeAt": "2026-08-18T07:25:22.519Z",
+          "notifiedAboutChangeAt": "2026-09-01T07:35:48.197Z"
+        },
+        "id": "VVHPJe5HmhxhLWeey",
+        "url": "https://apify.com/fingolfin/google-trends-api"
+      },
+      {
+        "title": "Google Trends Scraper - Trending Now, Search Volume & Growth",
+        "name": "google-trends-discovery",
+        "username": "habit.zhou",
+        "stats": {
+          "totalBuilds": 3,
+          "totalRuns": 220,
+          "totalUsers": 5,
+          "totalUsers7Days": 1,
+          "totalUsers30Days": 3,
+          "totalUsers90Days": 3,
+          "lastRunStartedAt": "2026-09-11T03:12:40.171Z",
+          "actorReviewCount": 0,
+          "actorReviewRating": 0,
+          "bookmarkCount": 0,
+          "publicActorRunStats30Days": {
+            "ABORTED": 3,
+            "FAILED": 0,
+            "SUCCEEDED": 53,
+            "TIMED-OUT": 0,
+            "TOTAL": 56
+          }
+        },
+        "description": "Scrape the Google Trends 'Trending Now' feed in real time. Get trending searches with search volume, growth rate, and related terms across 20 countries and 26 categories. No login or API key. Export JSON, CSV, Excel. For SEO monitoring, content strategy, market research, and trend tracking.",
+        "categories": [
+          "SEO_TOOLS",
+          "NEWS",
+          "MARKETING"
+        ],
+        "notice": "NONE",
+        "bookmarkCount": 0,
+        "actorReviewRating": 0,
+        "actorReviewCount": 0,
+        "badge": null,
+        "isWhiteListedForAgenticPayments": true,
+        "userFullName": "Seller Aim",
+        "userPictureUrl": "https://images.apifyusercontent.com/E7lGNh0ezXmlKuPIXnOKnlUfxiQNAbakah0xcg0qeBA/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vZjhFWWtQWDNMRzEyN0hfMzE2R2toeFlSZFJSYWxqdFl5bUE2ZUpMb3o5NC9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZVVlZFV0ZGSlNuRlpObXh1WTA5VVJtMHRjSEp2Wm1sc1pTMHphMDk0TlZOelZGVndMV3h2WjI5Zk5URXlMbkJ1WncucG5n.webp",
+        "currentPricingInfo": {
+          "minimalMaxTotalChargeUsd": null,
+          "pricingModel": "PAY_PER_EVENT",
+          "isPriceChangeNotificationSuppressed": false,
+          "reasonForChange": "Moving to per-result pricing: the run start fee drops 4x ($0.02 to $0.005) and you now pay $0.50 per 1,000 trends. A typical run gets cheaper, and you only pay for the trends you actually receive. Thanks for using it!",
+          "pricingPerEvent": {
+            "actorChargeEvents": {
+              "apify-actor-start": {
+                "eventTitle": "Actor Start",
+                "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+                "isOneTimeEvent": true,
+                "eventPriceUsd": 0.005
+              },
+              "apify-default-dataset-item": {
+                "eventTitle": "Result",
+                "eventDescription": "One trending topic returned (name, search volume, growth, related terms).",
+                "isOneTimeEvent": false,
+                "eventPriceUsd": 0.0005,
+                "isPrimaryEvent": true
+              }
+            }
+          },
+          "startedAt": "2026-08-17T02:31:48.509Z",
+          "createdAt": "2026-08-03T02:31:46.365Z",
+          "apifyMarginPercentage": 0.2,
+          "notifiedAboutFutureChangeAt": "2026-08-03T02:32:06.555Z",
+          "notifiedAboutChangeAt": "2026-08-19T08:06:27.119Z"
+        },
+        "id": "hk1O6WbwbctmDCEOb",
+        "url": "https://apify.com/habit.zhou/google-trends-discovery"
+      },
+      {
+        "title": "Google Trends Scraper & Breakout Monitor",
+        "name": "google-trends-monitor",
+        "username": "automa-flow",
+        "stats": {
+          "totalBuilds": 21,
+          "totalRuns": 4987,
+          "totalUsers": 1,
+          "totalUsers7Days": 1,
+          "totalUsers30Days": 1,
+          "totalUsers90Days": 1,
+          "lastRunStartedAt": "2026-09-11T20:04:06.588Z",
+          "actorReviewCount": 0,
+          "actorReviewRating": 0,
+          "bookmarkCount": 0,
+          "publicActorRunStats30Days": {
+            "ABORTED": 0,
+            "FAILED": 509,
+            "SUCCEEDED": 4334,
+            "TIMED-OUT": 36,
+            "TOTAL": 4879
+          }
+        },
+        "description": "Google Trends scraper API for interest over time, regions, related queries, rising searches, Breakouts, and Trending Now. Export keyword snapshots or schedule watchlists that return only new signals—no Google account, API key, or browser.",
+        "categories": [
+          "SEO_TOOLS",
+          "MARKETING",
+          "AUTOMATION"
+        ],
+        "pictureUrl": "https://images.apifyusercontent.com/cCA_-D83ORPlNDBL-PD6GYNhMVmzY5lpk-ejFigbw5Q/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vdkZubTVDd2JBVDBnVWxtVnItYWN0b3ItV2VjUkVpZFczZ0hpcFdGelAtZDRiN1BEVVFUQS1DaGF0R1BUX0ltYWdlX1NlcF8xX18yMDI2X18wNF8wMl80Ml9QTS5wbmc.webp",
+        "notice": "NONE",
+        "bookmarkCount": 0,
+        "actorReviewRating": 0,
+        "actorReviewCount": 0,
+        "badge": null,
+        "isWhiteListedForAgenticPayments": true,
+        "userFullName": "Vadim Bezrukov",
+        "userPictureUrl": "https://images.apifyusercontent.com/PWm3pETabRa8LMKcjNb8P_cPFXx5ix_rajfuhlp9t-E/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vbzN6VUZwcVRoYVJGcl9DdEkyNWU3VWprMWl2RC1PTTZwYjlqaXkyR09FNC9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloZG1GMFlYSnpMbWRwZEdoMVluVnpaWEpqYjI1MFpXNTBMbU52YlM5MUx6STFNamMyT1Rjek5UOTJQVFE.webp",
+        "currentPricingInfo": {
+          "apifyMarginPercentage": 0.2,
+          "createdAt": "2026-09-01T14:07:10.208Z",
+          "startedAt": "2026-09-01T14:10:00.000Z",
+          "notifiedAboutFutureChangeAt": null,
+          "notifiedAboutChangeAt": null,
+          "reasonForChange": null,
+          "isPriceChangeNotificationSuppressed": false,
+          "forceContainsSignificantPriceChange": false,
+          "pricingModel": "PAY_PER_EVENT",
+          "pricingPerEvent": {
+            "actorChargeEvents": {
+              "query-group": {
+                "eventTitle": "Completed keyword group",
+                "eventDescription": "Charged once when Google fully answers one keyword comparison group. Retries, partial checks and failed checks are not charged.",
+                "eventPriceUsd": 0.004,
+                "isPrimaryEvent": true,
+                "isOneTimeEvent": false
+              },
+              "trending-feed": {
+                "eventTitle": "Completed Trending Now feed",
+                "eventDescription": "Charged once when one country's Google Trending Now feed is fetched successfully. Retries and failed feeds are not charged.",
+                "eventPriceUsd": 0.002,
+                "isPrimaryEvent": false,
+                "isOneTimeEvent": false
+              }
+            }
+          },
+          "minimalMaxTotalChargeUsd": null
+        },
+        "id": "WecREidW3gHipWFzP",
+        "url": "https://apify.com/automa-flow/google-trends-monitor"
+      },
+      {
+        "title": "Google Trends Scraper - Keyword Research & SEO Analysis",
+        "name": "google-trends-scraper",
+        "username": "inexhaustible_glass",
+        "stats": {
+          "totalBuilds": 2,
+          "totalRuns": 727,
+          "totalUsers": 63,
+          "totalUsers7Days": 5,
+          "totalUsers30Days": 13,
+          "totalUsers90Days": 30,
+          "lastRunStartedAt": "2026-09-10T10:30:30.569Z",
+          "actorReviewCount": 0,
+          "actorReviewRating": 0,
+          "bookmarkCount": 1,
+          "publicActorRunStats30Days": {
+            "ABORTED": 1,
+            "FAILED": 0,
+            "SUCCEEDED": 123,
+            "TIMED-OUT": 0,
+            "TOTAL": 124
+          }
+        },
+        "description": "Analyze Google Trends for keyword research & SEO. Get interest over time, regional breakdowns, related queries, rising topics & trending searches. Compare 100+ keywords, any country, any timeframe. For SEO & content marketers.",
+        "categories": [
+          "SEO_TOOLS",
+          "AI"
+        ],
+        "pictureUrl": "https://images.apifyusercontent.com/mlPi6mt1LCS4vMDD2x9CrdEN7h-ra_yEoyNktNhkBU0/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vaDA3Y3ZyWVhDNmdHYnkzT2EtYWN0b3ItTDZ3SkJXczlMYVFMekdvOXotY1pHakRmMjJIRC1nb2dsZV90ZW5kcy5wbmc.webp",
+        "notice": "NONE",
+        "bookmarkCount": 3,
+        "actorReviewRating": 0,
+        "actorReviewCount": 0,
+        "badge": null,
+        "isWhiteListedForAgenticPayments": true,
+        "userFullName": "Hitman studio",
+        "userPictureUrl": "https://images.apifyusercontent.com/-dGl0H4SMe4cEFtN8UXxE58LOeVSdgZw0FkVyr_0kGY/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vOXlPcDNDdExSX25iUHB6WVF0aVBYOEFZa1NJbW8yc25BaVBLTVp5akY1RS9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTlzYURNdVoyOXZaMnhsZFhObGNtTnZiblJsYm5RdVkyOXRMMkV2UVVObk9HOWpTbnBRTFcxSVozaEJVRmxwTFV0RE9HRnhUR3RtV0RSMVQwNVVRemRyTTFaUlpXZFdTbFkyY1V0WVZrbDBUblpCUFhNNU5pMWo.webp",
+        "currentPricingInfo": {
+          "minimalMaxTotalChargeUsd": null,
+          "pricingModel": "PAY_PER_EVENT",
+          "isPriceChangeNotificationSuppressed": false,
+          "reasonForChange": "To continue delivering high-quality public data, faster updates, and ongoing maintenance, we're updating our pricing. Thank you for your support.",
+          "pricingPerEvent": {
+            "actorChargeEvents": {
+              "apify-default-dataset-item": {
+                "eventTitle": "result",
+                "eventDescription": "Single result in the default dataset.",
+                "isOneTimeEvent": false,
+                "eventPriceUsd": 0.003,
+                "isPrimaryEvent": true
+              },
+              "apify-actor-start": {
+                "eventTitle": "Actor Start",
+                "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+                "isOneTimeEvent": true,
+                "eventPriceUsd": 0.02
+              }
+            }
+          },
+          "startedAt": "2026-07-22T18:07:41.407Z",
+          "createdAt": "2026-07-08T18:07:41.875Z",
+          "apifyMarginPercentage": 0.2,
+          "notifiedAboutFutureChangeAt": "2026-07-08T18:08:02.803Z",
+          "notifiedAboutChangeAt": "2026-07-22T18:35:32.977Z"
+        },
+        "id": "L6wJBWs9LaQLzGo9z",
+        "url": "https://apify.com/inexhaustible_glass/google-trends-scraper"
+      },
+      {
+        "title": "Google Trends AI Content & SEO Keywords Generator",
+        "name": "daily-trend-intelligence",
+        "username": "vasram",
+        "stats": {
+          "totalBuilds": 30,
+          "totalRuns": 663,
+          "totalUsers": 50,
+          "totalUsers7Days": 1,
+          "totalUsers30Days": 1,
+          "totalUsers90Days": 2,
+          "lastRunStartedAt": "2026-09-11T04:03:22.755Z",
+          "actorReviewCount": 1,
+          "actorReviewRating": 5,
+          "bookmarkCount": 6,
+          "publicActorRunStats30Days": {
+            "ABORTED": 0,
+            "FAILED": 0,
+            "SUCCEEDED": 91,
+            "TIMED-OUT": 0,
+            "TOTAL": 91
+          }
+        },
+        "description": "Google Trends Scraper with AI content generator. Extract real-time trending topics from 48 countries → get blog titles, Twitter/Instagram/TikTok captions & 10 SEO keywords per trend. Results in 60 seconds. Free, no API keys, no proxies needed.",
+        "categories": [
+          "SEO_TOOLS",
+          "SOCIAL_MEDIA",
+          "AI"
+        ],
+        "pictureUrl": "https://images.apifyusercontent.com/zHxfD1IMRM6CAhmuHhCou-sIT5p1fdmzHLn0OOVvelo/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vQ3pVdTNPQ2ZTcjlERlo5UmstYWN0b3ItM09vRVJiUDIzQThCNUZCZDgtU3NWYnFqNlZCSS1HZW1pbmlfR2VuZXJhdGVkX0ltYWdlXzh4ajR6cTh4ajR6cTh4ajQucG5n.webp",
+        "notice": "NONE",
+        "bookmarkCount": 6,
+        "actorReviewRating": 5,
+        "actorReviewCount": 1,
+        "badge": null,
+        "isWhiteListedForAgenticPayments": true,
+        "userFullName": "Vasram Sonagara",
+        "userPictureUrl": "https://images.apifyusercontent.com/MRawt0LUbv1CbmUx0uQeNnpvhuuFWpnpbxre1CCrVU4/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vajg1Vjlxa0dDVkhvbnJkZnNSTjhQY1VyWDBMQ3ZpWi1DWFUzUy16YmZ1QS9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZRM3BWZFROUFEyWlRjamxFUmxvNVVtc3RjSEp2Wm1sc1pTMVFkM014TTJOcWN6WjFMVFF3TkM1cWNHYy5qcGc.webp",
+        "currentPricingInfo": {
+          "minimalMaxTotalChargeUsd": 0.1,
+          "pricingModel": "PAY_PER_EVENT",
+          "isPriceChangeNotificationSuppressed": false,
+          "reasonForChange": "Added Store pricing discounts to offer better rates for higher subscription tier users.",
+          "pricingPerEvent": {
+            "actorChargeEvents": {
+              "trend-result": {
+                "eventTitle": "Enriched Trend Result",
+                "eventDescription": "One enriched trend with content ideas and SEO keywords.",
+                "isOneTimeEvent": false,
+                "eventTieredPricingUsd": {
+                  "FREE": {
+                    "tieredEventPriceUsd": 0.005
+                  },
+                  "BRONZE": {
+                    "tieredEventPriceUsd": 0.0045
+                  },
+                  "SILVER": {
+                    "tieredEventPriceUsd": 0.004
+                  },
+                  "GOLD": {
+                    "tieredEventPriceUsd": 0.0035
+                  },
+                  "PLATINUM": {
+                    "tieredEventPriceUsd": 0.0035
+                  },
+                  "DIAMOND": {
+                    "tieredEventPriceUsd": 0.0035
+                  }
+                },
+                "isPrimaryEvent": true
+              },
+              "apify-actor-start": {
+                "eventTitle": "Actor Start",
+                "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+                "isOneTimeEvent": true,
+                "eventPriceUsd": 0.00001
+              }
+            }
+          },
+          "startedAt": "2026-06-16T04:46:32.952Z",
+          "createdAt": "2026-06-02T04:46:34.570Z",
+          "apifyMarginPercentage": 0.2,
+          "notifiedAboutFutureChangeAt": "2026-06-02T04:46:54.781Z"
+        },
+        "id": "3OoERbP23A8B5FBd8",
+        "url": "https://apify.com/vasram/daily-trend-intelligence"
+      },
+      {
+        "title": "Google Trends Scraper - Interest, Regions & Trends",
+        "name": "google-trends-scraper",
+        "username": "scrapesage",
+        "stats": {
+          "totalBuilds": 14,
+          "totalRuns": 772,
+          "totalUsers": 63,
+          "totalUsers7Days": 46,
+          "totalUsers30Days": 50,
+          "totalUsers90Days": 55,
+          "lastRunStartedAt": "2026-09-11T07:14:20.496Z",
+          "actorReviewCount": 0,
+          "actorReviewRating": 0,
+          "bookmarkCount": 0,
+          "publicActorRunStats30Days": {
+            "ABORTED": 0,
+            "FAILED": 0,
+            "SUCCEEDED": 630,
+            "TIMED-OUT": 0,
+            "TOTAL": 630
+          }
+        },
+        "description": "Scrape Google Trends with no browser or API key: interest over time, interest by region, related & rising queries/topics, multi-keyword comparison, and real-time Trending Now searches with traffic & news. Web, YouTube, News, Image & Shopping trends. Monitoring mode.",
+        "categories": [
+          "SEO_TOOLS",
+          "NEWS",
+          "OTHER"
+        ],
+        "pictureUrl": "https://images.apifyusercontent.com/8S6ZPy8Kq1Y6hjs3LaVz8E-dwyYkVH78Vn5RlwqTmbo/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vS2ZJMkRCWGxKenl1QUZxTXotYWN0b3ItTGVVdDRuVFRZaWwzOXVlTzEtWFc0aTRmcXVsTC1Hb29nbGVfVHJlbmRzLnBuZw.webp",
+        "notice": "NONE",
+        "bookmarkCount": 0,
+        "actorReviewRating": 0,
+        "actorReviewCount": 0,
+        "badge": null,
+        "isWhiteListedForAgenticPayments": true,
+        "userFullName": "Scrape Sage",
+        "userPictureUrl": "https://images.apifyusercontent.com/4S7GKlllKQyVtLhgCdN20Y9_jGA5IW09930pQc_S0GU/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vMHJ5WFF1LTc3bzZZNjlIRUIyZ3dmRHZaREZSNFZ5Qk5FenlVTFRsZ1A4by9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZTMlpKTWtSQ1dHeEtlbmwxUVVaeFRYb3RjSEp2Wm1sc1pTMTZjMWxZZUhoQmVIbEhMVk5qY21Gd1pWOVRZV2RsTG5CdVp3LnBuZw.webp",
+        "currentPricingInfo": {
+          "minimalMaxTotalChargeUsd": null,
+          "pricingModel": "PAY_PER_EVENT",
+          "isPriceChangeNotificationSuppressed": false,
+          "pricingPerEvent": {
+            "actorChargeEvents": {
+              "keywordResult": {
+                "eventTitle": "Keyword analysis",
+                "eventDescription": "One fully-analyzed keyword: interest over time, interest by region, and related & rising queries/topics for the chosen location, time range and property.",
+                "isOneTimeEvent": false,
+                "eventPriceUsd": 0.004,
+                "isPrimaryEvent": true
+              },
+              "comparisonResult": {
+                "eventTitle": "Keyword comparison",
+                "eventDescription": "One multi-keyword comparison (2–5 terms) on a relative 0–100 scale: timeline, per-keyword average/peak, winner, regional comparison & related.",
+                "isOneTimeEvent": false,
+                "eventPriceUsd": 0.005
+              },
+              "trendingResult": {
+                "eventTitle": "Trending search",
+                "eventDescription": "One real-time Trending Now search: title, approximate traffic, start time, image and related news articles.",
+                "isOneTimeEvent": false,
+                "eventPriceUsd": 0.0015
+              }
+            }
+          },
+          "startedAt": "2026-06-23T01:29:47.501Z",
+          "createdAt": "2026-06-23T01:29:45.949Z",
+          "apifyMarginPercentage": 0.2
+        },
+        "id": "LeUt4nTTYil39ueO1",
+        "url": "https://apify.com/scrapesage/google-trends-scraper"
+      },
+      {
+        "title": "Google Trends Scraper",
+        "name": "google-trends-scraper",
+        "username": "scrapesmith",
+        "stats": {
+          "totalBuilds": 4,
+          "totalRuns": 81,
+          "totalUsers": 19,
+          "totalUsers7Days": 2,
+          "totalUsers30Days": 4,
+          "totalUsers90Days": 18,
+          "actorReviewCount": 0,
+          "actorReviewRating": 0,
+          "bookmarkCount": 0,
+          "lastRunStartedAt": "2026-08-31T13:22:20.041Z",
+          "publicActorRunStats30Days": {
+            "ABORTED": 0,
+            "FAILED": 0,
+            "SUCCEEDED": 7,
+            "TIMED-OUT": 0,
+            "TOTAL": 7
+          }
+        },
+        "description": "Extract Google Trends data for any keyword — interest over time, related queries, regional interest (250+ countries), and daily trending searches. Custom date ranges, 100+ categories, minute-level granularity. No browser, no proxy.",
+        "categories": [
+          "DEVELOPER_TOOLS",
+          "SEO_TOOLS",
+          "AUTOMATION"
+        ],
+        "pictureUrl": "https://images.apifyusercontent.com/EErjYriDsB0i5ZGi8XpCOuPJTtoc3W5MwPEUBPfBw1w/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vOWNMWUFDZXhYTGZ2eE1oY2stYWN0b3ItUmVTeGk5WjBrdm1KQVJUeVMtTlBQbjFpZzlpMy1pbWFnZXMuanBn.webp",
+        "notice": "NONE",
+        "bookmarkCount": 1,
+        "actorReviewRating": 0,
+        "actorReviewCount": 0,
+        "badge": null,
+        "isWhiteListedForAgenticPayments": false,
+        "userFullName": "Scrape Smith",
+        "userPictureUrl": "https://images.apifyusercontent.com/qWB4-RqM6RH3W5fKsLLf7MWbO1ilGr7NoQ3lw-6eiYc/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vQ2JqLVk3bHdjM0JIUklsaWl1T0xtV3JUdDRZcGJyLTlobDlhMkh0TTVoVS9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZPV05NV1VGRFpYaFlUR1oyZUUxb1kyc3RjSEp2Wm1sc1pTMXBOM0F3YjJOMU1FZG9MV1poZGk1d2JtYy5wbmc.webp",
+        "currentPricingInfo": {
+          "minimalMaxTotalChargeUsd": null,
+          "pricingModel": "PAY_PER_EVENT",
+          "isPriceChangeNotificationSuppressed": false,
+          "pricingPerEvent": {
+            "actorChargeEvents": {
+              "apify-actor-start": {
+                "eventTitle": "Actor Start",
+                "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+                "isOneTimeEvent": true,
+                "eventPriceUsd": 0.005
+              },
+              "apify-default-dataset-item": {
+                "eventTitle": "result",
+                "eventDescription": "Single result in the default dataset.",
+                "isOneTimeEvent": false,
+                "eventPriceUsd": 0.0005,
+                "isPrimaryEvent": true
+              }
+            }
+          },
+          "startedAt": "2026-06-28T13:58:48.765Z",
+          "createdAt": "2026-06-28T13:58:27.888Z",
+          "apifyMarginPercentage": 0.2
+        },
+        "id": "ReSxi9Z0kvmJARTyS",
+        "url": "https://apify.com/scrapesmith/google-trends-scraper"
+      },
+      {
+        "title": "Google Trends Scraper",
+        "name": "google-trends-scraper",
+        "username": "parseforge",
+        "stats": {
+          "totalBuilds": 22,
+          "totalRuns": 569,
+          "totalUsers": 16,
+          "totalUsers7Days": 0,
+          "totalUsers30Days": 3,
+          "totalUsers90Days": 5,
+          "lastRunStartedAt": "2026-09-11T03:04:05.651Z",
+          "actorReviewCount": 0,
+          "actorReviewRating": 0,
+          "bookmarkCount": 0,
+          "publicActorRunStats30Days": {
+            "ABORTED": 0,
+            "FAILED": 0,
+            "SUCCEEDED": 33,
+            "TIMED-OUT": 0,
+            "TOTAL": 33
+          }
+        },
+        "description": "Scrapes Google Trends interest-over-time index, regional breakdowns, and related queries for a list of keywords. Returns each trend as a flat row with normalized search volume data.",
+        "categories": [
+          "SEO_TOOLS",
+          "NEWS",
+          "MARKETING"
+        ],
+        "pictureUrl": "https://images.apifyusercontent.com/iON65xHKHQlLsX9hDvd_BJL2y0FUyjlB4Ql_YWjfc7s/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vY1ZNRVRxQUhSTmJuT0N6QXEtYWN0b3ItQU1JZDgzV0F2V0I0OTAyZUwtTGJHamYzdFpIeS1nb29nbGUtdHJlbmRzLXNjcmFwZXItMjU2LnBuZw.webp",
+        "notice": "NONE",
+        "bookmarkCount": 0,
+        "actorReviewRating": 0,
+        "actorReviewCount": 0,
+        "badge": null,
+        "isWhiteListedForAgenticPayments": true,
+        "userFullName": "ParseForge",
+        "userPictureUrl": "https://images.apifyusercontent.com/7v_fw1tYOZK4ZaPIPpFJPq4bd1wmXxpvscQbD-yADiU/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vWkphSmZPeFdyX3NPNFdCNU0wNEpfRWYyc1BlaWxmN0JyWUJGTkt5TmNFdy9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZZMVpOUlZSeFFVaFNUbUp1VDBONlFYRXRjSEp2Wm1sc1pTMW5VbmxJWTBGSlFXNWtMWEJoY25ObFptOXlaMlZmYkc5bmJ5NXdibWMucG5n.webp",
+        "currentPricingInfo": {
+          "minimalMaxTotalChargeUsd": null,
+          "pricingModel": "PAY_PER_EVENT",
+          "isPriceChangeNotificationSuppressed": false,
+          "pricingPerEvent": {
+            "actorChargeEvents": {
+              "result-item": {
+                "eventTitle": "result",
+                "eventDescription": "Single result in the default dataset.",
+                "isOneTimeEvent": false,
+                "eventTieredPricingUsd": {
+                  "FREE": {
+                    "tieredEventPriceUsd": 0.0208
+                  },
+                  "BRONZE": {
+                    "tieredEventPriceUsd": 0.01993
+                  },
+                  "SILVER": {
+                    "tieredEventPriceUsd": 0.01907
+                  },
+                  "GOLD": {
+                    "tieredEventPriceUsd": 0.0182
+                  },
+                  "PLATINUM": {
+                    "tieredEventPriceUsd": 0.0182
+                  },
+                  "DIAMOND": {
+                    "tieredEventPriceUsd": 0.0182
+                  }
+                },
+                "isPrimaryEvent": true
+              }
+            }
+          },
+          "startedAt": "2026-06-11T23:28:00.755Z",
+          "apifyMarginPercentage": 0.2,
+          "reasonForChange": "Pricing adjustment: raising all tiers by 30%. Recent compute costs exceeded revenue and this change brings the actor back above cost floor.",
+          "createdAt": "2026-05-28T23:23:09.903Z",
+          "notifiedAboutFutureChangeAt": "2026-05-28T23:23:30.077Z"
+        },
+        "id": "AMId83WAvWB4902eL",
+        "url": "https://apify.com/parseforge/google-trends-scraper"
+      },
+      {
+        "title": "Multi-Keyword Google Trends Scraper — Compare Keyword Interest",
+        "name": "google-trends-scraper",
+        "username": "k1ra",
+        "stats": {
+          "totalBuilds": 5,
+          "totalRuns": 1137,
+          "totalUsers": 17,
+          "totalUsers7Days": 6,
+          "totalUsers30Days": 12,
+          "totalUsers90Days": 15,
+          "lastRunStartedAt": "2026-09-11T10:24:34.596Z",
+          "actorReviewCount": 0,
+          "actorReviewRating": 0,
+          "bookmarkCount": 1,
+          "publicActorRunStats30Days": {
+            "ABORTED": 0,
+            "FAILED": 0,
+            "SUCCEEDED": 584,
+            "TIMED-OUT": 0,
+            "TOTAL": 584
+          }
+        },
+        "description": "Fast Google Trends API - results in seconds, no timeouts. Compare up to 5 keywords side by side: interest over time, interest by region, and related queries. Structured Google search trends data, ready for pipelines and dashboards. Pay per keyword, $0 on empty runs.",
+        "categories": [
+          "SEO_TOOLS",
+          "DEVELOPER_TOOLS",
+          "LEAD_GENERATION"
+        ],
+        "pictureUrl": "https://images.apifyusercontent.com/PsZNLRfNvsjZmwP0jSARZWgIS_pqa_YIbZla3awenD8/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vdnJjaG51azNDN25mb0tveHQtYWN0b3ItQ1R6VDgwZWhJMUZtVUNQc1ctUDBFTzFyUjRrci1HZW1pbmlfR2VuZXJhdGVkX0ltYWdlXzhpaTdrZzhpaTdrZzhpaTcucG5n.webp",
+        "notice": "NONE",
+        "bookmarkCount": 1,
+        "actorReviewRating": 0,
+        "actorReviewCount": 0,
+        "badge": null,
+        "isWhiteListedForAgenticPayments": true,
+        "userFullName": "Kevin Savani",
+        "userPictureUrl": "https://images.apifyusercontent.com/kRqHHOAMxEwl1Tc7h3ENp6kKCb7F0PKNIrPaJT5xong/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vUDVPUkJKMkhtampITWhaZDlublA1Qk9sZDdyc1UyVS1VUDZEUFJCamtyQS9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTlzYURNdVoyOXZaMnhsZFhObGNtTnZiblJsYm5RdVkyOXRMMkV2UVVObk9HOWpTbkZVUldWQ1puWjFTV1ZCZGswMFFqVkJia3BRVTBaTk1VVnlVMlZRVG0xUFF6RjZka2QzY2tnd09HYw.webp",
+        "currentPricingInfo": {
+          "minimalMaxTotalChargeUsd": null,
+          "pricingModel": "PAY_PER_EVENT",
+          "isPriceChangeNotificationSuppressed": false,
+          "pricingPerEvent": {
+            "actorChargeEvents": {
+              "keyword-dataset": {
+                "eventTitle": "Keyword dataset",
+                "eventDescription": "Charged once per keyword that returns at least one populated view (interest over time, by region, related queries, or topics).",
+                "isOneTimeEvent": false,
+                "eventPriceUsd": 0.002,
+                "isPrimaryEvent": true
+              },
+              "apify-actor-start": {
+                "eventTitle": "Actor Start",
+                "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+                "isOneTimeEvent": true,
+                "eventPriceUsd": 0.00005
+              }
+            }
+          },
+          "startedAt": "2026-07-25T01:22:51.613Z",
+          "createdAt": "2026-07-25T01:22:51.937Z",
+          "apifyMarginPercentage": 0.2,
+          "notifiedAboutChangeAt": "2026-07-25T01:35:36.440Z"
+        },
+        "id": "CTzT80ehI1FmUCPsW",
+        "url": "https://apify.com/k1ra/google-trends-scraper"
+      },
+      {
+        "title": "Google Trends Scraper — Interest, Related, Now",
+        "name": "google-trends-scraper",
+        "username": "scrape.badger",
+        "stats": {
+          "totalBuilds": 7,
+          "totalRuns": 196,
+          "totalUsers": 12,
+          "totalUsers7Days": 1,
+          "totalUsers30Days": 2,
+          "totalUsers90Days": 6,
+          "actorReviewCount": 0,
+          "actorReviewRating": 0,
+          "bookmarkCount": 0,
+          "lastRunStartedAt": "2026-09-10T12:56:43.941Z",
+          "publicActorRunStats30Days": {
+            "ABORTED": 0,
+            "FAILED": 0,
+            "SUCCEEDED": 31,
+            "TIMED-OUT": 2,
+            "TOTAL": 33
+          }
+        },
+        "description": "Scrape Google Trends at scale: interest over time, interest by region, related topics & queries, trending-now searches with category/hours/status/sort filters, unified explore (TIMESERIES / GEO_MAP / RELATED_TOPICS / RELATED_QUERIES) and topic autocomplete.",
+        "categories": [
+          "DEVELOPER_TOOLS",
+          "SEO_TOOLS",
+          "OTHER"
+        ],
+        "pictureUrl": "https://images.apifyusercontent.com/vxQI9cOtzGkWDbBD1tYpMO1dyHzSdXHshWg_EQU3fvs/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vbDBWN2R0bEI2QURGaDNWdVYtYWN0b3ItbFZrNWJ6dHB6Z1c1ZWdUdXQtbHdYaDJac056RS1sb2dvLnBuZw.webp",
+        "notice": "NONE",
+        "bookmarkCount": 0,
+        "actorReviewRating": 0,
+        "actorReviewCount": 0,
+        "badge": null,
+        "isWhiteListedForAgenticPayments": true,
+        "userFullName": "ScrapeBadger",
+        "userPictureUrl": "https://images.apifyusercontent.com/S0FIICzJ8MDZlGC1eiVk3utFdeaM1-OU2VAllL83OTo/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vOHBLWW8xeGExd3pPaUk5bUFEbTVTZGhhR0ItLUxmR25TdnVVXzRpcnl6cy9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZiREJXTjJSMGJFSTJRVVJHYUROV2RWWXRjSEp2Wm1sc1pTMTFTak01VVhSNVNGUXlMVWRsYm1WeVlYUmxaRjlKYldGblpWOU5ZWEpqYUY4d01WOWZNakF5Tmw4dFh6RmZOVFpRVFY4bE1qZ3hKVEk1TG5CdVp3LnBuZw.webp",
+        "currentPricingInfo": {
+          "minimalMaxTotalChargeUsd": null,
+          "pricingModel": "PAY_PER_EVENT",
+          "isPriceChangeNotificationSuppressed": false,
+          "pricingPerEvent": {
+            "actorChargeEvents": {
+              "apify-actor-start": {
+                "eventTitle": "Actor Start",
+                "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+                "isOneTimeEvent": true,
+                "eventPriceUsd": 0.00005
+              },
+              "apify-default-dataset-item": {
+                "eventTitle": "result",
+                "eventDescription": "Single result in the default dataset.",
+                "eventPriceUsd": 0.00001
+              },
+              "trends-call": {
+                "eventTitle": "Trends call",
+                "eventDescription": "One Google Trends API call (autocomplete / interest / related / trending / region).",
+                "isOneTimeEvent": false,
+                "eventPriceUsd": 0.00025,
+                "isPrimaryEvent": true
+              }
+            }
+          },
+          "startedAt": "2026-04-29T22:47:04.981Z",
+          "createdAt": "2026-04-29T22:47:05.202Z",
+          "apifyMarginPercentage": 0.2
+        },
+        "id": "lVk5bztpzgW5egTut",
+        "url": "https://apify.com/scrape.badger/google-trends-scraper"
+      },
+      {
+        "title": "Google Trends Scraper — Trending Searches by Country",
+        "name": "google-trends-scraper",
+        "username": "sian.agency",
+        "stats": {
+          "totalBuilds": 14,
+          "totalRuns": 114,
+          "totalUsers": 9,
+          "totalUsers7Days": 2,
+          "totalUsers30Days": 6,
+          "totalUsers90Days": 9,
+          "lastRunStartedAt": "2026-09-10T13:58:29.176Z",
+          "actorReviewCount": 0,
+          "actorReviewRating": 0,
+          "bookmarkCount": 1,
+          "publicActorRunStats30Days": {
+            "ABORTED": 0,
+            "FAILED": 0,
+            "SUCCEEDED": 36,
+            "TIMED-OUT": 0,
+            "TOTAL": 36
+          }
+        },
+        "description": "Scrape Google Trends trending searches into clean JSON/CSV. Get every trending term for any country with its search-traffic volume, the news articles driving it, and a thumbnail. Scrape many countries in one run. No code, no API key.",
+        "categories": [
+          "SEO_TOOLS",
+          "BUSINESS",
+          "AUTOMATION"
+        ],
+        "pictureUrl": "https://images.apifyusercontent.com/ttnxob3SVLrwBQiaEpbHLVjJ_98SgQXAp_LhR1BuMAw/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vU0hhYnZOYkU3NlUxYVFhR2QtYWN0b3ItOFN4MmRLSEhrQ2JqaVBNYlItMlpQWHVxalJFMS1nb29nbGUtdHJlbmRzLXNjcmFwZXIucG5n.webp",
+        "notice": "NONE",
+        "bookmarkCount": 1,
+        "actorReviewRating": 0,
+        "actorReviewCount": 0,
+        "badge": null,
+        "isWhiteListedForAgenticPayments": true,
+        "userFullName": "SIÁN OÜ",
+        "userPictureUrl": "https://images.apifyusercontent.com/3-IKZ7tIOa05lY7MEtwSbfqDeQBl6ukkcNU3pSphMaY/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vaU1mYTktaWVrWlVUTHJKci1jcV9tcDFPdGRkU2lUXzEtZVc5MjJ5ek92NC9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZVMGhoWW5aT1lrVTNObFV4WVZGaFIyUXRjSEp2Wm1sc1pTMTVlSFYyYWtwNVkyWmxMVFV1Y0c1bi5wbmc.webp",
+        "currentPricingInfo": {
+          "startedAt": "2026-08-17T01:32:38.022Z",
+          "createdAt": "2026-08-17T01:32:42.500Z",
+          "pricingModel": "PAY_PER_EVENT",
+          "pricingPerEvent": {
+            "actorChargeEvents": {
+              "apify-actor-start": {
+                "eventTitle": "Actor Start",
+                "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+                "isOneTimeEvent": true,
+                "eventTieredPricingUsd": {
+                  "FREE": {
+                    "tieredEventPriceUsd": 0.05
+                  },
+                  "BRONZE": {
+                    "tieredEventPriceUsd": 0.005
+                  },
+                  "SILVER": {
+                    "tieredEventPriceUsd": 0.005
+                  },
+                  "GOLD": {
+                    "tieredEventPriceUsd": 0.005
+                  },
+                  "PLATINUM": {
+                    "tieredEventPriceUsd": 0.005
+                  },
+                  "DIAMOND": {
+                    "tieredEventPriceUsd": 0.005
+                  }
+                }
+              },
+              "TrendExtracted": {
+                "eventTitle": "Extracted Trend",
+                "eventDescription": "Charged per trending search term returned (term, traffic, news articles, thumbnail).",
+                "isPrimaryEvent": true,
+                "eventTieredPricingUsd": {
+                  "FREE": {
+                    "tieredEventPriceUsd": 0.009
+                  },
+                  "BRONZE": {
+                    "tieredEventPriceUsd": 0.0025
+                  },
+                  "SILVER": {
+                    "tieredEventPriceUsd": 0.0022
+                  },
+                  "GOLD": {
+                    "tieredEventPriceUsd": 0.002
+                  },
+                  "PLATINUM": {
+                    "tieredEventPriceUsd": 0.0017
+                  },
+                  "DIAMOND": {
+                    "tieredEventPriceUsd": 0.0015
+                  }
+                }
+              }
+            }
+          },
+          "apifyMarginPercentage": 0.2
+        },
+        "id": "8Sx2dKHHkCbjiPMbR",
+        "url": "https://apify.com/sian.agency/google-trends-scraper"
+      },
+      {
+        "title": "Google Trends Scraper (Fast & Reliable)",
+        "name": "google-trends-scraper",
+        "username": "emreceylan",
+        "stats": {
+          "totalBuilds": 9,
+          "totalRuns": 238,
+          "totalUsers": 9,
+          "totalUsers7Days": 1,
+          "totalUsers30Days": 3,
+          "totalUsers90Days": 6,
+          "lastRunStartedAt": "2026-09-11T03:10:40.386Z",
+          "actorReviewCount": 0,
+          "actorReviewRating": 0,
+          "bookmarkCount": 0,
+          "publicActorRunStats30Days": {
+            "ABORTED": 0,
+            "FAILED": 2,
+            "SUCCEEDED": 144,
+            "TIMED-OUT": 1,
+            "TOTAL": 147
+          }
+        },
+        "description": "Google Trends API alternative — scrape interest over time, related queries (top & rising) and interest by region for any keyword, country and time range. Web, News, YouTube & Shopping. Fast, reliable, no API key. Built for SEO & market research.",
+        "categories": [
+          "DEVELOPER_TOOLS",
+          "SEO_TOOLS",
+          "AUTOMATION"
+        ],
+        "notice": "NONE",
+        "bookmarkCount": 0,
+        "actorReviewRating": 0,
+        "actorReviewCount": 0,
+        "badge": null,
+        "isWhiteListedForAgenticPayments": false,
+        "userFullName": "Emre Ceylan",
+        "userPictureUrl": "https://images.apifyusercontent.com/JCWPPQXw5pmbp_rRuLsJecEhIYilhxDtWy4UG8oTplI/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vTEs5dWEza1g0SlZpaS0xR1hRYkJDX0ZVMWgzQ2NZV3JtOUY3QmI4VUk5OC9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTlzYURNdVoyOXZaMnhsZFhObGNtTnZiblJsYm5RdVkyOXRMMkV2UVVObk9HOWpTalpPU0VoNGRsWlVOMk55VGpOdk56SkVNRk13VVRkQlRWTnFjVWRvUVVVemRtWmtUa0p6Vm1OR04wd3dWMEl6UjBROWN6azJMV00.webp",
+        "currentPricingInfo": {
+          "pricingModel": "FREE",
+          "createdAt": "2026-07-17T21:58:21.494Z",
+          "startedAt": "2026-07-31T21:58:20.628Z",
+          "apifyMarginPercentage": 0,
+          "notifiedAboutFutureChangeAt": "2026-07-17T21:58:41.610Z",
+          "notifiedAboutChangeAt": "2026-08-05T15:06:17.717Z"
+        },
+        "id": "M141uiJidAEo3V5Cn",
+        "url": "https://apify.com/emreceylan/google-trends-scraper"
+      },
+      {
+        "title": "Google Trends Scraper",
+        "name": "google-trends-scraper",
+        "username": "xtracto",
+        "stats": {
+          "totalBuilds": 4,
+          "totalRuns": 166,
+          "totalUsers": 8,
+          "totalUsers7Days": 2,
+          "totalUsers30Days": 4,
+          "totalUsers90Days": 7,
+          "lastRunStartedAt": "2026-09-10T16:14:52.499Z",
+          "actorReviewCount": 0,
+          "actorReviewRating": 0,
+          "bookmarkCount": 0,
+          "publicActorRunStats30Days": {
+            "ABORTED": 1,
+            "FAILED": 0,
+            "SUCCEEDED": 119,
+            "TIMED-OUT": 8,
+            "TOTAL": 128
+          }
+        },
+        "description": "Get current trending searches for any country, or interest-over-time plus top & rising related queries and geographic breakdown for any keyword. No account, no API key.",
+        "categories": [
+          "LEAD_GENERATION",
+          "NEWS",
+          "SOCIAL_MEDIA"
+        ],
+        "pictureUrl": "https://images.apifyusercontent.com/TesCx0B4MC0oJaWm5FX69uBOsQ2XKWIBAGna4HBnTBg/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vUHVPMllrQnRuZkNzMUowYVctYWN0b3ItSVlkOURPU01KTnVUZWdyRXktT3RhdXp0ZWdNbS1nb29nbGUtdHJlbmRzLWxvZ28taWNvbi1mcmVlLXBuZy53ZWJw.webp",
+        "notice": "NONE",
+        "bookmarkCount": 0,
+        "actorReviewRating": 0,
+        "actorReviewCount": 0,
+        "badge": null,
+        "isWhiteListedForAgenticPayments": false,
+        "userFullName": "Farhan Febrian Nauval",
+        "userPictureUrl": "https://images.apifyusercontent.com/jNWKTK64tuv-ni0AXcJGuKrhAnRc3hucF8155u61X6Y/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20va2dPUm9SOWVadmF6cG5ON0ZWSVptWFVxZmNXTG5MaWktZ1QxZXk4TVJGdy9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZVSFZQTWxsclFuUnVaa056TVVvd1lWY3RjSEp2Wm1sc1pTMUtlR1JVU0hjNWRucFBMVE0yTmpZd01EVXVjRzVuLnBuZw.webp",
+        "currentPricingInfo": {
+          "minimalMaxTotalChargeUsd": null,
+          "isPPEPlatformUsagePaidByUser": true,
+          "pricingModel": "PAY_PER_EVENT",
+          "isPriceChangeNotificationSuppressed": false,
+          "pricingPerEvent": {
+            "actorChargeEvents": {
+              "apify-actor-start": {
+                "eventTitle": "Actor Start",
+                "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+                "isOneTimeEvent": true,
+                "eventPriceUsd": 0.005
+              },
+              "apify-default-dataset-item": {
+                "eventTitle": "result",
+                "eventDescription": "Single result in the default dataset.",
+                "isOneTimeEvent": false,
+                "eventTieredPricingUsd": {
+                  "FREE": {
+                    "tieredEventPriceUsd": 0.002
+                  },
+                  "BRONZE": {
+                    "tieredEventPriceUsd": 0.00166
+                  },
+                  "SILVER": {
+                    "tieredEventPriceUsd": 0.00133
+                  },
+                  "GOLD": {
+                    "tieredEventPriceUsd": 0.00099
+                  },
+                  "PLATINUM": {
+                    "tieredEventPriceUsd": 0.00099
+                  },
+                  "DIAMOND": {
+                    "tieredEventPriceUsd": 0.00099
+                  }
+                },
+                "isPrimaryEvent": true
+              }
+            }
+          },
+          "startedAt": "2026-07-12T09:31:47.455Z",
+          "createdAt": "2026-07-12T09:31:48.776Z",
+          "apifyMarginPercentage": 0.2,
+          "notifiedAboutChangeAt": "2026-07-13T10:36:45.773Z"
+        },
+        "id": "IYd9DOSMJNuTegrEy",
+        "url": "https://apify.com/xtracto/google-trends-scraper"
+      },
+      {
+        "title": "Google Trends Scraper",
+        "name": "google-trends-scraper",
+        "username": "kawsar",
+        "stats": {
+          "totalBuilds": 14,
+          "totalRuns": 160,
+          "totalUsers": 7,
+          "totalUsers7Days": 1,
+          "totalUsers30Days": 1,
+          "totalUsers90Days": 4,
+          "lastRunStartedAt": "2026-09-10T15:06:38.208Z",
+          "actorReviewCount": 0,
+          "actorReviewRating": 0,
+          "bookmarkCount": 0,
+          "publicActorRunStats30Days": {
+            "ABORTED": 0,
+            "FAILED": 0,
+            "SUCCEEDED": 31,
+            "TIMED-OUT": 0,
+            "TOTAL": 31
+          }
+        },
+        "description": "Google Trends Scraper that fetches keyword interest, regional data, related topics, and rising queries from Google Trends, so you can track search demand and catch trends before they peak.",
+        "categories": [
+          "SEO_TOOLS",
+          "DEVELOPER_TOOLS",
+          "AUTOMATION"
+        ],
+        "pictureUrl": "https://images.apifyusercontent.com/fKYd2DdEwfw54IRmgYbqpO3OqR6KC8Kqq5DZnpo7m4E/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vU1REbnRaNW5NcThtbXo5UFQtYWN0b3ItczRkY0ozSm9qdkZ3S1ZobmgtaVVCUEFkVUgwWi1nb29nbGUtdHJlbmRzLWxvZ28taWNvbi1oaWdoLXJlc29sdXRpb24tZnJlZS12ZWN0b3IuanBn.webp",
+        "notice": "NONE",
+        "bookmarkCount": 0,
+        "actorReviewRating": 0,
+        "actorReviewCount": 0,
+        "badge": null,
+        "isWhiteListedForAgenticPayments": true,
+        "userFullName": "Kawsar",
+        "userPictureUrl": "https://images.apifyusercontent.com/NbPj4GhqzRvZ979JRazp7x2iBeV7Gj-kMexG-BjZeaU/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vOHJVbGI1T2lmTWNCMXU0OTVrTEZwNUZaZExuN2NRSldWQUZTWHhlbDE3OC9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZVMVJFYm5SYU5XNU5jVGh0YlhvNVVGUXRjSEp2Wm1sc1pTMVBUbVJuUzFoaVZGZ3hMWEJvYjNSdlgzTnRZV3hzWHlVeU9ERWxNamt1YW5CbFp3LmpwZWc.webp",
+        "currentPricingInfo": {
+          "minimalMaxTotalChargeUsd": null,
+          "pricingModel": "PAY_PER_EVENT",
+          "isPriceChangeNotificationSuppressed": false,
+          "pricingPerEvent": {
+            "actorChargeEvents": {
+              "apify-default-dataset-item": {
+                "eventTitle": "result",
+                "eventDescription": "Single result in the default dataset.",
+                "eventTieredPricingUsd": {
+                  "FREE": {
+                    "tieredEventPriceUsd": 0.00299
+                  },
+                  "BRONZE": {
+                    "tieredEventPriceUsd": 0.00199
+                  },
+                  "SILVER": {
+                    "tieredEventPriceUsd": 0.00099
+                  },
+                  "GOLD": {
+                    "tieredEventPriceUsd": 0.00099
+                  },
+                  "PLATINUM": {
+                    "tieredEventPriceUsd": 0.00099
+                  },
+                  "DIAMOND": {
+                    "tieredEventPriceUsd": 0.00099
+                  }
+                },
+                "isPrimaryEvent": true
+              }
+            }
+          },
+          "startedAt": "2026-05-19T05:46:33.593Z",
+          "createdAt": "2026-05-19T05:46:32.568Z",
+          "apifyMarginPercentage": 0.2
+        },
+        "id": "s4dcJ3JojvFwKVhnh",
+        "url": "https://apify.com/kawsar/google-trends-scraper"
+      },
+      {
+        "title": "Google Trends Scraper - Interest Over Time, Peaks & Compare",
+        "name": "google-trends-scraper",
+        "username": "santhej",
+        "stats": {
+          "totalBuilds": 1,
+          "totalRuns": 153,
+          "totalUsers": 7,
+          "totalUsers7Days": 1,
+          "totalUsers30Days": 2,
+          "totalUsers90Days": 3,
+          "lastRunStartedAt": "2026-09-10T06:28:32.554Z",
+          "actorReviewCount": 0,
+          "actorReviewRating": 0,
+          "bookmarkCount": 0,
+          "publicActorRunStats30Days": {
+            "ABORTED": 0,
+            "FAILED": 0,
+            "SUCCEEDED": 93,
+            "TIMED-OUT": 0,
+            "TOTAL": 93
+          }
+        },
+        "description": "Scrape Google Trends for any keywords: interest-over-time series, average, peak and latest interest, plus side-by-side comparison of up to 5 terms. Pick country and time range. Clean JSON/CSV for trend research and content timing. No API keys.",
+        "categories": [
+          "SEO_TOOLS",
+          "MCP_SERVERS"
+        ],
+        "pictureUrl": "https://images.apifyusercontent.com/HIVUAWsIjpO0cMqIxoRCDr4MA-vFrZ1q2xgY9wVTnxQ/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vRnhoZk9KNjl0UG95TE81NFotYWN0b3ItU05GNG10SDMwUlV6WlQ4SXItMDZPdk54Z2NBYS1sb2dvLnBuZw.webp",
+        "notice": "NONE",
+        "bookmarkCount": 0,
+        "actorReviewRating": 0,
+        "actorReviewCount": 0,
+        "badge": null,
+        "isWhiteListedForAgenticPayments": true,
+        "userFullName": "Santhej Kallada",
+        "userPictureUrl": "https://images.apifyusercontent.com/rC70l0_OkI7iT3nXOqcAa5t6Z_ZpUE5uOIMGitAAaVM/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vUWlhSUZ2aTF0Y2k1ZC1jc2Z3VEo1YWN1MkJQQ09oUi1OOThtLW5VdC1Cdy9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTkzZDNjdVozSmhkbUYwWVhJdVkyOXRMMkYyWVhSaGNpOHlZamxrWm1VeFpXWmxNMkUwTlRrek9UaGxOemMwTlRrMU16VXdNV0kxTkQ5a1BXaDBkSEJ6SlROQkpUSkdKVEpHWTJSdUxtRndhV1o1TG1OdmJTVXlSbWx0WnlVeVJtbGpiMjV6SlRKR1lXNXZibmx0YjNWelgzVnpaWEpmY0dsamRIVnlaUzV3Ym1j.webp",
+        "currentPricingInfo": {
+          "pricingModel": "PAY_PER_EVENT",
+          "pricingPerEvent": {
+            "actorChargeEvents": {
+              "actor-start": {
+                "eventTitle": "Actor Start",
+                "eventDescription": "Charged once when the run starts.",
+                "eventPriceUsd": 0.001
+              },
+              "keyword-trend": {
+                "eventTitle": "Keyword Trend",
+                "eventDescription": "Charged per keyword trend analyzed.",
+                "eventPriceUsd": 0.005
+              }
+            }
+          },
+          "apifyMarginPercentage": 0.2,
+          "createdAt": "2026-05-30T17:34:53.689Z",
+          "startedAt": "2026-05-30T17:34:53.689Z"
+        },
+        "id": "SNF4mtH30RUzZT8Ir",
+        "url": "https://apify.com/santhej/google-trends-scraper"
+      },
+      {
+        "title": "Google Trends Scraper",
+        "name": "google-trends-scraper",
+        "username": "4l3c",
+        "stats": {
+          "totalBuilds": 7,
+          "totalRuns": 178,
+          "totalUsers": 5,
+          "totalUsers7Days": 1,
+          "totalUsers30Days": 2,
+          "totalUsers90Days": 4,
+          "lastRunStartedAt": "2026-09-11T08:50:53.023Z",
+          "actorReviewCount": 0,
+          "actorReviewRating": 0,
+          "bookmarkCount": 0,
+          "publicActorRunStats30Days": {
+            "ABORTED": 3,
+            "FAILED": 1,
+            "SUCCEEDED": 86,
+            "TIMED-OUT": 1,
+            "TOTAL": 91
+          }
+        },
+        "description": "Fast, reliable Google Trends data: interest over time, related queries, related topics, and interest by region for any keyword, country, and timeframe. A maintained replacement for the dead pytrends library — survives Google rate limits via rotating residential proxies. $4 per 1,000 results.",
+        "categories": [
+          "SEO_TOOLS",
+          "AI"
+        ],
+        "pictureUrl": "https://images.apifyusercontent.com/qkqLqbKzfrTjoovdMTgmtSLSei1HNAzvNd69DdkdDno/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vYWhOZlV1R0toSUh1NlNsTkEtYWN0b3ItMXF3bWJ4MkpzdmNYRE5TcUctZDIyMk5JWUlITS1nb29nbGUtdHJlbmRzLnBuZw.webp",
+        "notice": "NONE",
+        "bookmarkCount": 0,
+        "actorReviewRating": 0,
+        "actorReviewCount": 0,
+        "badge": null,
+        "isWhiteListedForAgenticPayments": true,
+        "userFullName": "Alec",
+        "userPictureUrl": "https://images.apifyusercontent.com/MX-TkqV4I1mMwIOD5eC1ve_NiNoKQBawURS2FmONylw/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vbkpudzlpMTJfb3VwVTVNaC1VZzVUY3BYelBheVp5Y0g3LWtBVGpnazd1dy9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZZV2hPWmxWMVIwdG9TVWgxTmxOc1RrRXRjSEp2Wm1sc1pTMTFiR1JZU2s5bmEzTTVMV1V6WVRrMllXVmpMVE0yTURZdE5ETTNZUzA1WXprMUxUQXlPVGxtTkRVelptVTNNQzVxY0djLmpwZw.webp",
+        "currentPricingInfo": {
+          "minimalMaxTotalChargeUsd": null,
+          "pricingModel": "PAY_PER_EVENT",
+          "isPriceChangeNotificationSuppressed": false,
+          "pricingPerEvent": {
+            "actorChargeEvents": {
+              "apify-actor-start": {
+                "eventTitle": "Actor Start",
+                "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+                "isOneTimeEvent": true,
+                "eventPriceUsd": 0.00005
+              },
+              "result-item": {
+                "eventTitle": "Result item",
+                "eventDescription": "One Google Trends dataset (e.g. interest over time for one keyword).",
+                "isOneTimeEvent": false,
+                "eventPriceUsd": 0.004,
+                "isPrimaryEvent": true
+              }
+            }
+          },
+          "startedAt": "2026-06-10T22:35:29.407Z",
+          "createdAt": "2026-06-10T22:35:29.503Z",
+          "apifyMarginPercentage": 0.2
+        },
+        "id": "1qwmbx2JsvcXDNSqG",
+        "url": "https://apify.com/4l3c/google-trends-scraper"
+      },
+      {
+        "title": "Google Trends Scraper — Compare, Interest & Trending Now",
+        "name": "google-trends-scraper",
+        "username": "automation_craft",
+        "stats": {
+          "totalBuilds": 10,
+          "totalRuns": 107,
+          "totalUsers": 4,
+          "totalUsers7Days": 0,
+          "totalUsers30Days": 0,
+          "totalUsers90Days": 2,
+          "lastRunStartedAt": "2026-09-10T22:50:28.479Z",
+          "actorReviewCount": 0,
+          "actorReviewRating": 0,
+          "bookmarkCount": 0,
+          "publicActorRunStats30Days": {
+            "ABORTED": 0,
+            "FAILED": 0,
+            "SUCCEEDED": 30,
+            "TIMED-OUT": 0,
+            "TOTAL": 30
+          }
+        },
+        "description": "Fast, browser-free Google Trends data: interest over time with real multi-keyword comparison (shared 0-100 scale), interest by region, related queries & topics, plus real-time Trending Now with volume, growth and news. Pay only for results.",
+        "categories": [
+          "SEO_TOOLS",
+          "NEWS"
+        ],
+        "pictureUrl": "https://images.apifyusercontent.com/WbYW7V1G90HbLpliqIGy-rvU0cBxuYYved3KSY5PnAk/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vVzE2M0hGU1FseEpTV0hCR0stYWN0b3IteTJyZW9UcG9BUWtWbUZHVmotVUNMd1RMWXlHSi1ndF9pY29uLnN2Zy5wbmc.webp",
+        "notice": "NONE",
+        "bookmarkCount": 0,
+        "actorReviewRating": 5,
+        "actorReviewCount": 3,
+        "badge": null,
+        "isWhiteListedForAgenticPayments": true,
+        "userFullName": "Automation Craft",
+        "userPictureUrl": "https://images.apifyusercontent.com/oDx_o4RspeDKeBgzghZVUfUK8n3VPgp9qwqxtcXFAdU/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vLVIyTnd2eG1VSjdHb0tQbml3UVFnWkQwOEl6WS1XWUEwME5YMGpIS0h4US9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTlzYURNdVoyOXZaMnhsZFhObGNtTnZiblJsYm5RdVkyOXRMMkV2UVVObk9HOWpTMFJaTTNOVFJuQnFOWFo1Tm5aNFltaHVYMmRNYzJ0R1VXRlBVMUZwUWtNeFdrb3RORmROWldKMFNYTlNhbGxu.webp",
+        "currentPricingInfo": {
+          "pricingModel": "PAY_PER_EVENT",
+          "pricingPerEvent": {
+            "actorChargeEvents": {
+              "apify-actor-start": {
+                "eventTitle": "Actor Start",
+                "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+                "eventPriceUsd": 0.02
+              },
+              "trending-fetch": {
+                "eventTitle": "Trending Now fetched (per country)",
+                "eventDescription": "One country's full Trending Now list (up to ~480 trends with volume, growth and news) for one flat price. Failed or empty fetches are free.",
+                "eventPriceUsd": 0.02
+              },
+              "keyword-result": {
+                "eventTitle": "Keyword report",
+                "eventDescription": "Full report for one keyword: interest over time with stats, interest by region, related queries. Only charged when the report contains data.",
+                "eventPriceUsd": 0.03
+              },
+              "comparison-result": {
+                "eventTitle": "Comparison report",
+                "eventDescription": "One multi-keyword comparison (2-5 terms on a shared 0-100 scale) with per-term stats, regional breakdown and related queries. Only charged when it contains data.",
+                "eventPriceUsd": 0.05
+              }
+            }
+          },
+          "createdAt": "2026-07-17T15:27:30.387Z",
+          "startedAt": "2026-07-17T15:27:30.387Z",
+          "apifyMarginPercentage": 0.2
+        },
+        "id": "y2reoTpoAQkVmFGVj",
+        "url": "https://apify.com/automation_craft/google-trends-scraper"
+      },
+      {
+        "title": "Google Trends Scraper",
+        "name": "google-trends-scraper",
+        "username": "crw",
+        "stats": {
+          "totalBuilds": 8,
+          "totalRuns": 142,
+          "totalUsers": 4,
+          "totalUsers7Days": 1,
+          "totalUsers30Days": 2,
+          "totalUsers90Days": 4,
+          "lastRunStartedAt": "2026-09-10T10:50:29.924Z",
+          "actorReviewCount": 0,
+          "actorReviewRating": 0,
+          "bookmarkCount": 0,
+          "publicActorRunStats30Days": {
+            "ABORTED": 0,
+            "FAILED": 0,
+            "SUCCEEDED": 75,
+            "TIMED-OUT": 0,
+            "TOTAL": 75
+          }
+        },
+        "description": "Collect real-time trending topics from Google Trends by country, time range, and category. Paste any Google Trends URL and get structured data in seconds.",
+        "categories": [
+          "SEO_TOOLS",
+          "NEWS",
+          "AUTOMATION"
+        ],
+        "pictureUrl": "https://images.apifyusercontent.com/FOzItWZLidynTYte4tDGpHZDnYBNILbxepGIQvaBiTQ/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vckVFVTd1dXFQUnZDWHhuZXMtYWN0b3ItQ2lRUG1ndUhENDFUZUZFRlYtaWFtZFZTMnEyMy1pY29uLnN2Zy53ZWJw.webp",
+        "notice": "NONE",
+        "bookmarkCount": 0,
+        "actorReviewRating": 0,
+        "actorReviewCount": 0,
+        "badge": null,
+        "isWhiteListedForAgenticPayments": true,
+        "userFullName": "CRW",
+        "userPictureUrl": "https://images.apifyusercontent.com/dv5JeQR00uu_FqKn1A32bYNbu8BpzUOjPAvD1hfZhlw/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vOGRNdlNIWFNnaG1YVDRsSG5DNURDUGVEUi1vWU5ZN2psRHI4YVc2N3prdy9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZja1ZGVlRkMWRYRlFVblpEV0hodVpYTXRjSEp2Wm1sc1pTMTVaa3BET0d4T2NHUm1MV055ZDE5emRHRnVaR0ZzYjI1bFh6RXdNSGd4TURBdWNHNW4ucG5n.webp",
+        "currentPricingInfo": {
+          "minimalMaxTotalChargeUsd": null,
+          "pricingModel": "PAY_PER_EVENT",
+          "isPriceChangeNotificationSuppressed": false,
+          "pricingPerEvent": {
+            "actorChargeEvents": {
+              "apify-actor-start": {
+                "eventTitle": "Actor Start",
+                "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+                "isOneTimeEvent": true,
+                "eventPriceUsd": 0.01
+              },
+              "apify-default-dataset-item": {
+                "eventTitle": "result",
+                "eventDescription": "Single result in the default dataset.",
+                "isOneTimeEvent": false,
+                "eventPriceUsd": 0.001,
+                "isPrimaryEvent": true
+              }
+            }
+          },
+          "startedAt": "2026-07-06T02:08:15.082Z",
+          "createdAt": "2026-07-06T02:08:15.448Z",
+          "apifyMarginPercentage": 0.2
+        },
+        "id": "CiQPmguHD41TeFEFV",
+        "url": "https://apify.com/crw/google-trends-scraper"
+      },
+      {
+        "title": "Google Trends Scraper",
+        "name": "google-trends-scraper",
+        "username": "agentx",
+        "stats": {
+          "totalBuilds": 17,
+          "totalRuns": 246,
+          "totalUsers": 5,
+          "totalUsers7Days": 1,
+          "totalUsers30Days": 1,
+          "totalUsers90Days": 2,
+          "lastRunStartedAt": "2026-09-11T08:18:17.430Z",
+          "actorReviewCount": 0,
+          "actorReviewRating": 0,
+          "bookmarkCount": 1,
+          "publicActorRunStats30Days": {
+            "ABORTED": 0,
+            "FAILED": 0,
+            "SUCCEEDED": 30,
+            "TIMED-OUT": 0,
+            "TOTAL": 30
+          }
+        },
+        "description": "Google Trends API for Trending Now: pick one of 125 measured countries and a 4-hour to 7-day window, and get one 13-field row per trending search — keyword, search volume, growth percent, Google's own categories, start and end times, related queries and news count. No Google account.",
+        "categories": [
+          "NEWS",
+          "SEO_TOOLS",
+          "AUTOMATION"
+        ],
+        "pictureUrl": "https://images.apifyusercontent.com/OHIiM0dCaAMKyW_6j0gcHWbVSmmvrrGjW8C0kNj7U3I/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vcHJxOTdEVExnZlVCRm9wWTgtYWN0b3Ita203SHp6T3lUVEVySzJINkQtU0JyZFJOZjI3Sy1pbWFnZXMucG5n.webp",
+        "notice": "NONE",
+        "bookmarkCount": 2,
+        "actorReviewRating": 4,
+        "actorReviewCount": 1,
+        "badge": null,
+        "isWhiteListedForAgenticPayments": true,
+        "userFullName": "AgentX",
+        "userPictureUrl": "https://images.apifyusercontent.com/O80oSWursQQZULFzRYVEmrtlY6dhffWbz5v2ktv-J7U/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vM2toX3dqa0VJb0wyeEZoSUlUWVR2YlJSa3ViOTktTFNGdWlfTjFBU0c5NC9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZjSEp4T1RkRVZFeG5abFZDUm05d1dUZ3RjSEp2Wm1sc1pTMVBaVzFuTjJab1FUUjBMV2x0WVdkbGMxOGxNamd4SlRJNUxuQnVady5wbmc.webp",
+        "currentPricingInfo": {
+          "apifyMarginPercentage": 0.2,
+          "minimalMaxTotalChargeUsd": null,
+          "pricingModel": "PAY_PER_EVENT",
+          "isPriceChangeNotificationSuppressed": false,
+          "reasonForChange": "Trending rows now bill at the market rate for trending-search data; Bronze is 10%, Silver 20%, and Gold+ 25% below FREE.",
+          "pricingPerEvent": {
+            "actorChargeEvents": {
+              "apify-actor-start": {
+                "eventTitle": "Actor Start",
+                "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+                "isOneTimeEvent": true,
+                "eventPriceUsd": 0.01
+              },
+              "result": {
+                "eventTitle": "Result",
+                "eventDescription": "Single result in the default dataset.",
+                "isPrimaryEvent": true,
+                "isOneTimeEvent": false,
+                "eventTieredPricingUsd": {
+                  "FREE": {
+                    "tieredEventPriceUsd": 0.0012
+                  },
+                  "BRONZE": {
+                    "tieredEventPriceUsd": 0.00108
+                  },
+                  "SILVER": {
+                    "tieredEventPriceUsd": 0.00096
+                  },
+                  "GOLD": {
+                    "tieredEventPriceUsd": 0.0009
+                  },
+                  "PLATINUM": {
+                    "tieredEventPriceUsd": 0.0009
+                  },
+                  "DIAMOND": {
+                    "tieredEventPriceUsd": 0.0009
+                  }
+                }
+              }
+            }
+          },
+          "startedAt": "2026-08-29T03:43:04.370Z",
+          "createdAt": "2026-08-15T03:33:05.934Z",
+          "notifiedAboutFutureChangeAt": "2026-08-15T03:33:26.125Z",
+          "notifiedAboutChangeAt": "2026-08-29T04:05:55.838Z"
+        },
+        "id": "km7HzzOyTTErK2H6D",
+        "url": "https://apify.com/agentx/google-trends-scraper"
+      },
+      {
+        "title": "Google Trends Scraper",
+        "name": "google-trends-scraper",
+        "username": "goat255",
+        "stats": {
+          "totalBuilds": 12,
+          "totalRuns": 110,
+          "totalUsers": 4,
+          "totalUsers7Days": 0,
+          "totalUsers30Days": 1,
+          "totalUsers90Days": 3,
+          "lastRunStartedAt": "2026-09-11T04:01:04.267Z",
+          "actorReviewCount": 1,
+          "actorReviewRating": 5,
+          "bookmarkCount": 0,
+          "publicActorRunStats30Days": {
+            "ABORTED": 0,
+            "FAILED": 0,
+            "SUCCEEDED": 32,
+            "TIMED-OUT": 0,
+            "TOTAL": 32
+          }
+        },
+        "description": "Scrape Google Trends without a login. Pull interest over time for any keywords across a region and window, or the search terms currently trending in a country. Compares up to five keywords on a shared scale.",
+        "categories": [
+          "SEO_TOOLS",
+          "NEWS",
+          "AUTOMATION"
+        ],
+        "pictureUrl": "https://images.apifyusercontent.com/5hatMnWQQWtjpFA-sfAptdsCJneppK5yLil54qELD2A/rs:fill:76:76/cb:1/aHR0cHM6Ly9hcGlmeS1pbWFnZS11cGxvYWRzLXByb2QuczMudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vMXBOeVFBdGFsbVBoMjljRXgtYWN0b3ItandvOW5oanlWM3NUY1E0WGctTWlJUjFmQVFTTS1sb2dvLnBuZw.webp",
+        "notice": "NONE",
+        "bookmarkCount": 0,
+        "actorReviewRating": 5.000000000000001,
+        "actorReviewCount": 1,
+        "badge": null,
+        "isWhiteListedForAgenticPayments": true,
+        "userFullName": "Goutam Soni",
+        "userPictureUrl": "https://images.apifyusercontent.com/A7FumRn8-jzcspeowT9vT6UEG9sXA34Zmyvar1xCBxA/rs:fill:32:32/cb:1/aHR0cHM6Ly9pbWFnZXMuYXBpZnl1c2VyY29udGVudC5jb20vMXZUYWYtR3RkeTN0al9WUFJwNjVyUDdnNDdBT01PaW5GRzcxOXhHdmJ1Yy9yczpmaWxsOjMyOjMyL2NiOjEvYUhSMGNITTZMeTloY0dsbWVTMXBiV0ZuWlMxMWNHeHZZV1J6TFhCeWIyUXVjek11ZFhNdFpXRnpkQzB4TG1GdFlYcHZibUYzY3k1amIyMHZNWEJPZVZGQmRHRnNiVkJvTWpsalJYZ3ZabkJ6V0hwMk5qQnlPVWt3VmtaS1ZYY3RNUzVxY0dWbi5qcGVn.webp",
+        "currentPricingInfo": {
+          "pricingModel": "PAY_PER_EVENT",
+          "apifyMarginPercentage": 0.2,
+          "startedAt": "2026-09-05T04:40:11.568Z",
+          "pricingPerEvent": {
+            "actorChargeEvents": {
+              "result": {
+                "eventTitle": "Result",
+                "eventDescription": "Charged per result returned.",
+                "isPrimaryEvent": true,
+                "eventTieredPricingUsd": {
+                  "FREE": {
+                    "tieredEventPriceUsd": 0.0023
+                  },
+                  "BRONZE": {
+                    "tieredEventPriceUsd": 0.0022
+                  },
+                  "SILVER": {
+                    "tieredEventPriceUsd": 0.0021
+                  },
+                  "GOLD": {
+                    "tieredEventPriceUsd": 0.002
+                  },
+                  "PLATINUM": {
+                    "tieredEventPriceUsd": 0.002
+                  },
+                  "DIAMOND": {
+                    "tieredEventPriceUsd": 0.002
+                  }
+                }
+              },
+              "apify-actor-start": {
+                "eventTitle": "Actor Start",
+                "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+                "eventTieredPricingUsd": {
+                  "FREE": {
+                    "tieredEventPriceUsd": 0.00115
+                  },
+                  "BRONZE": {
+                    "tieredEventPriceUsd": 0.0011
+                  },
+                  "SILVER": {
+                    "tieredEventPriceUsd": 0.00105
+                  },
+                  "GOLD": {
+                    "tieredEventPriceUsd": 0.001
+                  },
+                  "PLATINUM": {
+                    "tieredEventPriceUsd": 0.001
+                  },
+                  "DIAMOND": {
+                    "tieredEventPriceUsd": 0.001
+                  }
+                }
+              }
+            }
+          },
+          "isPriceChangeNotificationSuppressed": false,
+          "reasonForChange": "Add tiered volume pricing and a $0.001 start fee (structure only).",
+          "createdAt": "2026-08-21T04:43:45.797Z",
+          "notifiedAboutFutureChangeAt": "2026-08-21T04:44:05.940Z",
+          "notifiedAboutChangeAt": "2026-09-05T05:05:50.801Z"
+        },
+        "id": "jwo9nhjyV3sTcQ4Xg",
+        "url": "https://apify.com/goat255/google-trends-scraper"
+      }
+    ]
+  }
+}

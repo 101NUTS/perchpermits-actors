@@ -1,0 +1,14 @@
+{
+  "name": "apify-wrapper-kit",
+  "version": "0.1.0",
+  "description": "Wrap an Apify actor in a storefront that sells rows for prepaid credits. Zero dependencies.",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test test/lib.test.js"
+  }
+}

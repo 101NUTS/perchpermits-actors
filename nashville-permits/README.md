@@ -216,6 +216,10 @@ Set `maxTotalChargeUsd` on the run to cap spend. Enrichment is trimmed to what t
 - Metro Nashville [ePermits](https://epermits.nashville.gov/) public case search.
 - Building permits are open public records under Tennessee's Public Records Act (T.C.A. 10-7-503). This actor republishes what those sources already publish and adds organization, not surveillance. Do not use contact details for unsolicited marketing where prohibited.
 
+## Wrap this in an afternoon
+
+Reselling these records behind your own search box is allowed and expected; it is what the per-record price is for. A zero-dependency starter kit does it: a one-page storefront, Stripe credit packs that never expire (no subscription), and one call to this actor per search. Point it at `perchpermits/nashville-building-permits`, set your price per record, and deploy anywhere Node runs. Source and setup: [wrapper-kit](https://github.com/101NUTS/perchpermits-actors/tree/master/wrapper-kit). Keep the data-policy line above on your page.
+
 ## Running locally
 
 ```bash

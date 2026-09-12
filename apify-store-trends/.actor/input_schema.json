@@ -1,0 +1,62 @@
+{
+    "title": "Apify Store Trends",
+    "description": "Which Apify Store niches have demand and weak incumbents. Search one niche in seconds, or sweep the whole catalog for a monthly snapshot with change-over-time deltas.",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "mode": {
+            "title": "Mode",
+            "type": "string",
+            "description": "`search` runs the store's own search for `query` (a few requests, seconds). `full` sweeps the whole catalog across every category and pricing model (tens of thousands of actors, about ten minutes) and is meant for a scheduled monthly snapshot.",
+            "editor": "select",
+            "enum": ["search", "full"],
+            "enumTitles": ["Search one niche (seconds)", "Full catalog sweep (about 10 minutes)"],
+            "default": "search"
+        },
+        "query": {
+            "title": "Search query",
+            "type": "string",
+            "description": "What to search the store for, e.g. `google trends`, `bizbuysell`, `permits`. Required when mode is `search`; ignored in `full` mode.",
+            "editor": "textfield",
+            "prefill": "google trends",
+            "nullable": true
+        },
+        "minUsers30d": {
+            "title": "Minimum users in the last 30 days",
+            "type": "integer",
+            "description": "Drop actors with fewer users than this in the last 30 days. 0 keeps everything the store returns.",
+            "default": 5,
+            "minimum": 0
+        },
+        "maxActors": {
+            "title": "Max actor rows",
+            "type": "integer",
+            "description": "Keep at most this many actors, the most used first. In `full` mode set it high (5000) for a complete snapshot.",
+            "default": 200,
+            "minimum": 1,
+            "maximum": 5000
+        },
+        "includeTargets": {
+            "title": "Include target rows",
+            "type": "boolean",
+            "description": "Also emit one aggregate row per target bucket (and one for the search query, over the actors whose title or name match it): users, actor count, leader and its share, rating, fail rate, weighted and best rating, broken actors, and the A to G signals. Charged as `target`.",
+            "default": true
+        },
+        "snapshotDatasetName": {
+            "title": "Snapshot dataset (for deltas)",
+            "type": "string",
+            "description": "Optional. Name of a dataset in your account. Every actor row is appended to it, and before writing, the newest snapshot already there is read to fill each row's `delta` (previous 30-day users, change, previous rating and fail rate, whether the actor is new). Same name every run, e.g. `store-snapshots`. Not charged again.",
+            "editor": "textfield",
+            "nullable": true
+        },
+        "requestDelaySeconds": {
+            "title": "Delay between requests (seconds)",
+            "type": "number",
+            "description": "Politeness delay toward the store API. Lower is faster but risks throttling.",
+            "default": 0.2,
+            "minimum": 0,
+            "maximum": 5,
+            "sectionCaption": "Advanced"
+        }
+    }
+}

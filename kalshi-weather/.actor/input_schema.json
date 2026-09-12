@@ -66,6 +66,12 @@
             "description": "Add every hourly forecast period for the target day to the row (about 24 small objects). Larger rows.",
             "default": false
         },
+        "analysis": {
+            "title": "Write a ladder analysis",
+            "type": "boolean",
+            "description": "Add an `analysis_text` field to each enriched row: 90 to 140 words by Claude on where the market puts its weight, where the NWS forecast and the observations so far land, and what settled if the report is in. No trade recommendation, no invented facts. Charged as `ladder-analysis` on top of `enriched-event`, only for rows that got one. Needs `enrich`.",
+            "default": false
+        },
         "requestDelaySeconds": {
             "title": "Delay between requests (seconds)",
             "type": "number",

@@ -1,12 +1,13 @@
 # Perch Data actors
 
-Source for the Apify Store actors published by [Perch Data](https://apify.com/perchpermits). All four are Python; the Apify SDK is only used by each actor's `src/main.py`, so every actor also runs from the command line with no Apify account.
+Source for the Apify Store actors published by [Perch Data](https://apify.com/perchpermits). All five actors are Python; the Apify SDK is only used by each actor's `src/main.py`, so every actor also runs from the command line with no Apify account. `wrapper-kit/` is a Node storefront for reselling any of them.
 
 | Actor | Store page | What it does |
 |---|---|---|
 | [kalshi-weather](kalshi-weather/) | [apify.com/perchpermits/kalshi-weather-markets-nws](https://apify.com/perchpermits/kalshi-weather-markets-nws) | Every Kalshi daily high and low temperature market, one JSON row per city-day ladder with every strike and its implied probability, joined to the NWS station that settles it: observations so far today, the daily and hourly forecast, the official climate report, and which strike each lands on. 24 US cities. $0.02 per enriched ladder. |
 | [tennis-matches](tennis-matches/) | [apify.com/perchpermits/tennis-matches-odds-form](https://apify.com/perchpermits/tennis-matches-odds-form) | ATP and WTA matches, one JSON row each: schedule, results, or live snapshot, with 15+ bookmakers' opening and current odds, margin-free implied probabilities, each player's last 10 matches and surface record, rankings, and the full head-to-head. $0.02 per enriched match. |
 | [nashville-permits](nashville-permits/) | [apify.com/perchpermits/nashville-building-permits](https://apify.com/perchpermits/nashville-building-permits) | Nashville / Davidson County TN permits and applications joined to the licensed contractor, owner, outstanding sub-trade permits, and inspection stage. 22 scope presets. Contractor ranking. |
+| [apify-store-trends](apify-store-trends/) | store listing pending | Which Apify Store niches have demand and weak incumbents: one row per actor (30-day users, runs, fail rate, rating, price, idle days, gap signals, change since the last snapshot) and one per niche with the leader, its share, and the A to G flags. The scan this account used to pick its own niches. |
 | [kitchen-plan](kitchen-plan/) | [apify.com/perchpermits/kitchen-floor-plan-takeoff](https://apify.com/perchpermits/kitchen-floor-plan-takeoff) | JSON room spec in; dimensioned floor plan (SVG), cabinet takeoff (CSV), and quote totals out. |
 
 Each folder has its own README, the same one shown on the store page, with every input and output field documented.
@@ -16,6 +17,16 @@ Each folder has its own README, the same one shown on the store page, with every
 ![One tennis match row: US Open quarterfinal, Tiafoe v Michelsen, with rankings, form, surface record, head-to-head, consensus odds, fair probability, opening-to-current movement, and best price across 15 bookmakers](tennis-matches/tennis-post.png)
 
 Every number on the card is from the real row for that match. Other tennis actors on the store sell one piece each (scores, or one player's history, or results without odds); this one joins them so an agent does not need four actors and a merge step.
+
+## Wrap any of them in an afternoon
+
+[`wrapper-kit/`](wrapper-kit/) is a zero-dependency Node 18+ storefront: a one-page site with a search box, Stripe credit packs that never expire (no subscription, no database, the Stripe customer record is the ledger), and one call to an actor per search. Point it at any actor above with two environment variables, set your own price per row, and deploy anywhere Node runs. MIT. At $0.02 an enriched row, a $0.10 charge per row on your side leaves about 80% before Stripe's fee. It is a starter: claim-on-redirect instead of a webhook, and credits are not updated atomically, so add a database once you have paying users.
+
+```bash
+cd wrapper-kit
+cp .env.example .env    # Stripe test key, Apify token, actor name
+npm test && npm start
+```
 
 ## Run locally
 

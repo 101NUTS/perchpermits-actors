@@ -1,4 +1,2 @@
 apify>=4.0,<5
 requests>=2.31
-tzdata
-anthropic>=1.5,<2

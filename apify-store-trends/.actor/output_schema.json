@@ -1,0 +1,31 @@
+{
+    "actorOutputSchemaVersion": 1,
+    "title": "Apify Store Trends output",
+    "description": "One dataset row per actor (`row_type: actor`) and one per target bucket (`row_type: target`). Field reference is in the README.",
+    "properties": {
+        "results": {
+            "type": "string",
+            "title": "Rows as JSON",
+            "description": "Every actor row (actor, target, users_7d/30d/90d/total, runs_30d, fail_rate_30d, rating, reviews, price, notice, days_since_last_run, gap_signals, snapshot_at, delta) and every target row (target, hostility, actors, users_30d, leader, leader_share, leader_rating, leader_fail_rate, weighted_rating, best_rating, broken_actors, signals, delta).",
+            "template": "{{links.apiDefaultDatasetUrl}}?format=json&clean=true"
+        },
+        "resultsCsv": {
+            "type": "string",
+            "title": "Rows as CSV",
+            "description": "The same rows flattened with dot-separated column names (`delta.users_30d_change`).",
+            "template": "{{links.apiDefaultDatasetUrl}}?format=csv&clean=true"
+        },
+        "actors": {
+            "type": "string",
+            "title": "Actor rows only",
+            "description": "Just the `actor` rows, the most used first.",
+            "template": "{{links.apiDefaultDatasetUrl}}?format=json&clean=true&view=actors"
+        },
+        "targets": {
+            "type": "string",
+            "title": "Target rows only",
+            "description": "Just the `target` rows, one per niche, the highest demand first.",
+            "template": "{{links.apiDefaultDatasetUrl}}?format=json&clean=true&view=targets"
+        }
+    }
+}

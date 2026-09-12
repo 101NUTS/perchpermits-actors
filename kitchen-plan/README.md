@@ -175,6 +175,10 @@ One `plan` event per successful build. Validate-only runs and failed validations
 
 Rectangular rooms only. No angled walls, no vaulted ceilings, no open shelving, no wall cabinets without a base run beneath. Rendering, 3D models, and photoreal images are a separate, slower product.
 
+## Wrap this in an afternoon
+
+Selling plans from your own page is allowed and expected; it is what the per-plan price is for. A zero-dependency starter kit does it: a one-page storefront, Stripe credit packs that never expire (no subscription), and one call to this actor per request. Point it at `perchpermits/kitchen-floor-plan-takeoff`, replace the search form with a room-spec form, and deploy anywhere Node runs. Source and setup: [wrapper-kit](https://github.com/101NUTS/perchpermits-actors/tree/master/wrapper-kit).
+
 ## Running locally
 
 ```bash

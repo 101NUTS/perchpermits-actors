@@ -1,0 +1,18 @@
+{
+    "actorSpecification": 1,
+    "name": "apify-store-trends",
+    "title": "Apify Store Trends: demand, weak incumbents [$0.001/actor]",
+    "description": "Which Apify Store niches have demand and weak incumbents. One row per actor (30-day users, runs, fail rate, rating, price, idle days, gap signals, change since last snapshot) and one per niche with the leader, its share, and A-G flags. Search a niche in seconds or snapshot the catalog monthly.",
+    "version": "0.1",
+    "buildTag": "latest",
+    "dockerfile": "../Dockerfile",
+    "readme": "../README.md",
+    "input": "./input_schema.json",
+    "output": "./output_schema.json",
+    "storages": {
+        "dataset": "./dataset_schema.json"
+    },
+    "minMemoryMbytes": 256,
+    "maxMemoryMbytes": 1024,
+    "defaultMemoryMbytes": 512
+}
