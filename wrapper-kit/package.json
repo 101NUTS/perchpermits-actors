@@ -9,6 +9,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "test": "node --test test/lib.test.js"
+    "test": "node --test test/lib.test.js test/e2e.test.js",
+    "mocks": "node test/mock-upstreams.js 3499"
   }
 }

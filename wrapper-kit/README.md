@@ -178,3 +178,16 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+## Testing without keys
+
+`npm test` runs two suites. `test/lib.test.js` covers the accounting with a faked `fetch`. `test/e2e.test.js` starts the real server against `test/mock-upstreams.js`, a fake Stripe and a fake Apify in one process, and walks the whole flow: checkout, a fake payment page, the redirect back, claiming the key, balance, a search that is clamped by the row cap, spending down to zero, a second pack, empty results, an actor error, and bad inputs. No network, no money.
+
+To click through it yourself:
+
+```bash
+npm run mocks                      # fake Stripe + Apify on :3499
+STRIPE_SECRET_KEY=sk_test_fake APIFY_TOKEN=apify_test_token TOKEN_SECRET=demo STRIPE_API_BASE=http://localhost:3499 APIFY_API_BASE=http://localhost:3499 npm start
+```
+
+Then open http://localhost:3000, buy a pack on the fake checkout page, and search. The Help section at the bottom of the page is written for your customers: what the key is, how credits are spent, that they never expire, where the data comes from, and refunds. Edit the refund line to match what you actually offer.
