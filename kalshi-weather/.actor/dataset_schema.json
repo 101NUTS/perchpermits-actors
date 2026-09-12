@@ -1,0 +1,35 @@
+{
+    "actorSpecification": 1,
+    "fields": {},
+    "views": {
+        "ladders": {
+            "title": "Ladders",
+            "transformation": {
+                "fields": ["target_date", "station.city", "kind", "market_summary.favorite_label", "market_summary.favorite_prob", "market_summary.expected_temp_f", "enrichment.forecast.high_f", "enrichment.forecast.low_f", "enrichment.observations.max_f", "enrichment.observations.min_f", "enrichment.climate_report.max_f", "enrichment.climate_report.min_f", "enrichment.analysis.forecast.label", "enrichment.analysis.forecast.normalized_prob", "market_summary.total_volume", "market_summary.brackets", "status", "event_url"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "target_date": {"label": "Day"},
+                    "station.city": {"label": "City"},
+                    "kind": {"label": "High/Low"},
+                    "market_summary.favorite_label": {"label": "Market favourite"},
+                    "market_summary.favorite_prob": {"label": "Fav prob", "format": "number"},
+                    "market_summary.expected_temp_f": {"label": "Market exp °F", "format": "number"},
+                    "enrichment.forecast.high_f": {"label": "NWS high", "format": "number"},
+                    "enrichment.forecast.low_f": {"label": "NWS low", "format": "number"},
+                    "enrichment.observations.max_f": {"label": "Obs max", "format": "number"},
+                    "enrichment.observations.min_f": {"label": "Obs min", "format": "number"},
+                    "enrichment.climate_report.max_f": {"label": "Official max", "format": "number"},
+                    "enrichment.climate_report.min_f": {"label": "Official min", "format": "number"},
+                    "enrichment.analysis.forecast.label": {"label": "Forecast bracket"},
+                    "enrichment.analysis.forecast.normalized_prob": {"label": "Its prob", "format": "number"},
+                    "market_summary.total_volume": {"label": "Volume", "format": "number"},
+                    "market_summary.brackets": {"label": "Strikes", "format": "number"},
+                    "status": {"label": "Status"},
+                    "event_url": {"label": "Kalshi", "format": "link"}
+                }
+            }
+        }
+    }
+}

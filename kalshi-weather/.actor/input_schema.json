@@ -1,0 +1,86 @@
+{
+    "title": "Kalshi Weather Markets + NWS Station Data",
+    "description": "List Kalshi's daily high and low temperature markets, one row per city-day ladder with every strike, and join each to api.weather.gov for the station that settles it.",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "kind": {
+            "title": "Market kind",
+            "type": "string",
+            "description": "`high` for daily maximum temperature ladders (KXHIGH*), `low` for daily minimum ladders (KXLOW*), or both.",
+            "editor": "select",
+            "enum": ["both", "high", "low"],
+            "enumTitles": ["High and low", "High temperature only", "Low temperature only"],
+            "default": "both"
+        },
+        "status": {
+            "title": "Market status",
+            "type": "string",
+            "description": "`open` lists ladders still trading (today and tomorrow). `closed` lists ladders past their last trading time but not yet settled. `settled` lists finalized ladders with each strike's yes/no result, useful for a training set with the official temperature.",
+            "editor": "select",
+            "enum": ["open", "closed", "settled"],
+            "enumTitles": ["Open (trading now)", "Closed (awaiting settlement)", "Settled (with results)"],
+            "default": "open"
+        },
+        "stations": {
+            "title": "Stations",
+            "type": "array",
+            "description": "Optional. Keep only these settlement stations, by the NWS climate-site code in Kalshi's rules: NYC, MDW (Chicago), MIA, AUS, DEN, LAX, PHL, ATL, BOS, DFW, DCA, EWR, HOU, LAS, MSP, MSY, OKC, PHX, SAN, SAT, SDF, SFO, TTN, SEA. Empty = every city.",
+            "editor": "stringList",
+            "items": {"type": "string"},
+            "nullable": true
+        },
+        "dateFrom": {
+            "title": "Target date from",
+            "type": "string",
+            "description": "Optional ISO date (YYYY-MM-DD). Keep ladders whose target day (the local calendar day the temperature is measured on) is on or after this date.",
+            "editor": "datepicker",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+            "nullable": true
+        },
+        "dateTo": {
+            "title": "Target date to",
+            "type": "string",
+            "description": "Optional ISO date. Keep ladders whose target day is on or before this date.",
+            "editor": "datepicker",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+            "nullable": true
+        },
+        "maxEvents": {
+            "title": "Max ladders",
+            "type": "integer",
+            "description": "Stop after this many city-day ladders. Open markets today are about 48 (24 cities, high and low).",
+            "default": 100,
+            "minimum": 1,
+            "maximum": 2000
+        },
+        "enrich": {
+            "title": "Join to the NWS settlement station",
+            "type": "boolean",
+            "description": "Fetch api.weather.gov for each ladder's station: observations so far on the target day (running max/min), the daily and hourly forecast for that day, the official climate report once issued, and which strike each of those lands in. Charged as `enriched-event` instead of `event`. Ladders whose station is not an NWS site (international cities) stay plain.",
+            "default": true
+        },
+        "includeHourlyPeriods": {
+            "title": "Include hourly forecast periods",
+            "type": "boolean",
+            "description": "Add every hourly forecast period for the target day to the row (about 24 small objects). Larger rows.",
+            "default": false
+        },
+        "requestDelaySeconds": {
+            "title": "Delay between requests (seconds)",
+            "type": "number",
+            "description": "Politeness delay toward both APIs. Kalshi's unauthenticated reads return 429 above roughly seven requests a second.",
+            "default": 0.25,
+            "minimum": 0.1,
+            "maximum": 5,
+            "sectionCaption": "Advanced"
+        },
+        "archiveDatasetName": {
+            "title": "Also append to a named dataset",
+            "type": "string",
+            "description": "Optional. Name of a dataset in your account to append every returned row to, so scheduled runs build a history of ladders, forecasts, and settlements that outlives run-data retention. Not charged again.",
+            "editor": "textfield",
+            "nullable": true
+        }
+    }
+}

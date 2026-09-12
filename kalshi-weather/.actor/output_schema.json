@@ -1,0 +1,19 @@
+{
+    "actorOutputSchemaVersion": 1,
+    "title": "Kalshi Weather Markets + NWS Station Data output",
+    "description": "One dataset row per city-day ladder. Field reference is in the README.",
+    "properties": {
+        "results": {
+            "type": "string",
+            "title": "Ladders as JSON",
+            "description": "Every ladder from the run with its nested strikes and the optional `enrichment` block (NWS observations, forecast, climate report, analysis).",
+            "template": "{{links.apiDefaultDatasetUrl}}?format=json&clean=true"
+        },
+        "resultsCsv": {
+            "type": "string",
+            "title": "Ladders as CSV",
+            "description": "The same rows flattened with dot-separated column names (strikes are flattened by index).",
+            "template": "{{links.apiDefaultDatasetUrl}}?format=csv&clean=true"
+        }
+    }
+}
