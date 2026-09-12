@@ -132,9 +132,19 @@ class DriftGuardTests(unittest.TestCase):
         first = raw["conditions"]["value"][0]
         first.pop("dateCompleted")
         self.assertEqual(epermits.shape_issues(raw), [])
+        # A permit whose conditions are all still open carries dateCompleted on
+        # no row at all (live 2026-09-12, pool permit 4910775, ten open
+        # conditions). Nullable fields are never drift.
         for r in raw["conditions"]["value"]:
             r.pop("dateCompleted", None)
-        self.assertEqual(epermits.shape_issues(raw), ["conditions: fields missing: dateCompleted"])
+        self.assertEqual(epermits.shape_issues(raw), [])
+        for r in raw["tasks"]["value"]:
+            r.pop("completedDate", None)
+        self.assertEqual(epermits.shape_issues(raw), [])
+        # A field that is never null still counts.
+        for r in raw["conditions"]["value"]:
+            r.pop("conditionCode", None)
+        self.assertEqual(epermits.shape_issues(raw), ["conditions: fields missing: conditionCode"])
 
     def test_transport_failure_is_not_a_shape_issue(self):
         raw = {ep: None for ep in epermits.ENDPOINTS}

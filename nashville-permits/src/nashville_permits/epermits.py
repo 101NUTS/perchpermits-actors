@@ -115,12 +115,17 @@ def fetch_raw(ivr: int, rate_limit: float = RATE_LIMIT_SECONDS) -> dict:
 
 # Fields each endpoint must carry when it returns rows. Missing fields on a
 # non-empty response mean Metro changed the API, not that the permit is odd.
+# Only fields that are never null belong here: OData drops a null field from
+# the row entirely, so ``dateCompleted`` and ``completedDate`` vanish from
+# every row of a permit whose conditions or tasks are all still open (seen
+# live 2026-09-12 on pool permits, cases 4910775 and 4914546, ten open
+# conditions each). Those two are read leniently in ``extract`` instead.
 EXPECTED_FIELDS = {
     "case": ("caseNumber", "status", "projectScope"),
     "contractors": ("companyName", "licenseNumber"),
     "people": ("name", "roleCode"),
-    "conditions": ("conditionCode", "description", "dateCompleted"),
-    "tasks": ("description", "isInspection", "completedDate"),
+    "conditions": ("conditionCode", "description"),
+    "tasks": ("description", "isInspection"),
 }
 
 
