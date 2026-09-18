@@ -1,7 +1,7 @@
 """Orchestration: find a Polymarket temperature event, read its settling station from the
 rules, pull that station's reports for the local day, and say where the ladder stands.
 
-Verified offline 2026-09-18 against 89 settled ladders (15 cities, highs and lows, F and
+Verified offline 2026-09-18 against 89 settled fixture ladders (15 cities, highs and lows, F and
 C): the recomputed value landed in the bracket Polymarket paid every time
 (scripts/verify_settled.py). Hong Kong settles on the Observatory's daily extract, not a
 station reading, and is served without a recomputed value.

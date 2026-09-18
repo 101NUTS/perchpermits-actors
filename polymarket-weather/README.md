@@ -28,7 +28,11 @@ This actor reads the station from every market's rules text on every run, so a c
 
 ## Verified
 
-On 2026-09-18 the recomputed value was checked against 89 settled ladders: 15 cities on five continents, highs and lows, °F and °C. It landed in the bracket Polymarket paid **89 times out of 89**. The check is in `scripts/verify_settled.py` and runs in the test suite. Hong Kong settles on the Observatory's daily extract rather than an airport report, so it is returned without a recomputed value.
+Every settled ladder is archived daily with the bracket Polymarket paid and the value this actor recomputes from the settling station's own reports. Over Sep 14 to 17, 2026 (51 cities, highs and lows, °F and °C), the recomputed value landed in the paid bracket **325 times out of 326**.
+
+- **The one miss:** Manila's low on Sep 16. The station's routine reports reached 25°C and Polymarket paid 26°C. It stays in the record.
+- **No call:** 82 more ladders. Hong Kong settles on the Observatory's daily extract rather than an airport report, a few stations settle on a Weather Underground page with no reports in NOAA's feed, and some days in that first backfill started before the oldest report NOAA still serves.
+- **Test suite:** a fixed set of 89 of those ladders is recomputed in `scripts/verify_settled.py` on every build.
 
 ## Input
 
