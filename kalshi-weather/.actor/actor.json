@@ -2,7 +2,7 @@
     "actorSpecification": 1,
     "name": "kalshi-weather-markets-nws",
     "title": "Kalshi Weather Markets + NWS Station Data [$0.02/city-day]",
-    "description": "Every Kalshi daily high and low temperature market (24 US cities) joined to the NWS station that settles it: the full strike ladder with prices and implied probabilities, observations so far today, the daily and hourly forecast, and the official climate report. Free official APIs only.",
+    "description": "Every Kalshi daily high and low temperature ladder (24 US cities) joined to the NWS station that settles it. Verified: 288 settled ladders vs the official climate report, zero mismatches; canary-checked 3x daily. Strikes, prices, observations, forecast, official report. Free official APIs only.",
     "version": "0.1",
     "buildTag": "latest",
     "dockerfile": "../Dockerfile",

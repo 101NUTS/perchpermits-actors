@@ -1,0 +1,19 @@
+{
+    "actorOutputSchemaVersion": 1,
+    "title": "Polymarket Weather Markets + Settling Station Data output",
+    "description": "One dataset row per city-day ladder. Field reference is in the README.",
+    "properties": {
+        "results": {
+            "type": "string",
+            "title": "Ladders as JSON",
+            "description": "Every ladder with its brackets and, when joined, observations, forecast, floor_rule_outs and verdict.",
+            "template": "{{links.apiDefaultDatasetUrl}}?format=json&clean=true"
+        },
+        "resultsCsv": {
+            "type": "string",
+            "title": "Ladders as CSV",
+            "description": "The same rows flattened.",
+            "template": "{{links.apiDefaultDatasetUrl}}?format=csv&clean=true"
+        }
+    }
+}

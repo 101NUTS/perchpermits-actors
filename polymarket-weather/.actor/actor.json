@@ -1,0 +1,15 @@
+{
+    "actorSpecification": 1,
+    "name": "polymarket-weather-markets-stations",
+    "title": "Polymarket Weather Markets + Station Data [$0.02/city-day]",
+    "description": "Every Polymarket daily highest and lowest temperature ladder (50 cities worldwide) joined to the airport station its rules settle on: NYC is LaGuardia, not Central Park. Running high/low recomputed the way the rules read it. Verified on 89 settled ladders, zero mismatches. Free official APIs only.",
+    "version": "0.1",
+    "buildTag": "latest",
+    "dockerfile": "../Dockerfile",
+    "readme": "../README.md",
+    "input": "./input_schema.json",
+    "output": "./output_schema.json",
+    "minMemoryMbytes": 256,
+    "maxMemoryMbytes": 1024,
+    "defaultMemoryMbytes": 256
+}

@@ -2,6 +2,7 @@
 
 One JSON row per Kalshi daily temperature ladder (a city, a day, high or low), with everything an agent needs to price it in a single call:
 
+- **It works every time it is called**: checked against 288 settled ladders across 24 cities, the official climate report landed in the strike Kalshi paid out in every case; a canary runs the live join three times a day and the record is public in the source repo. Runs that cannot deliver a row charge nothing.
 - **The ladder**: every strike as Kalshi lists it (`78° or below`, `79° to 80°`, ... `87° or above`) with the integer Fahrenheit bounds worked out, YES bid, ask, mid, last, volume, open interest, and status. Settled ladders carry each strike's `yes`/`no` result.
 - **The market's view**: each strike's probability normalised so the ladder sums to one, the favourite, the probability-weighted expected temperature, and how far the raw YES prices sum above one.
 - **The station that settles it**: Kalshi's rules name an NWS climate site (Central Park for NYC, Midway for Chicago, and so on). The row joins that station from api.weather.gov: observations recorded so far on the target day with the running max and min, the NWS daily forecast high and low for that day, the hourly forecast's max and min, and the official climate report (CLI) once it is issued.

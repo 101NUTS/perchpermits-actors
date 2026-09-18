@@ -17,6 +17,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 import os
 import sys
 import time
@@ -32,10 +33,22 @@ from src.tennis_matches.service import SourceDrift, enrich_matches, list_matches
 REQUIRED_TOP = ["match_id", "match_url", "date", "status", "tournament", "home", "away", "odds", "result", "start_utc", "fetched_at_utc"]
 REQUIRED_ENRICH = ["status", "home", "away", "h2h", "bookmakers", "bookmaker_count", "best_odds", "market"]
 
+# Tournaments in the Americas publish the day's order of play in their morning, so until
+# mid-afternoon UTC a new tournament day (Mondays especially) lists matches without times.
+EARLY_UTC_HOUR = 16
+UTC_FLOOR_EARLY = 5
+
 
 def check(label: str, ok: bool, detail: str, problems: list, severity: str = "broken") -> None:
     if not ok:
         problems.append({"check": label, "severity": severity, "detail": detail})
+
+
+def utc_required(n_rows: int, utc_hour: int) -> tuple[int, str]:
+    """How many listed matches must carry start_utc at this hour, and the rule applied."""
+    if utc_hour < EARLY_UTC_HOUR:
+        return min(UTC_FLOOR_EARLY, n_rows), f"at least {UTC_FLOOR_EARLY} before {EARLY_UTC_HOUR:02d}:00 UTC"
+    return math.ceil(0.7 * n_rows), "70% from 16:00 UTC"
 
 
 def main(argv=None) -> int:
@@ -45,7 +58,8 @@ def main(argv=None) -> int:
     ap.add_argument("--log", action="store_true", help="append to docs/reliability/runs.jsonl")
     a = ap.parse_args(argv)
     problems: list[dict] = []
-    report: dict = {"ran_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())}
+    now = time.gmtime()
+    report: dict = {"ran_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", now)}
     client = Client(delay_s=0.4)
     t0 = time.time()
 
@@ -85,7 +99,8 @@ def main(argv=None) -> int:
             # require a few priced matches rather than a share.
             check("bookmaker_coverage", with_books >= min(3, len(enriched)), f"{with_books}/{len(enriched)} enriched rows have bookmakers", problems, "degraded")
             check("latest_coverage", with_latest >= 0.7 * len(enriched), f"{with_latest}/{len(enriched)} have latest matches", problems, "degraded")
-        check("utc_coverage", with_utc >= 0.7 * len(rows), f"{with_utc}/{len(rows)} have start_utc", problems, "degraded")
+        need, rule = utc_required(len(rows), now.tm_hour)
+        check("utc_coverage", with_utc >= need, f"{with_utc}/{len(rows)} have start_utc (need {need}: {rule})", problems, "degraded")
 
     # 2. yesterday's results, plain
     try:

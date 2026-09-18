@@ -1,0 +1,73 @@
+{
+    "title": "Polymarket Weather Markets + Settling Station Data",
+    "description": "List Polymarket's daily highest and lowest temperature markets, one row per city-day ladder with every bracket, and join each to the airport station its rules settle on.",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "kind": {
+            "title": "Market kind",
+            "type": "string",
+            "editor": "select",
+            "enum": [
+                "both",
+                "high",
+                "low"
+            ],
+            "enumTitles": [
+                "Highest and lowest",
+                "Highest temperature only",
+                "Lowest temperature only"
+            ],
+            "default": "both",
+            "description": "`high` for daily highest temperature ladders, `low` for daily lowest, or both."
+        },
+        "cities": {
+            "title": "Cities",
+            "type": "array",
+            "editor": "stringList",
+            "items": {
+                "type": "string"
+            },
+            "nullable": true,
+            "description": "Optional. Polymarket city slugs to keep: nyc, chicago, miami, dallas, denver, atlanta, austin, houston, seattle, los-angeles, san-francisco, toronto, mexico-city, sao-paulo, buenos-aires, london, paris, madrid, milan, munich, amsterdam, warsaw, helsinki, istanbul, moscow, tel-aviv, jeddah, karachi, lucknow, tokyo, seoul, busan, beijing, shanghai, shenzhen, guangzhou, singapore, manila, taipei, wellington, cape-town and more. Empty = every open ladder."
+        },
+        "dateFrom": {
+            "title": "Target date from",
+            "type": "string",
+            "editor": "datepicker",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+            "nullable": true,
+            "description": "Optional ISO date. With a date, the actor looks up each listed city's ladder for every day in the range, open or settled (settled rows carry the paid bracket). Needs Cities."
+        },
+        "dateTo": {
+            "title": "Target date to",
+            "type": "string",
+            "editor": "datepicker",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+            "nullable": true,
+            "description": "Optional ISO date, inclusive. Defaults to Target date from."
+        },
+        "join": {
+            "title": "Join to the settling station",
+            "type": "boolean",
+            "default": true,
+            "description": "Read the station from each market's rules and add its reports for the local day, the brackets already ruled out, the US forecast, and a verdict. Charged as joined-ladder; off returns plain ladders."
+        },
+        "maxEvents": {
+            "title": "Max ladders",
+            "type": "integer",
+            "default": 100,
+            "minimum": 1,
+            "maximum": 1000,
+            "description": "Stop after this many city-day ladders."
+        },
+        "requestDelaySeconds": {
+            "title": "Delay between requests (s)",
+            "type": "number",
+            "default": 0.25,
+            "minimum": 0,
+            "maximum": 5,
+            "description": "Politeness delay for the public APIs."
+        }
+    }
+}
